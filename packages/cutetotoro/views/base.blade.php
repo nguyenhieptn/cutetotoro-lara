@@ -18,7 +18,7 @@
 
 	<!-- content -->
 	<div class="container-fluid" style="width: 1440px; height: 80px; background: #d9d9d9">
-		<div>
+		<div class="flex">
 			<img src="{{asset('FrontEnd/Image/bar.png')}}" alt="bar_tool" style="width: 28.81px; height: 20.8px; left: 96.04px; top: 32px;">
 			<p>Mug</p>
 			<p>T-shirt</p>
