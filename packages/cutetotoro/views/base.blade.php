@@ -7,6 +7,11 @@
 	<!-- boostrap -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/5bf87cd97a.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="{{asset('FrontEnd/Css/StyleHomePage.css')}}">
+	<!-- font google -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;700&display=swap" rel="stylesheet">
 	<title>Cute Totoro</title>
 
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -22,6 +27,12 @@
 	<div class="container-fluid" style="width: 1440px; height: 80px; background: #d9d9d9">
 		<div>
 			<img src="{{asset('FrontEnd/Image/bar.png')}}" alt="bar_tool" style="width: 28.81px; height: 20.8px; left: 96.04px; top: 32px;">
+			<p>Mug</p>
+			<p>T-shirt</p>
+			<p>Sticker</p>
+			<p>Poster</p>
+			<p>Bag</p>
+			<p>Other</p>
 			<img src="{{asset('FrontEnd/Image/logo_totoro.png')}}" width="146px" height="54px">
 		</div>
 	</div>
