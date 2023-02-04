@@ -43,3 +43,6 @@ if( $conf['prefix'] )
 Route::group($conf ?? [], function() {
     require __DIR__.'/auth.php';
 });
+Route::get('/long', function() {
+    return view('components.best-seller');
+});

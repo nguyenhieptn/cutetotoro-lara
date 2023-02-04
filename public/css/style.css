@@ -1,0 +1,51 @@
+
+.list-category ul li{
+    list-style: none;
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding: 20px 10px;
+}
+
+.list-category ul li a, .sale-price{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+.list-category ul li:first-child{
+    position: relative;
+}
+
+.list-category ul li:first-child img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 3px;
+    z-index: -1;
+}
+
+.grid, .img-sale-main{
+    margin-left: 50px;
+}
+.grid-item {
+    position: relative;
+    float: left;
+    margin-left: 8px;
+}
+
+.sale-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    height: 38px;
+    width: 119px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.sale-price span:first-child{
+    text-decoration: line-through;
+}
+

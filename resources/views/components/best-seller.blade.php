@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="{{asset('FrontEnd/Css/best-seller.css')}}">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <div class="best_seller">
     <div class="container">
         <div class="row best_seller_top">
             <div class="best_seller_top-image">
-                <img src="{{ asset('FrontEnd/Image/Group%204.png') }}" alt="">
+                <img class="bsl__bn" src="{{ asset('FrontEnd/Image/Group%204.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -94,6 +97,6 @@
                 </div>
             </div>
         </div>
-        <button style="position: absolute; top: -10%; right: 0; background-color: transparent; margin-right: 10px ">View all</button>
+        <button style="position: absolute; top: -10%; right: 0; background-color: transparent; margin-right: 10px; border: none "><p>View all</p></button>
     </div>
 </section>

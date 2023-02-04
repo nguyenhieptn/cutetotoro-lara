@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9" >
+    <div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 30px" >
         <div class="row">
             <div class="col col-12 col-xs-12 col-xl-6">
                 <div class="ft-bt-left">
@@ -60,7 +60,7 @@
                         <li><a href="#"> shipping policy</a></li>
                         <li><a href="#">terms of service</a></li>
                     </ul>
-                    <p style="text-align: center; margin-bottom: 0px">copyright 2016 © cutetotoro</p>
+                    <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2016 © cutetotoro</p>
                 </div>
             </div>
 

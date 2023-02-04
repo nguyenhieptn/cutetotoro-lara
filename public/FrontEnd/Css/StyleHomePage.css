@@ -1,0 +1,88 @@
+body{
+	font-family: 'Manjari';
+}
+
+a{
+	text-decoration: none;
+}
+
+.Header__First{
+	width: 1440px;
+	height: 80px;
+	background: #d9d9d9;
+}
+.Bar__Tool{
+	margin-top: 32px;
+	margin-left: 96.04px;;
+}
+.Mug__CSS{
+	margin-left: 40.15px;
+	margin-top: 39px;
+	font-family: 'Manjari';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+}
+.T__Shirt{
+	margin-left: 20.15px;
+	margin-top: 39px;
+	font-family: 'Manjari';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+}
+.Logo_Page{
+	margin-left: 143px;
+	margin-top: 13px;
+}
+.Search{
+	background: #ececec;
+	border-color: #ececec;
+	margin-left: 268px;
+	margin-top: 28px;
+	width: 156px;
+	height: 30px;
+}
+.icon_search{
+	margin-top: 33px;
+	margin-left: -28px;
+}
+.cart{
+	margin-left: 19px;
+	margin-top: 38px;
+	font-family: 'Manjari';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+}
+.cart_shippping{
+	margin-left: 6px;
+	margin-top: 22px;
+}
+.banner{
+	width: 1440px;
+	height: 569px;
+	margin-left: -12px;
+}
+.banner_img{
+	width: 1440px;
+	height: 569px;
+	margin-left: 0px;
+	margin-top: 6px;
+}
+.link{
+	text-decoration: none;
+}
+.content_sidebar{
+	font-family: 'Manjari';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+}
