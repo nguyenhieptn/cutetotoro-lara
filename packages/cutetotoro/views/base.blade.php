@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;700&display=swap" rel="stylesheet">
+
+    {{-- long-css --}}
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Cute Totoro</title>
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -96,8 +101,8 @@
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img class="banner_img" src="{{ asset('FrontEnd/Image/bestchoose.png') }}" class="d-block w-100"
-                            alt="...">
+                        <img class="banner_img" src="{{ asset('FrontEnd/Image/bestchoose.png') }}"
+                            class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img class="banner_img" src="{{ asset('FrontEnd/Image/saleup.png') }}" class="d-block w-100"
@@ -123,11 +128,11 @@
     </div>
     <!-- end content -->
 
-	{{-- best-seller --}}
-	<div style="margin-top: 610px">
-		@include('components.best-seller')
-	</div>
-	{{-- end-best-seller --}}
+    {{-- best-seller --}}
+    <div style="margin-top: 610px">
+        @include('components.best-seller')
+    </div>
+    {{-- end-best-seller --}}
 
     <!-- sale product -->
     <div style="margin-top: 100px">
@@ -135,17 +140,17 @@
     </div>
     <!-- end sale product -->
 
-	{{-- about --}}
-	<div>
-		@include('components.about')
-	</div>
-	{{-- end-about --}}
+    {{-- about --}}
+    <div>
+        @include('components.about')
+    </div>
+    {{-- end-about --}}
 
-	{{-- footer --}}
-	<div>
-		@include('components.footer')
-	</div>
-	{{-- end-footer --}}
+    {{-- footer --}}
+    <div>
+        @include('components.footer')
+    </div>
+    {{-- end-footer --}}
 
 </body>
 <footer>
@@ -162,13 +167,13 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
     </script>
 
-	<script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
-	<script>
-		var $grid = $('.grid').isotope({
-			itemSelector: '.grid-item',
-			layoutMode: 'fitRows'
-		});
-	</script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script>
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+        });
+    </script>
 </footer>
 
 </html>
