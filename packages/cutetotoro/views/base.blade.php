@@ -29,66 +29,73 @@
 
     <!-- content -->
     <div class="container-fluid Header__First">
-        <div class="d-flex">
-            <div class="">
-                <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                    aria-controls="offcanvasScrolling">
-                    <img class="Bar__Tool" src="{{ asset('FrontEnd/Image/bar.png') }}" alt="bar_tool">
-                </a>
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title content_sidebar" id="offcanvasScrollingLabel">Totoro Shop</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <p class="content_sidebar">This is a content Slide Bar</p>
+        <div class="container d-flex align-items-center" style="height: 100%; position: relative;">
+            <div class="d-flex " style="justify-content: space-around">
+                <div class="">
+                    <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling">
+                        <img class="Bar__Tool" src="{{ asset('FrontEnd/Image/bar.png') }}" alt="bar_tool">
+                    </a>
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title content_sidebar" id="offcanvasScrollingLabel">Totoro Shop</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p class="content_sidebar">This is a content Slide Bar</p>
+                        </div>
                     </div>
                 </div>
+                <div class="d-flex align-items-center">
+                    <a class="link" href="/mug">
+                        <p class="Mug__CSS">Mug</p>
+                    </a>
+                    <a class="link" href="/t-shirt">
+                        <p class="T__Shirt">T-shirt</p>
+                    </a>
+                    <a class="link" href="/sticker">
+                        <p class="T__Shirt">Sticker</p>
+                    </a>
+                    <a class="link" href="/poster">
+                        <p class="T__Shirt">Poster</p>
+                    </a>
+                    <a class="link" href="/bag">
+                        <p class="T__Shirt">Bag</p>
+                    </a>
+                    <a class="link" href="/orther">
+                        <p class="T__Shirt">Other</p>
+                    </a>
+                </div>
             </div>
-            <div class="d-flex">
-                <a class="link" href="/mug">
-                    <p class="Mug__CSS">Mug</p>
-                </a>
-                <a class="link" href="/t-shirt">
-                    <p class="T__Shirt">T-shirt</p>
-                </a>
-                <a class="link" href="/sticker">
-                    <p class="T__Shirt">Sticker</p>
-                </a>
-                <a class="link" href="/poster">
-                    <p class="T__Shirt">Poster</p>
-                </a>
-                <a class="link" href="/bag">
-                    <p class="T__Shirt">Bag</p>
-                </a>
-                <a class="link" href="/orther">
-                    <p class="T__Shirt">Other</p>
-                </a>
-            </div>
-            <div class="">
+            <div class="logo">
                 <a href="/home-page">
                     <img class="Logo_Page" src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
                 </a>
             </div>
-            <div class="d-flex">
-                <input class="rounded-pill Search" type="text" name="Search" placeholder="Search...">
-                <span>
-                    <a href="/search-items">
-                        <img class="icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
+            <div class="d-flex align-items-center" style="position: absolute; right: 0;">
+                <div class="d-flex align-items-center">
+                    <input class="rounded-pill Search" type="text" name="Search" placeholder="Search...">
+                    <span>
+                        <a href="/search-items">
+                            <img class="icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
+                        </a>
+                    </span>
+                </div>
+                <div>
+                    <p class="cart">Cart/$0.00</p>
+                </div>
+                <div>
+                    <a href="/cart">
+                        <img class="cart_shippping" src="{{ asset('FrontEnd/Image/cart.png') }}">
                     </a>
-                </span>
-            </div>
-            <div>
-                <p class="cart">Cart/$0.00</p>
-            </div>
-            <div>
-                <a href="/cart">
-                    <img class="cart_shippping" src="{{ asset('FrontEnd/Image/cart.png') }}">
-                </a>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="container-fluid" style="width: 1440px">
         <div class="banner">
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
@@ -125,14 +132,15 @@
                 </button>
             </div>
         </div>
+
     </div>
     <!-- end content -->
 
-    {{-- best-seller --}}
-    <div style="margin-top: 610px">
-        @include('components.best-seller')
-    </div>
-    {{-- end-best-seller --}}
+	{{-- best-seller --}}
+	<div style="margin-top: 10px">
+		@include('components.best-seller')
+	</div>
+	{{-- end-best-seller --}}
 
     <!-- sale product -->
     <div style="margin-top: 100px">

@@ -4,21 +4,28 @@ body{
 
 a{
 	text-decoration: none;
+	color: black;
+}
+p{
+	margin: 0;
 }
 
 .Header__First{
-	width: 1440px;
 	height: 80px;
 	background: #d9d9d9;
 }
+
+.logo{
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .Bar__Tool{
-	margin-top: 32px;
-	margin-left: 96.04px;;
+	margin-left: 32px;
 }
 .Mug__CSS{
 	margin-left: 40.15px;
-	margin-top: 39px;
-	font-family: 'Manjari';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
@@ -27,43 +34,33 @@ a{
 }
 .T__Shirt{
 	margin-left: 20.15px;
-	margin-top: 39px;
-	font-family: 'Manjari';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 19px;
 	color: #000000;
 }
-.Logo_Page{
-	margin-left: 143px;
-	margin-top: 13px;
-}
 .Search{
 	background: #ececec;
 	border-color: #ececec;
-	margin-left: 268px;
-	margin-top: 28px;
 	width: 156px;
 	height: 30px;
 }
 .icon_search{
-	margin-top: 33px;
 	margin-left: -28px;
 }
 .cart{
 	margin-left: 19px;
-	margin-top: 38px;
-	font-family: 'Manjari';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 16px;
 	color: #000000;
 }
-.cart_shippping{
-	margin-left: 6px;
-	margin-top: 22px;
+.cart_shippping {
+    margin-left: 6px;
+    margin-top: -10px;
+	margin-right: 32px;
 }
 .banner{
 	width: 1440px;
@@ -80,7 +77,6 @@ a{
 	text-decoration: none;
 }
 .content_sidebar{
-	font-family: 'Manjari';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
