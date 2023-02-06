@@ -23,6 +23,12 @@
 <body>
 
     <!-- content -->
+    <!-- Controller -->
+    <?php
+        use App\Models\Catalog;
+        $Catalog = Catalog::orderBy('id','DESC')->get();
+    ?>
+    <!-- End Controler -->
     <div class="container-fluid Header__First">
         <div class="d-flex">
             <div class="">
@@ -42,25 +48,28 @@
                     </div>
                 </div>
             </div>
+            
             <div class="d-flex">
                 <a class="link" href="/mug">
                     <p class="Mug__CSS">Mug</p>
                 </a>
-                <a class="link" href="/t-shirt">
-                    <p class="T__Shirt">T-shirt</p>
-                </a>
-                <a class="link" href="/sticker">
-                    <p class="T__Shirt">Sticker</p>
-                </a>
-                <a class="link" href="/poster">
-                    <p class="T__Shirt">Poster</p>
-                </a>
-                <a class="link" href="/bag">
-                    <p class="T__Shirt">Bag</p>
-                </a>
-                <a class="link" href="/orther">
-                    <p class="T__Shirt">Other</p>
-                </a>
+                @foreach($Catalog as $key => $data)
+                    <a class="link" href="/{{$data->label}}">
+                        <p class="T__Shirt">{{$data->label}}</p>
+                    </a>
+                    <!-- <a class="link" href="/sticker">
+                        <p class="T__Shirt">Sticker</p>
+                    </a>
+                    <a class="link" href="/poster">
+                        <p class="T__Shirt">Poster</p>
+                    </a>
+                    <a class="link" href="/bag">
+                        <p class="T__Shirt">Bag</p>
+                    </a>
+                    <a class="link" href="/orther">
+                        <p class="T__Shirt">Other</p>
+                    </a> -->
+                @endforeach
             </div>
             <div class="">
                 <a href="/home-page">
