@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer footer-details" style="font-family: 'Manjari';">
     <div class="container footer-top">
         <div class="row">
             <div class="col col-12 col-sm-6 col-lg-4  ft ft-1">
@@ -50,45 +50,47 @@
         </div>
     </div>
     <div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 30px" >
-        <div class="row">
-            <div class="col col-12 col-xs-12 col-xl-6">
-                <div class="ft-bt-left">
-                    <ul style="list-style: none; padding-left: 0; margin-bottom: 0px">
-                        <li><a href="#">wishlist</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">contact us</a></li>
-                        <li><a href="#"> shipping policy</a></li>
-                        <li><a href="#">terms of service</a></li>
-                    </ul>
-                    <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2016 © cutetotoro</p>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-xs-12 col-xl-6">
+                    <div class="ft-bt-left">
+                        <ul style="list-style: none; padding-left: 0; margin-bottom: 0px">
+                            <li><a href="#">wishlist</a></li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">contact us</a></li>
+                            <li><a href="#"> shipping policy</a></li>
+                            <li><a href="#">terms of service</a></li>
+                        </ul>
+                        <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2016 © cutetotoro</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col col-12 col-xs-12 col-xl-6">
-                <div class="ft-bt-right d-flex justify-content-center">
-                    <p style="margin-bottom: 0px">Contact with us:</p>
-                    <ul style="list-style: none; padding-left: 0px; margin-bottom: 0px">
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                        </li>
-                    </ul>
+    
+                <div class="col col-12 col-xs-12 col-xl-6">
+                    <div class="ft-bt-right d-flex justify-content-center">
+                        <p style="margin-bottom: 0px">Contact with us:</p>
+                        <ul style="list-style: none; padding-left: 0px; margin-bottom: 0px">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-brands fa-telegram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
