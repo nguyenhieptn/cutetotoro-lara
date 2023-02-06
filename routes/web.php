@@ -45,4 +45,6 @@ Route::group($conf ?? [], function() {
     require __DIR__.'/auth.php';
 });
 // catalog
-// Route::get('/',[CatalogController::class,'Catalog']);
+Route::get('/product-detail', function(){
+    return view('layouts.sub_view');
+});
