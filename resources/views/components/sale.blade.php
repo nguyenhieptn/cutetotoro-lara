@@ -13,10 +13,10 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-xxl-4 col-7">
+        <div class="col-xxl-4 col-lg-4 col-7">
             <a href="#"><img class="img-sale-main" src="{{ asset('FrontEnd/Image/sale/main.png') }}" alt=""></a>
         </div>
-        <div class="col-xxl-8 col-5">
+        <div class="col-xxl-8 col-lg-8 col-5">
             <div class="grid">
                 <div class="grid-item ">
                     <a href="#" class="d-grid">
