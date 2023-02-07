@@ -171,7 +171,7 @@ p {
     margin-bottom: 20px;
 }
 
-.ft h1, p, span, a {
+.ft h1, .ft p, .ft span, .ft a {
     font-size: 17px;
     /* margin-bottom: 18px; */
     font-weight: 700;
