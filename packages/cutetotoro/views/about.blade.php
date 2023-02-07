@@ -114,7 +114,7 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="about-main">
-                    <img src="{{ asset('FrontEnd/Image/about/m.png') }}" alt="eye">
+                    <img src="{{ asset('FrontEnd/Image/about/m.png') }}" alt="eye" class="about-main-img">
                     <div class="about-main-content">
                         <p>Anime, Studio Ghibli, My Neighbor Totoro, HD wallpaper</p>
                         <div style="margin: 10px 0 20px 0">
@@ -195,9 +195,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
     </script>
-
-    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
-    <script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript"  src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script language="JavaScript" type="text/javascript" >
         var $element = $('.element').isotope({
             itemSelector: '.element-item',
             layoutMode: 'fitRows'

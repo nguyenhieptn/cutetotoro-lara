@@ -252,8 +252,11 @@
 @media screen and (max-width: 1400px) {
     .img-sale-main {
         width: 100%;
+        margin-left: 0;
     }
-
+    .grid{
+        margin-left: 0;
+    }
     .grid-item {
         width: 32%;
     }
@@ -262,7 +265,24 @@
         width: 100%;
     }
 
+    .about-main-img{
+        width: 100%;
+    }
+    .about-side {
+        margin-left: 0;
+    }
 }
+
+@media screen and (max-width: 992px){
+    .img-sale-main{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+}
+
 
 
 
