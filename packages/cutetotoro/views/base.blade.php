@@ -5,27 +5,27 @@
 <body>
     @include('Pages.Body_Menu_Sidebar') {{-- Banner, Sidebar Menu --}}
 	{{-- best-seller --}}
-	<div style="margin-top: 10px">
+	{{-- <div style="margin-top: 10px">
 		@include('components.best-seller')
-	</div>
+	</div> --}}
 	{{-- end-best-seller --}}
 
     <!-- sale product -->
-    <div style="margin-top: 100px">
+    {{-- <div style="margin-top: 100px">
         @include('components.sale')
-    </div>
+    </div> --}}
     <!-- end sale product -->
 
     {{-- about --}}
-    <div>
+    {{-- <div>
         @include('components.about')
-    </div>
+    </div> --}}
     {{-- end-about --}}
 
     {{-- footer --}}
-    <div>
+    {{-- <div>
         @include('components.footer')
-    </div>
+    </div> --}}
     {{-- end-footer --}}
 
 </body>
