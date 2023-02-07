@@ -1,4 +1,4 @@
-@extends('cutetotoro::mug')
+@extends('cutetotoro::base')
 
 @section('aimeos_header')
     <?= $aiheader['locale/select'] ?? '' ?>
