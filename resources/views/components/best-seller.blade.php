@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="{{asset('FrontEnd/Css/best-seller.css')}}">
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 <div class="best_seller">
     <div class="container">
         <div class="row best_seller_top">

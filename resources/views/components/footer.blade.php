@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer footer-details" style="font-family: 'Manjari';">
     <div class="container footer-top">
         <div class="row">
             <div class="col col-12 col-sm-6 col-lg-4  ft ft-1">

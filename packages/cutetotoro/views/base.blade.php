@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;700&display=swap" rel="stylesheet">
+
+    {{-- long-css --}}
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Cute Totoro</title>
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -23,6 +28,12 @@
 <body>
 
     <!-- content -->
+    <!-- Controller -->
+    <?php
+        use App\Models\Catalog;
+        $Catalog = Catalog::orderBy('id','DESC')->get();
+    ?>
+    <!-- End Controler -->
     <div class="container-fluid Header__First">
         <div class="container d-flex align-items-center" style="height: 100%; position: relative;">
             <div class="d-flex " style="justify-content: space-around">
@@ -44,7 +55,12 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <a class="link" href="/mug">
+                    @foreach($Catalog as $key => $data)
+                        <a class="link" href="/{{$data->label}}">
+                            <p class="T__Shirt">{{$data->label}}</p>
+                        </a>
+                     @endforeach
+                    {{-- <a class="link" href="/mug">
                         <p class="Mug__CSS">Mug</p>
                     </a>
                     <a class="link" href="/t-shirt">
@@ -61,9 +77,33 @@
                     </a>
                     <a class="link" href="/orther">
                         <p class="T__Shirt">Other</p>
-                    </a>
+                    </a> --}}
                 </div>
             </div>
+            
+            {{-- <div class="d-flex">
+                <a class="link" href="/mug">
+                    <p class="Mug__CSS">Mug</p>
+                </a>
+                @foreach($Catalog as $key => $data)
+                    <a class="link" href="/{{$data->label}}">
+                        <p class="T__Shirt">{{$data->label}}</p>
+                    </a> --}}
+                    <!-- <a class="link" href="/sticker">
+                        <p class="T__Shirt">Sticker</p>
+                    </a>
+                    <a class="link" href="/poster">
+                        <p class="T__Shirt">Poster</p>
+                    </a>
+                    <a class="link" href="/bag">
+                        <p class="T__Shirt">Bag</p>
+                    </a>
+                    <a class="link" href="/orther">
+                        <p class="T__Shirt">Other</p>
+                    </a> -->
+                {{-- @endforeach
+            </div> --}}
+            <div class="">
             <div class="logo">
                 <a href="/home-page">
                     <img class="Logo_Page" src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
@@ -103,8 +143,8 @@
                             alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img class="banner_img" src="{{ asset('FrontEnd/Image/bestchoose.png') }}" class="d-block w-100"
-                            alt="...">
+                        <img class="banner_img" src="{{ asset('FrontEnd/Image/bestchoose.png') }}"
+                            class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img class="banner_img" src="{{ asset('FrontEnd/Image/saleup.png') }}" class="d-block w-100"
@@ -143,17 +183,17 @@
     </div>
     <!-- end sale product -->
 
-	{{-- about --}}
-	<div>
-		@include('components.about')
-	</div>
-	{{-- end-about --}}
+    {{-- about --}}
+    <div>
+        @include('components.about')
+    </div>
+    {{-- end-about --}}
 
-	{{-- footer --}}
-	<div>
-		@include('components.footer')
-	</div>
-	{{-- end-footer --}}
+    {{-- footer --}}
+    <div>
+        @include('components.footer')
+    </div>
+    {{-- end-footer --}}
 
 </body>
 <footer>
@@ -170,13 +210,13 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
     </script>
 
-	<script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
-	<script>
-		var $grid = $('.grid').isotope({
-			itemSelector: '.grid-item',
-			layoutMode: 'fitRows'
-		});
-	</script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script>
+        var $grid = $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows'
+        });
+    </script>
 </footer>
 
 </html>
