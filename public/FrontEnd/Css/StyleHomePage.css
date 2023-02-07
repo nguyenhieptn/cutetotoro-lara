@@ -1,0 +1,84 @@
+body{
+	font-family: 'Manjari';
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+p{
+	margin: 0;
+}
+
+.Header__First{
+	height: 80px;
+	background: #d9d9d9;
+}
+
+.logo{
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Bar__Tool{
+	margin-left: 32px;
+}
+.Mug__CSS{
+	margin-left: 40.15px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+}
+.T__Shirt{
+	margin-left: 20.15px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+}
+.Search{
+	background: #ececec;
+	border-color: #ececec;
+	width: 156px;
+	height: 30px;
+}
+.icon_search{
+	margin-left: -28px;
+}
+.cart{
+	margin-left: 19px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 16px;
+	color: #000000;
+}
+.cart_shippping {
+    margin-left: 6px;
+    margin-top: -10px;
+	margin-right: 32px;
+}
+.banner{
+	width: 1440px;
+	height: 569px;
+	margin-left: -12px;
+}
+.banner_img{
+	width: 1440px;
+	height: 569px;
+	margin-left: 0px;
+	margin-top: 6px;
+}
+.link{
+	text-decoration: none;
+}
+.content_sidebar{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+}

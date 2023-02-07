@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Catalog\CatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,8 @@ if( $conf['prefix'] )
 
 Route::group($conf ?? [], function() {
     require __DIR__.'/auth.php';
+});
+// catalog
+Route::get('/product-detail', function(){
+    return view('layouts.sub_view');
 });
