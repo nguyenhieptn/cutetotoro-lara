@@ -206,7 +206,8 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
                 <a href="/cart">
                     <p style="
                     position: absolute;
-                    left: -137px;
+    left: -123px;
+    top: -7px;
                 ">Cart/$0.00</p>
                 </a>
             </div>
