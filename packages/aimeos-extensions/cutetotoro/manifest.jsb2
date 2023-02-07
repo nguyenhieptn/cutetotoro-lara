@@ -1,0 +1,22 @@
+{
+	"projectName": "cutetotoro",
+	"licenseText": "proprietary",
+	"pkgs": [{
+		"name": "cutetotoro CSS",
+		"file": "cutetotoro.css",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.css",
+			"path": "themes/admin/jqadm/"
+		}]
+	}, {
+		"name": "cutetotoro JS",
+		"file": "cutetotoro.js",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.js",
+			"path": "themes/admin/jqadm/"
+		}]
+	}],
+	"resources" : []
+}
