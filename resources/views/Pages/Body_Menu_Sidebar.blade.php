@@ -15,11 +15,21 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
                 {{-- Sidebar menu --}}
                 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title content_sidebar" id="offcanvasScrollingLabel">Totoro Shop</h5>
+                        <div class="Logo_sidebar">
+                            <a href="/home-page">
+                                <img src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
+                            </a>
+                        </div>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <p class="content_sidebar">This is a content Slide Bar</p>
+                        <div class="list-group list-group-flush">
+                            @foreach ($Catalog as $key => $data)
+                                <a type="button" class="list-group-item list-group-item-action list-group-item-action list_babel" aria-current="true">
+                                    <p style="margin-top: 25px">{{ $data->label }}</p>
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

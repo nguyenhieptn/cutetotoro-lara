@@ -17,7 +17,7 @@
         {{-- end-best-seller --}}
 
     <!-- sale product -->
-    {{-- <div style="margin-top: 100px">
+    {{-- <div style="margin-top: 1500px">
         @include('components.sale')
     </div> --}}
     <!-- end sale product -->
