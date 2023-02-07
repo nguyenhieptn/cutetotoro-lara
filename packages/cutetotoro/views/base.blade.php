@@ -30,8 +30,8 @@
     <!-- content -->
     <!-- Controller -->
     <?php
-        use App\Models\Catalog;
-        $Catalog = Catalog::orderBy('id','DESC')->get();
+    use App\Models\Catalog;
+    $Catalog = Catalog::orderBy('id', 'DESC')->get();
     ?>
     <!-- End Controler -->
     <div class="container-fluid Header__First">
@@ -55,11 +55,11 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    @foreach($Catalog as $key => $data)
-                        <a class="link" href="/{{$data->label}}">
-                            <p class="T__Shirt">{{$data->label}}</p>
+                    @foreach ($Catalog as $key => $data)
+                        <a class="link" href="/{{ $data->label }}">
+                            <p class="T__Shirt">{{ $data->label }}</p>
                         </a>
-                     @endforeach
+                    @endforeach
                     {{-- <a class="link" href="/mug">
                         <p class="Mug__CSS">Mug</p>
                     </a>
@@ -80,16 +80,16 @@
                     </a> --}}
                 </div>
             </div>
-            
+
             {{-- <div class="d-flex">
                 <a class="link" href="/mug">
                     <p class="Mug__CSS">Mug</p>
                 </a>
-                @foreach($Catalog as $key => $data)
+                @foreach ($Catalog as $key => $data)
                     <a class="link" href="/{{$data->label}}">
                         <p class="T__Shirt">{{$data->label}}</p>
                     </a> --}}
-                    <!-- <a class="link" href="/sticker">
+            <!-- <a class="link" href="/sticker">
                         <p class="T__Shirt">Sticker</p>
                     </a>
                     <a class="link" href="/poster">
@@ -101,99 +101,99 @@
                     <a class="link" href="/orther">
                         <p class="T__Shirt">Other</p>
                     </a> -->
-                {{-- @endforeach
+            {{-- @endforeach
             </div> --}}
             <div class="">
-            <div class="logo">
-                <a href="/home-page">
-                    <img class="Logo_Page" src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
-                </a>
-            </div>
-            <div class="d-flex align-items-center" style="position: absolute; right: 0;">
-                <div class="d-flex align-items-center">
-                    <input class="rounded-pill Search" type="text" name="Search" placeholder="Search...">
-                    <span>
-                        <a href="/search-items">
-                            <img class="icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
-                        </a>
-                    </span>
-                </div>
-                <div>
-                    <p class="cart">Cart/$0.00</p>
-                </div>
-                <div>
-                    <a href="/cart">
-                        <img class="cart_shippping" src="{{ asset('FrontEnd/Image/cart.png') }}">
+                <div class="logo">
+                    <a href="/home-page">
+                        <img class="Logo_Page" src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid" style="width: 1440px">
-        <div class="banner">
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="banner_img" src="{{ asset('FrontEnd/Image/banner1.png') }}" class="d-block w-100"
-                            alt="i love you">
+                <div class="d-flex align-items-center" style="position: absolute; right: 0;">
+                    <div class="d-flex align-items-center">
+                        <input class="rounded-pill Search" type="text" name="Search" placeholder="Search...">
+                        <span>
+                            <a href="/search-items">
+                                <img class="icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
+                            </a>
+                        </span>
                     </div>
-                    <div class="carousel-item">
-                        <img class="banner_img" src="{{ asset('FrontEnd/Image/sale.png') }}" class="d-block w-100"
-                            alt="...">
+                    <div>
+                        <p class="cart">Cart/$0.00</p>
                     </div>
-                    <div class="carousel-item">
-                        <img class="banner_img" src="{{ asset('FrontEnd/Image/bestchoose.png') }}"
-                            class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="banner_img" src="{{ asset('FrontEnd/Image/saleup.png') }}" class="d-block w-100"
-                            alt="...">
+                    <div>
+                        <a href="/cart">
+                            <img class="cart_shippping" src="{{ asset('FrontEnd/Image/cart.png') }}">
+                        </a>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true">
-                        <img src="{{ asset('FrontEnd/Image/back.png') }}">
-                    </span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true">
-                        <img src="{{ asset('FrontEnd/Image/next.png') }}">
-                    </span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
 
-    </div>
-    <!-- end content -->
+        <div class="container-fluid" style="width: 1440px">
+            <div class="banner">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="banner_img" src="{{ asset('FrontEnd/Image/banner1.png') }}"
+                                class="d-block w-100" alt="i love you">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="banner_img" src="{{ asset('FrontEnd/Image/sale.png') }}" class="d-block w-100"
+                                alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="banner_img" src="{{ asset('FrontEnd/Image/bestchoose.png') }}"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="banner_img" src="{{ asset('FrontEnd/Image/saleup.png') }}"
+                                class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">
+                            <img src="{{ asset('FrontEnd/Image/back.png') }}">
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <img src="{{ asset('FrontEnd/Image/next.png') }}">
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
 
-	{{-- best-seller --}}
-	<div style="margin-top: 10px">
-		@include('components.best-seller')
-	</div>
-	{{-- end-best-seller --}}
+        </div>
+        <!-- end content -->
 
-    <!-- sale product -->
-    <div style="margin-top: 100px">
-        @include('components.sale')
-    </div>
-    <!-- end sale product -->
+        {{-- best-seller --}}
+        <div style="margin-top: 10px">
+            @include('components.best-seller')
+        </div>
+        {{-- end-best-seller --}}
 
-    {{-- about --}}
-    <div>
-        @include('components.about')
-    </div>
-    {{-- end-about --}}
+        <!-- sale product -->
+        <div style="margin-top: 100px">
+            @include('components.sale')
+        </div>
+        <!-- end sale product -->
 
-    {{-- footer --}}
-    <div>
-        @include('components.footer')
-    </div>
-    {{-- end-footer --}}
+        {{-- about --}}
+        <div>
+            @include('components.about')
+        </div>
+        {{-- end-about --}}
+
+        {{-- footer --}}
+        <div>
+            @include('components.footer')
+        </div>
+        {{-- end-footer --}}
 
 </body>
 <footer>
@@ -210,11 +210,28 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous">
     </script>
 
-    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
-    <script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script language="JavaScript" type="text/javascript">
         var $grid = $('.grid').isotope({
             itemSelector: '.grid-item',
             layoutMode: 'fitRows'
+        });
+        $('#filters').on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            // use filterFn if matches value
+            // filterValue = filterFns[filterValue] || filterValue;
+            $grid.isotope({
+                filter: filterValue
+            });
+        });
+        $('.button-group').each(function(i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function() {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
         });
     </script>
 </footer>
