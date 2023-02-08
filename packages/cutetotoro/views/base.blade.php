@@ -5,34 +5,34 @@
 <body>
     @include('Pages.Body_Menu_Sidebar') {{-- Banner, Sidebar Menu --}}
 	{{-- best-seller --}}
-	<div style="margin-top: 10px">
+	{{-- <div style="margin-top: 10px">
 		@include('components.best-seller')
-	</div>
+	</div> --}}
 	{{-- end-best-seller --}}
 
         {{-- best-seller --}}
-        <div style="margin-top: 10px">
+        {{-- <div style="margin-top: 10px">
             @include('components.best-seller')
-        </div>
+        </div> --}}
         {{-- end-best-seller --}}
 
-        <!-- sale product -->
-        <div style="margin-top: 100px">
-            @include('components.sale')
-        </div>
-        <!-- end sale product -->
+    <!-- sale product -->
+    {{-- <div style="margin-top: 1500px">
+        @include('components.sale')
+    </div> --}}
+    <!-- end sale product -->
 
-        {{-- about --}}
-        <div>
-            @include('components.about')
-        </div>
-        {{-- end-about --}}
+    {{-- about --}}
+    {{-- <div>
+        @include('components.about')
+    </div> --}}
+    {{-- end-about --}}
 
-        {{-- footer --}}
-        <div>
-            @include('components.footer')
-        </div>
-        {{-- end-footer --}}
+    {{-- footer --}}
+    {{-- <div>
+        @include('components.footer')
+    </div> --}}
+    {{-- end-footer --}}
 
 </body>
 <footer>
