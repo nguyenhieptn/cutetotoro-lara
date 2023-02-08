@@ -9,7 +9,7 @@
                <div class="row">
                 <div class="col col-12 col-xl-6 align-item-center d-flex">
                     <div class="about-l justify-content-center align-item-center d-flex" style="flex-direction: column">
-                        <h1 style="text-align: center;">
+                        <h1 style="text-align: center; font-family: 'Manjari';">
                             ABOUT US
                         </h1>
                         <p>

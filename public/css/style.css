@@ -1,22 +1,71 @@
+* {
+    font-family: 'Manjari';
+}
 
-.list-category ul li{
+.list-category ul li {
     list-style: none;
     text-transform: uppercase;
     margin: 0 10px;
     padding: 20px 10px;
 }
 
-.list-category ul li a, .sale-price{
+.button-group button{
+    font-size: 20px;
+    font-family: 'Manjari';
+}
+
+.button {
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding: 20px 0px;
+    border: none;
+    background-color: #fff;
+    height: 120px;
+    width: 80px;
+    font-size: 14px;
+}
+
+.button:active,
+.button.is-checked {
+    background-image: url("../FrontEnd/Image/mug.png");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    animation: fadeIn 1s;
+    background-size: contain;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.button-group:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.button-group .button {
+    float: left;
+}
+
+.button,
+.sale-price {
     text-decoration: none;
     color: black;
     font-weight: 700;
 }
 
-.list-category ul li:first-child{
+.list-category ul li:first-child {
     position: relative;
 }
 
-.list-category ul li:first-child img{
+.list-category ul li:first-child img {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -25,16 +74,18 @@
     z-index: -1;
 }
 
-.grid, .img-sale-main{
+.grid,
+.img-sale-main {
     margin-left: 50px;
 }
+
 .grid-item {
     position: relative;
     float: left;
     margin-left: 8px;
 }
 
-.sale-price{
+.sale-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,14 +96,14 @@
     margin-bottom: 10px;
 }
 
-.sale-price span:first-child{
+.sale-price span:first-child {
     text-decoration: line-through;
 }
 
 /* ---------------------------------------------mug  */
 
-.mug-link{
-    width: 79px;
+.mug-link {
+    width: 107px;
     height: 14px;
     margin-top: 29px;
     font-weight: 700;
@@ -61,13 +112,13 @@
     margin-left: 10px;
 }
 
-.mug-banner{
+.mug-banner {
     margin-top: 17px;
     margin-bottom: 20px;
     width: 1295px;
 }
 
-.mug-btn{
+.mug-btn {
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
@@ -77,50 +128,50 @@
     padding: 11px 12px 5px 17px;
     background-color: white;
     margin-right: 9px;
-    
+
 }
 
-.mug-btn img{
+.mug-btn img {
     margin-left: 17px;
 }
 
-.element-item{
+.element-item {
     position: relative;
     float: left;
     margin-right: 16px;
 }
 
-.mug-product{
+.mug-product {
     width: 246px;
     position: relative;
     margin-bottom: 39px;
 }
 
-.mug-product span{
+.mug-product span {
     font-size: 12px;
 }
 
-.mug-layer{
+.mug-layer {
     position: absolute;
     top: -5px;
 }
 
-.mug-sticker{
+.mug-sticker {
     position: absolute;
     left: 13px;
     bottom: 113px;
 }
 
-.mug-sticker img:first-child{
+.mug-sticker img:first-child {
     margin-top: 3px;
     margin-right: 9px;
 }
 
-.mug-viewed{
+.mug-viewed {
     margin-bottom: 64px;
 }
 
-.mug-viewed p{
+.mug-viewed p {
     width: 199px;
     height: 27px;
     font-weight: 700;
@@ -131,7 +182,7 @@
     text-transform: uppercase;
 }
 
-.viewed-product{
+.viewed-product {
     height: 320px;
     background-color: #D9D9D9;
     justify-content: center;
@@ -139,13 +190,13 @@
     position: relative;
 }
 
-.viewed-product img{
+.viewed-product img {
     width: 232px;
     height: 239px;
     margin: 0 10px;
 }
 
-.viewed-product span{
+.viewed-product span {
     position: absolute;
     font-weight: 700;
     font-size: 12px;
@@ -154,3 +205,115 @@
     bottom: 20px;
 }
 
+/* -------------------------------------------about  */
+
+.about-news {
+    margin-top: 29px;
+    margin-bottom: 36px;
+}
+
+.about-news p {
+    width: 352px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 44px;
+    letter-spacing: 0.015em;
+    margin-left: 13px;
+    margin-top: 4px;
+}
+
+.about-news img {
+    width: 32px;
+    height: 32px;
+}
+
+.about-main-content {
+    margin-top: 37px;
+    margin-bottom: 50px;
+}
+
+.about-main-content,
+.about-main-content p,
+.about-side {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: justify;
+    font-family: 'Questrial';
+}
+
+.about-main-content p:first-child {
+    font-size: 25px;
+    line-height: 31px;
+}
+
+.about-main-content img {
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.about-side {
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+
+.about-side-content {
+    margin-left: 12px;
+}
+
+.about-side-content div {
+    margin-top: 24px;
+}
+
+.about-side-content div img {
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width: 1400px) {
+    .img-sale-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .grid {
+        margin-left: 0;
+    }
+
+    .grid-item {
+        width: 32%;
+    }
+
+    .grid-item img {
+        width: 100%;
+    }
+
+    .about-main-img {
+        width: 100%;
+    }
+
+    .about-side {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .img-sale-main {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {}
+
+
+@media screen and (max-width: 576px) {
+    .button {
+        height: 105px;
+        width: 70px;
+        margin: 0;
+        padding: 0;
+    }
+    .grid{
+        margin-left: 50px;
+    }
+}

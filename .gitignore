@@ -1,7 +1,11 @@
 /node_modules
 /public/hot
 /public/storage
+<<<<<<< HEAD
 /public/vendor
+=======
+#/public/vendor
+>>>>>>> abac977462a62469662916e79b8c7f2721493907
 /storage/*.key
 /vendor
 .env

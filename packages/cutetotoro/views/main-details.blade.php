@@ -187,8 +187,14 @@
                                 </ul>
                             </li>
                             <li style="margin-top: 30px">
+<<<<<<< HEAD
                                 <button class="detail-btn">
                                     <p>Add to cart</p>
+=======
+                                <button
+                                    style="border: none; width: 100%; border-radius: 20px; padding: 10px 0 5px 0; background-color: #363636">
+                                    <p style="display: flex; justify-content: center;color: white;">Add to cart</p>
+>>>>>>> abac977462a62469662916e79b8c7f2721493907
                                 </button>
                             </li>
                             <li style="margin-top: 35px">
