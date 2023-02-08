@@ -11,6 +11,15 @@
 
 }
 
+.view-all {
+    position: absolute;
+    top: -10%;
+    right: 0;
+    background-color: transparent;
+    margin-right: 10px;
+    border: none;
+}
+
 .best_seller_bottom span,
 p {
     font-family: 'Manjari';
@@ -25,9 +34,6 @@ p {
 
 }
 
-.best_seller_top-image {
-    max-width: 400px;
-}
 
 .best_seller_top-image img {
     width: 100%;
@@ -64,6 +70,115 @@ p {
         line-height: 20px;
         letter-spacing: 15px;
     }
+
+    .view-all {
+        top: -4%;
+    }
+
+    .view-all p {
+        font-size: 20px;
+    }
+
+    .best_seller_bottom span,
+    p {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 35px;
+    }
+
+    .best_seller-price {
+        margin-top: 30px;
+        display: flex
+    }
+
+    .best_seller-price p:first-child {
+        font-size: 23px;
+    }
+    
+    .best_seller-price p:last-child {
+        padding-left: 28px;
+        font-size: 28px;
+    }
+
+    .about p {
+        line-height: 35px;
+        padding: 0px;
+        font-size: 23px;
+    }
+
+    .about-l >h1{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .about-img-top p {
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
+        top: 33%;
+        left: 10%;
+        text-align: center;
+    }
+
+    .about-img{
+        margin-top: 20px;
+    }
+
+    .footer {
+        font-weight: 700;
+        font-size: 23px;
+        font-family: 'Manjari';
+    }
+
+    .ft-top  h1,span,a {
+        font-size: 23px;
+        /* margin-bottom: 18px; */
+        font-weight: 700;
+        font-family: 'Manjari';
+    }
+
+    .ft-top {
+        margin-bottom: 35px;
+    }
+
+    .ft-top  h1{
+        text-align: center;
+    }
+
+    .ft-bt-left >ul li{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+    /* half-width cells for larger devices */
+    .carousel-cell {
+        width: 50%;
+    }
+
+    .best_seller_top-image {
+        max-width: 400px;
+    }
+
+    .view-all {
+        top: -6%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+
+    .about-img-top p {
+        top: 35%;
+        left: 15%;
+    }
+
+    .about-l h1 {
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -72,31 +187,136 @@ p {
     .carousel-cell {
         width: 50%;
     }
+
+    .best_seller_top-image {
+        max-width: 500px;
+    }
+
+    .ft-bt-left >ul li{
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 920px) {
 
-    /* half-width cells for larger devices */
     .carousel-cell {
         width: 34%;
+    }
+
+    .best_seller_bottom span,
+    p {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .best_seller-price p:first-child {
+        font-size: 20px;
+    }
+    
+    .best_seller-price p:last-child {
+        padding-left: 28px;
+        font-size: 24px;
+    }
+
+    .about-img-top p {
+        top: 42%;
+        left: 18%;
+        font-size: 35px;
+    }
+
+    .about-img-bottom p{
+        font-size: 20px;
+    }
+
+
+    .ft-top  h1,span,a {
+        font-size: 20px;
+        /* margin-bottom: 18px; */
+        font-weight: 700;
+        font-family: 'Manjari';
+    }
+
+    .ft-bt-left >ul li{
+        display: unset;
+    }
+
+    .ft-bt-left ul li {
+        padding: 0 10px;
+        text-decoration: underline;
     }
 }
 
 @media screen and (min-width: 1200px) {
 
-    /* half-width cells for larger devices */
     .carousel-cell {
         width: 25%;
     }
+
+    .about-img-top p {
+        top: 45%;
+        left: 29%;
+        font-size: 40px;
+    }
+
+    .ft-bt-left ul li {
+        padding: 0px;
+    }
+
+    .ft-top  h1{
+        text-align: left;
+    }
+
 }
 
 @media screen and (min-width: 1400px) {
 
-    /* half-width cells for larger devices */
     .carousel-cell {
         width: 20%;
     }
+
+    .about-img-top p {
+        top: 47%;
+        left: 28%;
+        font-size: 50px;
+    }
+
 }
+
+@media screen and (min-width: 1400px) {
+
+    .best_seller-price p:first-child {
+        font-size: 17px;
+    }
+    
+    .best_seller-price p:last-child {
+        padding-left: 28px;
+        font-size: 22px;
+    }
+
+    .about-img-top p {
+        top: 48%;
+        left: 21%;
+        font-size: 70px;
+    }
+
+    .ft-contact li {
+        padding-bottom: 0px;
+    }
+
+}
+
+@media screen and (min-width: 1700px) {
+    .ft-contact li {
+        padding-bottom: 15px;
+    }
+}
+
+
+/* -----------------------end-responsive--------------------------- */
 
 .flickity-page-dots {
     display: none;
@@ -104,10 +324,6 @@ p {
 
 .best_seller_bottom {
     margin-top: 10px;
-}
-
-.best_seller_bottom span {
-    font-size: 14px;
 }
 
 .best_seller-price {
@@ -119,37 +335,10 @@ p {
     margin-bottom: 0;
 }
 
-.best_seller-price p:first-child {
-    font-size: 13px;
-}
-
-.best_seller-price p:last-child {
-    padding-left: 15px;
-}
-
 /* About */
 .about {
     margin-top: 60px;
     margin-bottom: 80px;
-}
-
-.about p {
-    line-height: 25px;
-    padding: 0 50px;
-    font-size: 17px;
-}
-
-.about-img-top p {
-    position: absolute;
-    font-style: normal;
-    font-weight: 700;
-    /* font-size: 65px; */
-    /* line-height: 65px; */
-    /* letter-spacing: 40px; */
-    color: #000000;
-    top: 40%;
-    left: 7%;
-    text-align: center;
 }
 
 .about-img {
@@ -162,20 +351,13 @@ p {
 }
 
 /* footer */
-.footer {
-    font-weight: 700;
-    font-size: 15px;
-}
 
 .ft h1 {
     margin-bottom: 20px;
 }
 
-.ft h1, .ft p, .ft span, .ft a {
+.ft >p{
     font-size: 17px;
-    /* margin-bottom: 18px; */
-    font-weight: 700;
-    font-family: 'Manjari';
 }
 
 .ft-contact {
@@ -183,9 +365,6 @@ p {
     list-style: none;
 }
 
-.ft-contact li {
-    padding-bottom: 15px;
-}
 
 .ft-contact li p {
     margin-bottom: 0;
@@ -203,17 +382,11 @@ p {
     line-height: 35px;
 }
 
-.ft-top {}
-
 .ft-bt-left ul {
     display: flex;
     justify-content: center;
 }
 
-.ft-bt-left ul li {
-    padding: 0 5px;
-    text-decoration: underline;
-}
 
 .ft-bt-left ul li a {
     color: black;

@@ -1,6 +1,18 @@
 {
     "name": "aimeos/aimeos",
     "description": "Aimeos ecommerce and shop system",
+<<<<<<< HEAD
+    "keywords": ["aimeos", "ecommerce", "shop", "laravel", "distribution"],
+    "license": "MIT",
+    "type": "project",
+    "repositories": [{
+        "type": "composer",
+        "url": "https://packages.aimeos.org/aimeoscom"
+    }, {
+        "type": "path",
+        "url": "packages/*"
+    }],
+=======
     "keywords": [
         "aimeos",
         "ecommerce",
@@ -23,12 +35,16 @@
             }
         }
     ],
+>>>>>>> abac977462a62469662916e79b8c7f2721493907
     "require": {
         "php": "^8.0.10",
         "composer-runtime-api": "^2.1",
         "aimeos-themes/cutetotoro": "dev-master",
         "aimeos/aimeos-laravel": "^2022.10",
+<<<<<<< HEAD
+=======
         "doctrine/dbal": "^3.6",
+>>>>>>> abac977462a62469662916e79b8c7f2721493907
         "guzzlehttp/guzzle": "^7.2",
         "laravel/breeze": "^1.9",
         "laravel/framework": "^9.2",

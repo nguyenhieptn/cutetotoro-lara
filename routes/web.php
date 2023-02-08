@@ -18,7 +18,6 @@ Route::get('/ready', function() {
     return 'OK';
 });
 
-
 $params = [];
 $conf = ['prefix' => '', 'where' => []];
 

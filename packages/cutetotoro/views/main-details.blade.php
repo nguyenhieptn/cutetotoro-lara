@@ -30,7 +30,7 @@
 <body>
 
     <!-- header -->
-    <div class="container-fluid Header__First">
+    {{-- <div class="container-fluid Header__First">
         <div class="container d-flex align-items-center" style="height: 100%; position: relative;">
             <div class="d-flex " style="justify-content: space-around">
                 <div class="">
@@ -95,14 +95,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- end header -->
 
     {{-- details-product --}}
     <div class="detail-content" style="margin-top: 80px">
         <div class="container">
             <div class="row mb-5">
-                <div class=" col col-12 breadcrumb">
+                <div class=" col col-12 breadcrumb-main-details">
                     <p class="d-flex">
                         <a href="#">Home </a>
                         <span style="margin: 0 10px;">/</span> Mug
@@ -112,32 +112,32 @@
 
             <div class="row">
                 <div class="col col-12 col-xl-8">
-                    <div class="row">
-                        <div class="col col-12 col-xl-2">
+                    <div class="row d-flex">
+                        <div class="col col-12 col-xl-2 detail-son">
                             <div class="row main-detail-sb">
                                 <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr" style="min-width: 110px; height: 110px">
+                                    <div class="detail-sb-wr">
                                         <img style="width: 100%; height: 100%"
                                             src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
                                     </div>
                                 </div>
 
                                 <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr" style="min-width: 110px; height: 110px">
+                                    <div class="detail-sb-wr">
                                         <img style="width: 100%; height: 100%"
                                             src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
                                     </div>
                                 </div>
 
                                 <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr" style="min-width: 110px; height: 110px">
+                                    <div class="detail-sb-wr">
                                         <img style="width: 100%; height: 100%"
                                             src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
                                     </div>
                                 </div>
 
                                 <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr" style="min-width: 110px; height: 110px">
+                                    <div class="detail-sb-wr">
                                         <img style="width: 100%; height: 100%"
                                             src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
                                     </div>
@@ -145,7 +145,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-12 col-xl-10">
+                        <div class="col col-12 col-xl-10 detail-dad">
                             <div class="main-detail-image" style="width: 100%">
                                 <img style="width: 100% ; height: 100%"
                                     src="{{ asset('FrontEnd/Image/hehehe.png') }}" alt="">
@@ -187,9 +187,14 @@
                                 </ul>
                             </li>
                             <li style="margin-top: 30px">
+<<<<<<< HEAD
+                                <button class="detail-btn">
+                                    <p>Add to cart</p>
+=======
                                 <button
                                     style="border: none; width: 100%; border-radius: 20px; padding: 10px 0 5px 0; background-color: #363636">
                                     <p style="display: flex; justify-content: center;color: white;">Add to cart</p>
+>>>>>>> abac977462a62469662916e79b8c7f2721493907
                                 </button>
                             </li>
                             <li style="margin-top: 35px">

@@ -95,6 +95,11 @@
                 </div>
             </div>
         </div>
-        <button style="position: absolute; top: -10%; right: 0; background-color: transparent; margin-right: 10px; border: none "><p>View all</p></button>
+        <button class="view-all"><p>View all</p></button>
     </div>
 </section>
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

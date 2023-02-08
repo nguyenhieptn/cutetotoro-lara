@@ -3,11 +3,13 @@
 <html>
     @include('Pages.Header') {{-- Header --}}
 <body>
-    @include('Pages.Body_Menu_Sidebar') 
+    <div>
+        @include('Pages.Body_Menu_Sidebar') 
+    </div>
 	{{-- best-seller --}}
-	{{-- <div style="margin-top: 10px">
+	<div style="margin-top: 100px">
 		@include('components.best-seller')
-	</div> --}}
+	</div>
 	{{-- end-best-seller --}}
 
         {{-- best-seller --}}
@@ -17,21 +19,21 @@
         {{-- end-best-seller --}}
 
     <!-- sale product -->
-    <div style="margin-top: 1500px">
+    <div style="margin-top: 70px">
         @include('components.sale')
     </div>
     <!-- end sale product -->
 
     {{-- about --}}
-    {{-- <div>
+    <div>
         @include('components.about')
-    </div> --}}
+    </div>
     {{-- end-about --}}
 
     {{-- footer --}}
-    {{-- <div>
+    <div>
         @include('components.footer')
-    </div> --}}
+    </div>
     {{-- end-footer --}}
 
 </body>
