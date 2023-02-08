@@ -17,7 +17,7 @@
         </div>
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
-                <div class="grid-item mug">
+                <div class="grid-item grid-item-cus mug">
                     <a href="#" class="d-grid">
                         <img src="{{ asset('FrontEnd/Image/sale/1.png') }}" alt="">
                         <div class="sale-price">
@@ -26,7 +26,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="grid-item mug">
+                <div class="grid-item grid-item-cus mug">
                     <a href="#" class="d-grid">
                         <img src="{{ asset('FrontEnd/Image/sale/2.png') }}" alt="">
                         <div class="sale-price">
@@ -35,7 +35,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="grid-item poster">
+                <div class="grid-item grid-item-cus poster">
                     <a href="#" class="d-grid">
                         <img src="{{ asset('FrontEnd/Image/sale/3.png') }}" alt="">
                         <div class="sale-price">
@@ -44,7 +44,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="grid-item poster">
+                <div class="grid-item grid-item-cus poster">
                     <a href="#" class="d-grid">
                         <img src="{{ asset('FrontEnd/Image/sale/4.png') }}" alt="">
                         <div class="sale-price">
@@ -53,7 +53,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="grid-item poster">
+                <div class="grid-item grid-item-cus poster">
                     <a href="#" class="d-grid">
                         <img src="{{ asset('FrontEnd/Image/sale/5.png') }}" alt="">
                         <div class="sale-price">
@@ -62,7 +62,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="grid-item poster">
+                <div class="grid-item grid-item-cus poster">
                     <a href="#" class="d-grid">
                         <img src="{{ asset('FrontEnd/Image/sale/6.png') }}" alt="">
                         <div class="sale-price">

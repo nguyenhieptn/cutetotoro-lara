@@ -58,21 +58,29 @@ p {
     padding: 0 10px;
 }
 
+.main-carousel .flickity-prev-next-button {
+    top: 27%;
+}
+
 @media screen and (min-width: 0px) {
 
     /* half-width cells for larger devices */
     .carousel-cell {
         width: 100%;
+        padding: 0 25px;
+    }
+
+    .main-carousel .flickity-prev-next-button {
+        top: 34%;
     }
 
     .about-img-top p {
-        font-size: 20px;
-        line-height: 20px;
-        letter-spacing: 15px;
+      display: none;
     }
 
     .view-all {
-        top: -4%;
+        top: -5%;
+        right: 2%;
     }
 
     .view-all p {
@@ -113,15 +121,6 @@ p {
         font-weight: 700;
     }
     
-    .about-img-top p {
-        position: absolute;
-        font-style: normal;
-        font-weight: 700;
-        color: #000000;
-        top: 33%;
-        left: 10%;
-        text-align: center;
-    }
 
     .about-img{
         margin-top: 20px;
@@ -158,6 +157,26 @@ p {
     /* half-width cells for larger devices */
     .carousel-cell {
         width: 50%;
+        padding: 0 10px;
+    }
+
+    .view-all {
+        right: 0;
+    }
+
+    .about-img-top p {
+        display: unset;
+        font-size: 20px;
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
+        top: 41%;
+        left: 12%;
+        text-align: center;
+        line-height: 20px;
+        letter-spacing: 15px;
+        margin-bottom: 0px;
     }
 
     .best_seller_top-image {
@@ -172,8 +191,8 @@ p {
 @media screen and (min-width: 576px) {
 
     .about-img-top p {
-        top: 35%;
-        left: 15%;
+        top: 42%;
+        left: 16%;
     }
 
     .about-l h1 {
@@ -186,6 +205,13 @@ p {
     /* half-width cells for larger devices */
     .carousel-cell {
         width: 50%;
+    }
+
+    .about-img-top p {
+        top: 48%;
+        left: 16%;
+        font-size: 29px;
+        letter-spacing: 20px;
     }
 
     .best_seller_top-image {
@@ -223,8 +249,8 @@ p {
     }
 
     .about-img-top p {
-        top: 42%;
-        left: 18%;
+        top: 47%;
+        left: 14%;
         font-size: 35px;
     }
 
@@ -257,9 +283,10 @@ p {
     }
 
     .about-img-top p {
-        top: 45%;
-        left: 29%;
-        font-size: 40px;
+        top: 52%;
+        left: 16%;
+        font-size: 50px;
+        letter-spacing: 30px;
     }
 
     .ft-bt-left ul li {
@@ -272,21 +299,13 @@ p {
 
 }
 
+
+
 @media screen and (min-width: 1400px) {
 
     .carousel-cell {
         width: 20%;
     }
-
-    .about-img-top p {
-        top: 47%;
-        left: 28%;
-        font-size: 50px;
-    }
-
-}
-
-@media screen and (min-width: 1400px) {
 
     .best_seller-price p:first-child {
         font-size: 17px;
@@ -298,9 +317,10 @@ p {
     }
 
     .about-img-top p {
-        top: 48%;
-        left: 21%;
+        top: 55%;
+        left: 10%;
         font-size: 70px;
+        letter-spacing: 40px;
     }
 
     .ft-contact li {
