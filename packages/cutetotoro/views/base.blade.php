@@ -3,7 +3,7 @@
 <html>
     @include('Pages.Header') {{-- Header --}}
 <body>
-    @include('Pages.Body_Menu_Sidebar') {{-- Banner, Sidebar Menu --}}
+    @include('Pages.Body_Menu_Sidebar') 
 	{{-- best-seller --}}
 	{{-- <div style="margin-top: 10px">
 		@include('components.best-seller')
@@ -17,9 +17,9 @@
         {{-- end-best-seller --}}
 
     <!-- sale product -->
-    {{-- <div style="margin-top: 1500px">
+    <div style="margin-top: 1500px">
         @include('components.sale')
-    </div> --}}
+    </div>
     <!-- end sale product -->
 
     {{-- about --}}

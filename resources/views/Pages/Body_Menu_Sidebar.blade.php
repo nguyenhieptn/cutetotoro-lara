@@ -6,7 +6,7 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
 ?>
 <!-- End Controler -->
 <div class="container-fluid Header_Style">
-    <div class="container d-flex">
+    <div class="container d-flex container1">
         <div class="d-flex ">
             <div>
                 <a class="Bar_Menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
