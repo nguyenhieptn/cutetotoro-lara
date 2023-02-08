@@ -256,23 +256,23 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
         </div>
     </div>
 </div>
-<div class="container-fluid p-0">
-    <div class="banner_mobile">
+<div>
+    <div>
         <div id="carouselExample2" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/banner1.png') }}" alt="i love you">
+                    <img src="{{ asset('FrontEnd/Image/banner1.png') }}" alt="i love you">
                 </div>
                 <div class="carousel-item">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/sale.png') }}"
+                    <img src="{{ asset('FrontEnd/Image/sale.png') }}"
                         alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/bestchoose.png') }}"
+                    <img src="{{ asset('FrontEnd/Image/bestchoose.png') }}"
                         alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/saleup.png') }}"
+                    <img src="{{ asset('FrontEnd/Image/saleup.png') }}"
                         alt="...">
                 </div>
             </div>
