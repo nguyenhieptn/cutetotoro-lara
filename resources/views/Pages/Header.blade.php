@@ -13,5 +13,4 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Cute Totoro</title>
-    {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
 </head>

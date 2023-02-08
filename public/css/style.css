@@ -1,3 +1,7 @@
+* {
+    font-family: 'Manjari';
+}
+
 .list-category ul li {
     list-style: none;
     text-transform: uppercase;
@@ -11,8 +15,8 @@
     padding: 20px 10px;
     border: none;
     background-color: #fff;
-    height: 90px;
-    width: 85px;
+    height: 120px;
+    width: 80px;
     font-size: 14px;
 }
 
@@ -21,6 +25,18 @@
     background-image: url("../FrontEnd/Image/mug.png");
     background-position: center 0;
     background-repeat: no-repeat;
+    animation: fadeIn 1s;
+    background-size: contain;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .button-group:after {
@@ -254,9 +270,11 @@
         width: 100%;
         margin-left: 0;
     }
-    .grid{
+
+    .grid {
         margin-left: 0;
     }
+
     .grid-item {
         width: 32%;
     }
@@ -265,24 +283,32 @@
         width: 100%;
     }
 
-    .about-main-img{
+    .about-main-img {
         width: 100%;
     }
+
     .about-side {
         margin-left: 0;
     }
 }
 
-@media screen and (max-width: 992px){
-    .img-sale-main{
-        margin-bottom: 30px;
+@media screen and (max-width: 992px) {
+    .img-sale-main {
+        display: none;
     }
 }
 
-@media screen and (max-width: 768px){
-    
+@media screen and (max-width: 768px) {}
+
+
+@media screen and (max-width: 576px) {
+    .button {
+        height: 105px;
+        width: 70px;
+        margin: 0;
+        padding: 0;
+    }
+    .grid{
+        margin-left: 50px;
+    }
 }
-
-
-
-
