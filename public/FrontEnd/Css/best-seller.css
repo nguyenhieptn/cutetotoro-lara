@@ -58,6 +58,10 @@ p {
     padding: 0 10px;
 }
 
+.main-carousel .flickity-prev-next-button {
+    top: 27%;
+}
+
 @media screen and (min-width: 0px) {
 
     /* half-width cells for larger devices */
