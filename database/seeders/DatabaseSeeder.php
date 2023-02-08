@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(TruncateAllTables::class);
         $data = [
             [
                 'siteid' => '1',
@@ -25,7 +24,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'mug',
                 'label' => 'Mug',
                 'url' => 'mug',
-                'config' => '',
+                'config' => '{}',
                 'nleft' => 1,
                 'nright' => 1,
                 'target' => 'mug',
@@ -41,7 +40,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'tshrit',
                 'label' => 'T-shrit',
                 'url' => 'tshrit',
-                'config' => '',
+                'config' => '{}',
                 'nleft' => 1,
                 'nright' => 1,
                 'target' => 'tshrit',
@@ -57,7 +56,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'sticker',
                 'label' => 'Sticker',
                 'url' => 'sticker',
-                'config' => '',
+                'config' => '{}',
                 'nleft' => 1,
                 'nright' => 1,
                 'target' => 'sticker',
@@ -73,7 +72,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'poster',
                 'label' => 'Poster',
                 'url' => 'poster',
-                'config' => '',
+                'config' => '{}',
                 'nleft' => 1,
                 'nright' => 1,
                 'target' => 'poster',
@@ -89,7 +88,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'bag',
                 'label' => 'Bag',
                 'url' => 'bag',
-                'config' => '',
+                'config' => '{}',
                 'nleft' => 1,
                 'nright' => 1,
                 'target' => 'bag',
@@ -105,7 +104,7 @@ class DatabaseSeeder extends Seeder
                 'code' => 'orther',
                 'label' => 'Orther',
                 'url' => 'orther',
-                'config' => '',
+                'config' => '{}',
                 'nleft' => 1,
                 'nright' => 1,
                 'target' => 'orther',

@@ -25,7 +25,7 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
                     <div class="offcanvas-body">
                         <div class="list-group list-group-flush">
                             @foreach ($Catalog as $key => $data)
-                                <a type="button" class="list-group-item list-group-item-action list-group-item-action list_babel" aria-current="true">
+                                <a href="/{{$data->url}}" type="button" class="list-group-item list-group-item-action list-group-item-action list_babel" aria-current="true">
                                     <p style="margin-top: 25px">{{ $data->label }}</p>
                                 </a>
                             @endforeach
@@ -199,11 +199,29 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
         {{-- sidebar menu --}}
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling2" aria-labelledby="offcanvasScrollingLabe">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title content_sidebar" id="offcanvasScrollingLabel">Totoro Shop</h5>
+                <div class="Logo_sidebar">
+                    <a href="/home-page">
+                        <img src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
+                    </a>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <p class="content_sidebar">This is a content Slide Bar</p>
+                <div class="list-group list-group-flush">
+                    <div class="d-flex" style="justify-content: center;">
+                        <input type="text" name="Search" placeholder="Search..." style="border-radius: 12px; width: -webkit-fill-available; border-radius: 12px; width: -webkit-fill-available; border: none; height: 40px; font-family: 'Manjari'; font-style: normal; font-weight: 700; font-size: 16px; line-height: 19px; color: #000000; outline: none">
+                        <span>
+                            <a href="/search-items" style="position: absolute; right: 23px; top: 111px;">
+                                <img class="" src="{{ asset('FrontEnd/Image/search.png') }}">
+                            </a>
+                        </span>
+                    </div>
+                    @foreach ($Catalog as $key => $data)
+                        <a href="/{{$data->url}}" type="button" class="list-group-item list-group-item-action list-group-item-action list_babel" aria-current="true">
+                            <p style="margin-top: 25px">{{ $data->label }}</p>
+                        </a>
+                    @endforeach
+                </div>
             </div>
         </div>
         <div style="position: absolute; top: 52px;">
@@ -216,8 +234,8 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
                 <a href="/cart">
                     <p style="
                     position: absolute;
-    left: -123px;
-    top: -7px;
+    left: -134px;
+    top: -1px; font-family: 'Manjari'; font-style: normal; font-weight: 700; font-size: 16px; line-height: 19px; color: #000000;
                 ">Cart/$0.00</p>
                 </a>
             </div>
