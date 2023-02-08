@@ -7,6 +7,9 @@
 
 }
 
+.Banner_mobile {
+    width: 100%;
+}
 
 .list_babel {
     font-family: 'Manjari';
@@ -90,7 +93,8 @@
     right: -10%;
     position: absolute;
 }
-.wrap-nav-left{
+
+.wrap-nav-left {
     display: flex;
 }
 
@@ -145,99 +149,98 @@
 .Banner {
     width: 100%;
 }
- .wrap-nav-right{
-    display: flex;
- }
 
- .wrap-header{
+.wrap-nav-right {
+    display: flex;
+}
+
+.wrap-header {
     position: relative;
     justify-content: space-between;
- }
+}
 
 
- .wrap-img-slide{
+.wrap-img-slide {
     width: 100%;
- }
+}
 
- .wrap-img-slide img{
+.wrap-img-slide img {
     width: 100%;
     height: 100%;
- }
+}
 
 /* responsive */
 @media screen and (min-width: 0px) {
-    .wrap-nav-left .Category{
+    .wrap-nav-left .Category {
         display: none;
     }
-    
-    .wrap-search{
+
+    .wrap-search {
         display: none;
     }
 
     .Header_Style {
         padding-top: 30px;
         padding-bottom: 30px;
-    
+
     }
 
-    .wrap-cart{
+    .wrap-cart {
         padding-left: 0px;
     }
 
-    .wrap-nav-right{
+    .wrap-nav-right {
         position: absolute;
         right: 0;
         top: -50%;
-     }
+    }
 
-     .wrap-nav-left{
+    .wrap-nav-left {
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-30%);
-     }
-     
-     .wrap-header{
+    }
+
+    .wrap-header {
         position: relative;
         justify-content: center;
-     }
+    }
 
-     .Cart p{
+    .Cart p {
         font-size: 20px;
-     }
+    }
 
-     .Search li:last-child{
+    .Search li:last-child {
         padding-right: 0px;
-     }
-    
+    }
+
 }
 
 @media screen and (min-width: 768px) {
-    .wrap-nav-right{
+    .wrap-nav-right {
         top: 0;
         transform: translateY(25%);
-     }
+    }
 
-     .Search li:last-child{
+    .Search li:last-child {
         padding-right: unset;
-     }
+    }
 }
 
-@media screen and (min-width: 920px) {
-    
-}
+@media screen and (min-width: 920px) {}
 
 
 @media screen and (min-width: 1200px) {
-    
-    .wrap-nav-left .Category{
+
+    .wrap-nav-left .Category {
         display: unset;
     }
-    
-    .wrap-search{
+
+    .wrap-search {
         display: unset;
     }
-    
+
     .wrap-nav-left .Category {
         display: flex;
         align-items: center;
@@ -249,18 +252,18 @@
         align-items: center;
     }
 
-    .Cart p{
+    .Cart p {
         font-size: 16px;
-     }
+    }
 }
 
 @media screen and (min-width: 1400px) {
 
-    .wrap-nav-left .Category{
+    .wrap-nav-left .Category {
         display: unset;
     }
-    
-    .wrap-search{
+
+    .wrap-search {
         display: unset;
     }
 
@@ -274,3 +277,12 @@
     }
 }
 
+.listItems {
+    font-family: 'Manjari';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    height: -webkit-fill-available;
+}
