@@ -22,19 +22,21 @@ $BestSeller = BestSeller::orderBy('id')->get();
                  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($BestSeller as $key => $data)
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{$data->url }}"
-                            class="girl img-responsive" alt="" />
-                            <div class="best_seller_bottom">
-                                <span>
-                                    {{ $data->label }}
-                                </span>
-                                <div class="best_seller-price">
-                                    <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->config }}$</strike></p>
-                                    <p>{{ $data->target }}$</p>
+                    <a href="/product-detail">
+                        <div class="carousel-cell" style="position: relative">
+                            <img style="width: 100%" src="{{$data->url }}"
+                                class="girl img-responsive" alt="" />
+                                <div class="best_seller_bottom">
+                                    <span>
+                                        {{ $data->label }}
+                                    </span>
+                                    <div class="best_seller-price">
+                                        <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->config }}$</strike></p>
+                                        <p>{{ $data->target }}$</p>
+                                    </div>
                                 </div>
-                            </div>
-                    </div>
+                        </div>
+                    </a>
                @endforeach
                
             </div>
