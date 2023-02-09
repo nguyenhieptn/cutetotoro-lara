@@ -20,15 +20,15 @@ $BestSeller = BestSeller::orderBy('id')->get();
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($BestSeller as $key => $data)
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                        <img style="width: 100%" src="{{$data->url }}"
                             class="girl img-responsive" alt="" />
                             <div class="best_seller_bottom">
                                 <span>
                                     {{ $data->label }}
                                 </span>
                                 <div class="best_seller-price">
-                                    <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                    <p>14,00$</p>
+                                    <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->rating }}$</strike></p>
+                                    <p>{{ $data->target }}$</p>
                                 </div>
                             </div>
                     </div>
