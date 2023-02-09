@@ -9,8 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;700&display=swap" rel="stylesheet">
     {{-- long-css --}}
-    {{-- <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}"> --}}
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <title>Cute Totoro</title>
+    <style>
+        .row{
+            margin-left: unset;
+            margin-right: unset;
+        }
+        .row>*{
+            padding-left: unset;
+            padding-right: unset;
+        }
+        .a-view-all{
+            text-decoration: none;
+            font-size: 1em;
+        }
+    </style>
 </head>

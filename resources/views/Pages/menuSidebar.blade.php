@@ -7,7 +7,6 @@
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        
                         <p>
                             Mug
                             <i class="right fas fa-angle-left"></i>
@@ -36,7 +35,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        
                         <p>
                             T-shrit
                             <i class="right fas fa-angle-left"></i>
@@ -65,7 +63,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        
                         <p>
                             Sticker
                             <i class="right fas fa-angle-left"></i>
@@ -94,7 +91,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        
                         <p>
                             Poster
                             <i class="right fas fa-angle-left"></i>
@@ -123,7 +119,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        
                         <p>
                             Bag
                             <i class="right fas fa-angle-left"></i>
@@ -152,7 +147,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        
                         <p>
                             Orther
                             <i class="right fas fa-angle-left"></i>

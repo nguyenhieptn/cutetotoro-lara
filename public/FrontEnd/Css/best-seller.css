@@ -10,7 +10,6 @@
     margin-bottom: 25px;
 
 }
-
 .view-all {
     position: absolute;
     bottom: 100%;
@@ -27,8 +26,8 @@ p {
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-    display: flex;
-    align-items: center;
+    /*display: flex;*/
+    /*align-items: center;*/
     text-align: justify;
     color: #000000;
 
@@ -54,27 +53,36 @@ p {
 }
 
 .carousel-cell {
-    width: 20%;
+    /*width: 20%;*/
     padding: 0 10px;
+
+    width: 50%;
+    /*margin-right: 10px;*/
+    counter-increment: gallery-cell;
 }
 
 /* .main-carousel .flickity-prev-next-button {
     top: 27%;
 } */
 
+.regula-price {
+    font-size: 1em;
+}
+
+.sale-price {
+    font-size: 1.3em;
+    margin-left: 1.5em;
+    margin-top: 8px;
+}
+
+
 @media screen and (min-width: 0px) {
 
-    /* half-width cells for larger devices */
-    .carousel-cell {
-        width: 100%;
-        padding: 0 25px;
-    }
-
-    .carousel-cell >img{
+    .carousel-cell > img {
         border-radius: 20px;
     }
 
-    .container-globe{
+    .container-globe {
         padding: 0 25px;
     }
 
@@ -83,7 +91,7 @@ p {
     }
 
     .about-img-top p {
-      display: none;
+        display: none;
     }
 
     .view-all {
@@ -101,22 +109,21 @@ p {
         font-family: 'Manjari';
         font-style: normal;
         font-weight: 700;
-        font-size: 23px;
-        line-height: 35px;
+        font-size: 1em;
     }
 
     .best_seller-price {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
         display: flex
     }
 
     .best_seller-price p:first-child {
-        font-size: 23px;
+        font-size: 1em;
     }
-    
+
     .best_seller-price p:last-child {
-        padding-left: 28px;
-        font-size: 28px;
+        /*padding-left: 28px;*/
+        font-size: 1.3em;
     }
 
     .about p {
@@ -125,13 +132,13 @@ p {
         font-size: 23px;
     }
 
-    .about-l >h1{
+    .about-l > h1 {
         font-size: 25px;
         font-weight: 700;
     }
-    
 
-    .about-img{
+
+    .about-img {
         margin-top: 20px;
     }
 
@@ -141,7 +148,7 @@ p {
         font-family: 'Manjari';
     }
 
-    .ft-top  h1,span,a {
+    .ft-top h1, span, a {
         font-size: 23px;
         /* margin-bottom: 18px; */
         font-weight: 700;
@@ -152,11 +159,11 @@ p {
         margin-bottom: 35px;
     }
 
-    .ft-top  h1{
+    .ft-top h1 {
         text-align: center;
     }
 
-    .ft-bt-left >ul li{
+    .ft-bt-left > ul li {
         display: none;
     }
 }
@@ -229,7 +236,7 @@ p {
         max-width: 500px;
     }
 
-    .ft-bt-left >ul li{
+    .ft-bt-left > ul li {
         display: none;
     }
 
@@ -257,10 +264,10 @@ p {
     .best_seller-price p:first-child {
         font-size: 20px;
     }
-    
+
     .best_seller-price p:last-child {
         padding-left: 28px;
-        font-size: 24px;
+        font-size: 1em;
     }
 
     .about-img-top p {
@@ -269,19 +276,19 @@ p {
         font-size: 35px;
     }
 
-    .about-img-bottom p{
+    .about-img-bottom p {
         font-size: 20px;
     }
 
 
-    .ft-top  h1,span,a {
+    .ft-top h1, span, a {
         font-size: 20px;
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
     }
 
-    .ft-bt-left >ul li{
+    .ft-bt-left > ul li {
         display: unset;
     }
 
@@ -312,7 +319,7 @@ p {
         padding: 0px;
     }
 
-    .ft-top  h1{
+    .ft-top h1 {
         text-align: left;
     }
 
@@ -323,17 +330,13 @@ p {
 }
 
 
-
 @media screen and (min-width: 1400px) {
 
     .carousel-cell {
         width: 20%;
     }
 
-    .best_seller-price p:first-child {
-        font-size: 17px;
-    }
-    
+
     .best_seller-price p:last-child {
         padding-left: 28px;
         font-size: 22px;
@@ -349,6 +352,7 @@ p {
     .ft-contact li {
         padding-bottom: 0px;
     }
+
     .main-carousel .flickity-prev-next-button {
         top: 25%;
     }
@@ -370,10 +374,11 @@ p {
 
 .best_seller_bottom {
     margin-top: 10px;
+    text-align: justify;
 }
 
 .best_seller-price {
-    margin-top: 30px;
+    margin-top: .5em;
     display: flex
 }
 
@@ -402,7 +407,7 @@ p {
     margin-bottom: 20px;
 }
 
-.ft >p{
+.ft > p {
     font-size: 17px;
 }
 

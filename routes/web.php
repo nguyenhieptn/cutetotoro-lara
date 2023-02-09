@@ -46,5 +46,8 @@ Route::group($conf ?? [], function() {
 });
 // catalog
 Route::get('/product-detail', function(){
-    return view('layouts.sub_view');
+    return view('Pages.mainDetail');
+});
+Route::get('/all-product', function(){
+    return view('Pages.allProduct');
 });
