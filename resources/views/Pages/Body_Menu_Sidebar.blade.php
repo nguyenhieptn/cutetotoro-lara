@@ -36,7 +36,7 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
             <ul class="Search">
                 <li class="wrap-search">
                     <div class="d-flex">
-                        <input class="Search_Input" type="text" name="Search" placeholder="Search...">
+                        <input style="border: none" class="Search_Input" type="text" name="Search" placeholder="Search...">
                         <span>
                             <a href="/search-items">
                                 <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
@@ -112,7 +112,7 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
         <p>Wellcom to Shop Totoro</p>
         <div class="d-flex">
             <input class="Search_Input" type="text" name="Search" placeholder="Search..."
-                style="width: -webkit-fill-available;">
+                style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
             <span>
                 <a href="/search-items">
                     <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">

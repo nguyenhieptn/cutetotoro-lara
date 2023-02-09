@@ -39,7 +39,7 @@
             <div class="row mb-5">
                 <div class=" col col-12 breadcrumb-main-details">
                     <p class="d-flex">
-                        <a href="#">Home </a>
+                        <a href="/">Home </a>
                         <span style="margin: 0 10px;">/</span> Mug
                     </p>
                 </div>

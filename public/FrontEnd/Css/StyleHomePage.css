@@ -125,7 +125,7 @@
     width: 156px;
     height: 30px;
     border-radius: 12px;
-    border: none;
+    border-color: black;
 }
 
 .Search_Icon {

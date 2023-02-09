@@ -1,5 +1,7 @@
 <?php
+
 use App\Models\BestSeller;
+
 $BestSeller = BestSeller::orderBy('id')->get();
 ?>
 <div class="best_seller">
@@ -15,33 +17,33 @@ $BestSeller = BestSeller::orderBy('id')->get();
 <section id="slider" class="slider-slictiky">
     <div class="container container-globe" style="position: relative">
         <div class="row">
-            <div class="main-carousel"
-                data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
+            <a href="/all-product" class="a-view-all text-end">View all</a>
+            <div class="main-carousel row"
+                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($BestSeller as $key => $data)
-                    <a href="/product-detail">
-                        <div class="carousel-cell" style="position: relative">
-                            <img style="width: 100%" src="{{ $data->url }}" class="girl img-responsive" alt="" />
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{$data->url }}"
+                            class="girl img-responsive" alt="" />
                             <div class="best_seller_bottom">
                                 <span>
                                     {{ $data->label }}
                                 </span>
                                 <div class="best_seller-price">
-                                    <p style="display: flex; align-item: center"><strike
-                                            style="line-height: 24px">{{ $data->config }}$</strike></p>
+                                    <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->config }}$</strike></p>
                                     <p>{{ $data->target }}$</p>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                @endforeach
+                    </div>
+               @endforeach
+               
             </div>
         </div>
-        <button class="view-all"><a href="/all-product">View All</a></button>
+        
     </div>
 </section>
-<link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
-<link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
