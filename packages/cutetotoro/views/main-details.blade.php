@@ -97,7 +97,6 @@
         </div>
     </div> --}}
     <!-- end header -->
-
     {{-- details-product --}}
     <div class="detail-content" style="margin-top: 80px">
         <div class="container">
@@ -147,8 +146,8 @@
 
                         <div class="col col-12 col-xl-10 detail-dad">
                             <div class="main-detail-image" style="width: 100%">
-                                <img style="width: 100% ; height: 100%"
-                                    src="{{ asset('FrontEnd/Image/hehehe.png') }}" alt="">
+                                <img style="width: 100% ; height: 100%" src="{{ asset('FrontEnd/Image/hehehe.png') }}"
+                                    alt="">
                             </div>
                         </div>
                     </div>
@@ -187,15 +186,12 @@
                                 </ul>
                             </li>
                             <li style="margin-top: 30px">
-<<<<<<< HEAD
-                                <button class="detail-btn">
+                                <<<<<<< HEAD <button class="detail-btn">
                                     <p>Add to cart</p>
-=======
-                                <button
-                                    style="border: none; width: 100%; border-radius: 20px; padding: 10px 0 5px 0; background-color: #363636">
-                                    <p style="display: flex; justify-content: center;color: white;">Add to cart</p>
->>>>>>> abac977462a62469662916e79b8c7f2721493907
-                                </button>
+                                    <button
+                                        style="border: none; width: 100%; border-radius: 20px; padding: 10px 0 5px 0; background-color: #363636">
+                                        <p style="display: flex; justify-content: center;color: white;">Add to cart</p>
+                                    </button>
                             </li>
                             <li style="margin-top: 35px">
                                 <p>Star Seller. This seller consistently earned 5-star reviews, shipped on time, and

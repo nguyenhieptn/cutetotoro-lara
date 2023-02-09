@@ -1,5 +1,5 @@
 <div class="about">
-    <div class="container">
+    <div class="container container-globe">
         <div class="row d-flex flex-direction-column">
             <div class=" col col-12 about-img-top" style="width: 100%; position: relative; margin-bottom: 50px">
                 <img style="width: 100%; height: 100%" src="{{ asset('FrontEnd/Image/image 3.png') }}" alt="">
