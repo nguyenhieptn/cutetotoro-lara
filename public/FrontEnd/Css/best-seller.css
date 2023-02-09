@@ -13,7 +13,7 @@
 
 .view-all {
     position: absolute;
-    top: -10%;
+    bottom: 100%;
     right: 0;
     background-color: transparent;
     margin-right: 10px;
@@ -70,6 +70,10 @@ p {
         padding: 0 25px;
     }
 
+    .carousel-cell >img{
+        border-radius: 20px;
+    }
+
     .container-globe{
         padding: 0 25px;
     }
@@ -83,12 +87,13 @@ p {
     }
 
     .view-all {
-        top: -5%;
+        bottom: 100%;
         right: 2%;
     }
 
     .view-all p {
         font-size: 20px;
+        margin-bottom: 0px;
     }
 
     .best_seller_bottom span,
@@ -187,9 +192,6 @@ p {
         max-width: 400px;
     }
 
-    .view-all {
-        top: -6%;
-    }
 
 }
 
