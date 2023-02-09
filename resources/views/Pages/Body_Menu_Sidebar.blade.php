@@ -111,15 +111,16 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
     <div class="offcanvas-body listItems">
         <p>Wellcom to Shop Totoro</p>
         <div class="d-flex">
-            <input class="Search_Input" type="text" name="Search" placeholder="Search..." style="width: -webkit-fill-available;">
+            <input class="Search_Input" type="text" name="Search" placeholder="Search..."
+                style="width: -webkit-fill-available;">
             <span>
                 <a href="/search-items">
                     <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
                 </a>
             </span>
         </div>
-        <p>Click on the Category to open the list menu.</p>
-        <div class="dropdown">
+        @include('Pages.menuSidebar')
+        {{-- <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn">Mug</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#home">Mug</a>
@@ -166,7 +167,7 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
 {{-- end sidebar menu --}}
