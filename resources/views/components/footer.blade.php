@@ -64,7 +64,7 @@
                         <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2016 © cutetotoro</p>
                     </div>
                 </div>
-    
+
                 <div class="col col-12 col-xs-12 col-xl-6">
                     <div class="ft-bt-right d-flex justify-content-center">
                         <p style="margin-bottom: 0px">Contact with us:</p>
@@ -96,7 +96,6 @@
         </div>
     </div>
 </div>
-    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
     <link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
