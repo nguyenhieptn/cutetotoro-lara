@@ -1,6 +1,9 @@
-
+<?php
+use App\Models\BestSeller;
+$BestSeller = BestSeller::orderBy('id')->get();
+?>
 <div class="best_seller">
-    <div class="container">
+    <div class="container container-globe">
         <div class="row best_seller_top">
             <div class="best_seller_top-image">
                 <img class="bsl__bn" src="{{ asset('FrontEnd/Image/Group%204.png') }}" alt="">
@@ -10,12 +13,27 @@
 </div>
 
 <section id="slider" class="slider-slictiky">
-    <div class="container" style="position: relative">
+    <div class="container container-globe" style="position: relative">
         <div class="row">
             <div class="main-carousel"
                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
-                <div class="carousel-cell" style="position: relative">
+                @foreach ($BestSeller as $key => $data)
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                            <div class="best_seller_bottom">
+                                <span>
+                                    {{ $data->label }}
+                                </span>
+                                <div class="best_seller-price">
+                                    <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
+                                    <p>14,00$</p>
+                                </div>
+                            </div>
+                    </div>
+               @endforeach
+                {{-- <div class="carousel-cell" style="position: relative">
                     <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
                         class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
@@ -27,8 +45,8 @@
                                 <p>14,00$</p>
                             </div>
                         </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
+                </div> --}}
+                {{-- <div class="carousel-cell" style="position: relative">
                     <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 11.png') }}"
                         class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
@@ -92,7 +110,7 @@
                                 <p>14,00$</p>
                             </div>
                         </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <button class="view-all"><p>View all</p></button>

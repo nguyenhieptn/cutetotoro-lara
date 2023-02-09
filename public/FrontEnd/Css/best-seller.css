@@ -58,9 +58,9 @@ p {
     padding: 0 10px;
 }
 
-.main-carousel .flickity-prev-next-button {
+/* .main-carousel .flickity-prev-next-button {
     top: 27%;
-}
+} */
 
 @media screen and (min-width: 0px) {
 
@@ -70,8 +70,12 @@ p {
         padding: 0 25px;
     }
 
+    .container-globe{
+        padding: 0 25px;
+    }
+
     .main-carousel .flickity-prev-next-button {
-        top: 34%;
+        top: 21%;
     }
 
     .about-img-top p {
@@ -186,6 +190,7 @@ p {
     .view-all {
         top: -6%;
     }
+
 }
 
 @media screen and (min-width: 576px) {
@@ -197,6 +202,10 @@ p {
 
     .about-l h1 {
         margin-bottom: 20px;
+    }
+
+    .main-carousel .flickity-prev-next-button {
+        top: 23%;
     }
 }
 
@@ -220,6 +229,10 @@ p {
 
     .ft-bt-left >ul li{
         display: none;
+    }
+
+    .main-carousel .flickity-prev-next-button {
+        top: 30%;
     }
 
 }
@@ -274,6 +287,10 @@ p {
         padding: 0 10px;
         text-decoration: underline;
     }
+
+    .main-carousel .flickity-prev-next-button {
+        top: 22%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -295,6 +312,10 @@ p {
 
     .ft-top  h1{
         text-align: left;
+    }
+
+    .main-carousel .flickity-prev-next-button {
+        top: 28%;
     }
 
 }
@@ -325,6 +346,9 @@ p {
 
     .ft-contact li {
         padding-bottom: 0px;
+    }
+    .main-carousel .flickity-prev-next-button {
+        top: 25%;
     }
 
 }
