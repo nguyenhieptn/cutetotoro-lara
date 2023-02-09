@@ -115,5 +115,7 @@ class DatabaseSeeder extends Seeder
             ],
         ];
         DB::table('mshop_catalog')->insert($data);
+
+        
     }
 }
