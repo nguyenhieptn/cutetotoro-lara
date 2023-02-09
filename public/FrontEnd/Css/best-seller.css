@@ -78,11 +78,6 @@ p {
 
 @media screen and (min-width: 0px) {
 
-    /* half-width cells for larger devices */
-    /*.carousel-cell {*/
-    /*    width: 100%;*/
-    /*    padding: 0 25px;*/
-    /*}*/
     .carousel-cell > img {
         border-radius: 20px;
     }
