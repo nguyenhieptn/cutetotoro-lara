@@ -19,105 +19,29 @@ $BestSeller = BestSeller::orderBy('id')->get();
                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($BestSeller as $key => $data)
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{$data->url }}"
-                            class="girl img-responsive" alt="" />
+                    <a href="/product-detail">
+                        <div class="carousel-cell" style="position: relative">
+                            <img style="width: 100%" src="{{ $data->url }}" class="girl img-responsive" alt="" />
                             <div class="best_seller_bottom">
                                 <span>
                                     {{ $data->label }}
                                 </span>
                                 <div class="best_seller-price">
-                                    <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->rating }}$</strike></p>
+                                    <p style="display: flex; align-item: center"><strike
+                                            style="line-height: 24px">{{ $data->config }}$</strike></p>
                                     <p>{{ $data->target }}$</p>
                                 </div>
                             </div>
-                    </div>
-               @endforeach
-                {{-- <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
-                        class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                <p>14,00$</p>
-                            </div>
                         </div>
-                </div> --}}
-                {{-- <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 11.png') }}"
-                        class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                <p>14,00$</p>
-                            </div>
-                        </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 12.png') }}"
-                        class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                <p>14,00$</p>
-                            </div>
-                        </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 13.png') }}"
-                        class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                <p>14,00$</p>
-                            </div>
-                        </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 14.png') }}"
-                        class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                <p>14,00$</p>
-                            </div>
-                        </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
-                        class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">15,55$</strike></p>
-                                <p>14,00$</p>
-                            </div>
-                        </div>
-                </div> --}}
+                    </a>
+                @endforeach
             </div>
         </div>
-        <button class="view-all"><p>View all</p></button>
+        <button class="view-all"><a href="/all-product">View All</a></button>
     </div>
 </section>
-    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
-    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
+<link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

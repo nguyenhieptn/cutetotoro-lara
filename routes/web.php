@@ -48,3 +48,6 @@ Route::group($conf ?? [], function() {
 Route::get('/product-detail', function(){
     return view('Pages.mainDetail');
 });
+Route::get('/all-product', function(){
+    return view('Pages.allProduct');
+});
