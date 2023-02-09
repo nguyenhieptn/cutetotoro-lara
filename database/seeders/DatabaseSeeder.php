@@ -16,23 +16,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        
         $data = [
-            [
-                'siteid' => '1',
-                'parentid' => 1,
-                'level' => 0,
-                'code' => 'mug',
-                'label' => 'Mug',
-                'url' => 'mug',
-                'config' => '{}',
-                'nleft' => 1,
-                'nright' => 1,
-                'target' => 'mug',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
-            ],
             [
                 'siteid' => '1',
                 'parentid' => 1,
@@ -114,6 +99,25 @@ class DatabaseSeeder extends Seeder
                 'editor' => 'Admin@aimeos.laravel'
             ],
         ];
+        $Mug = [
+            'code' => 'mug',
+            'label' => 'Mug',
+            'url' => 'mug',
+        ];
+        DB::table('mshop_catalog')->where('label','Home')->update($Mug);
+        DB::table('mshop_catalog')->where('label','Best sellers')->delete();
+        DB::table('mshop_catalog')->where('label','Women')->delete();
+        DB::table('mshop_catalog')->where('label','Shirts')->delete();
+        DB::table('mshop_catalog')->where('label','Dresses')->delete();
+        DB::table('mshop_catalog')->where('label','Tops')->delete();
+        DB::table('mshop_catalog')->where('label','Men')->delete();
+        DB::table('mshop_catalog')->where('label','T-Shirts')->delete();
+        DB::table('mshop_catalog')->where('label','Muscle shirts')->delete();
+        DB::table('mshop_catalog')->where('label','Misc')->delete();
+        DB::table('mshop_catalog')->where('label','Events')->delete();
+        DB::table('mshop_catalog')->where('label','Vouchers')->delete();
+        DB::table('mshop_catalog')->where('label','New arrivals')->delete();
+        DB::table('mshop_catalog')->where('label','Hot deals')->delete();
         DB::table('mshop_catalog')->insert($data);
     }
 }
