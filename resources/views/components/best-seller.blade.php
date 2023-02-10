@@ -19,11 +19,21 @@ $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_pro
                  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($info_product as $key => $data)
-                        <?php
-                            echo '<pre>';
-                            print_r($data);
-                            echo '</pre>';
-                        ?>
+                        <div class="carousel-cell" style="position: relative">
+                            <a href="/product-detail"><img src="/aimeos/{{$data->link }}"></a>
+                                <div class="best_seller_bottom">
+                                    <span>
+                                        {{ $data->content }}
+                                    </span>
+                                    <div class="best_seller-price">
+                                        <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->value }}$</strike></p>
+                                        <?php
+                                            $sale = $data->value - $data->rebate
+                                        ?>
+                                        <p>{{ $sale}}$</p>
+                                    </div>
+                                </div>
+                        </div>
                @endforeach
             </div>
         </div>
