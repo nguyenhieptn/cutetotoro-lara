@@ -25,16 +25,16 @@ $info_product = DB::table('mshop_text')
                 {{-- "autoPlay": 3000 --}}
                 <div class="carousel-cell" style="position: relative">
                     @foreach ($info_product as $key => $info )
-                        <a href="/product-detail"><img src="/aimeos/{{ $data->link }}"></a>
+                        <a href="/product-detail"><img src="/aimeos/{{ $info->link }}"></a>
                         <div class="best_seller_bottom">
                             <span>
-                                {{ $data->content }}
+                                {{ $info->content }}
                             </span>
                             <div class="best_seller-price">
                                 <p style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">{{ $data->value }}$</strike></p>
+                                        style="line-height: 24px">{{ $info->value }}$</strike></p>
                                 <?php
-                                $sale = $data->value - $data->rebate;
+                                $sale = $info->value - $info->rebate;
                                 ?>
                                 <p>{{ $sale }}$</p>
                             </div>
