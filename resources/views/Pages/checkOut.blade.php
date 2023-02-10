@@ -39,27 +39,7 @@
 </head>
 
 <body class="page-checkout-index">
-    <nav class="navbar navbar-expand-md navbar-top">
-        <a class="navbar-brand" href="/" title="Logo">
-            <img src="{{asset('/default/assets/logo.png')}}" height="40"
-                alt="Logo">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-top"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-top">
-        </div>
-
-
-        <ul class="navbar-nav">
-            <li class="nav-item login"><a class="nav-link" href="http://127.0.0.1:9000/login" title="Login"><span
-                        class="name">Login</span></a></li>
-        </ul>
-
-    </nav>
-
+    
     <div class="content">
         <div class="container-fluid">
             <section class="aimeos checkout-standard" data-jsonurl="http://127.0.0.1:9000/jsonapi">
