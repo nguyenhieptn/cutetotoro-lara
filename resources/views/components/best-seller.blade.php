@@ -21,7 +21,7 @@ $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_pro
                 @foreach ($info_product as $key => $data)
                         <?php
                             echo '<pre>';
-                            prinrt_r($data);
+                            print_r($data);
                             echo '</pre>';
                         ?>
                @endforeach
