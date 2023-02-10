@@ -19,105 +19,54 @@ class DatabaseSeeder extends Seeder
         
         $data = [
             [
-                'siteid' => '1',
-                'parentid' => 1,
-                'level' => 1,
-                'code' => 'tshrit',
-                'label' => 'T-shrit',
-                'url' => 'tshrit',
-                'config' => '{}',
-                'nleft' => 1,
-                'nright' => 1,
-                'target' => 'tshrit',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category_name' => 'Mug',
+                'category_descript' => 'Mug product',
+                'url' => '/mug',
+                'meta_keywords' => 'mug',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'siteid' => '1',
-                'parentid' => 1,
-                'level' => 1,
-                'code' => 'sticker',
-                'label' => 'Sticker',
-                'url' => 'sticker',
-                'config' => '{}',
-                'nleft' => 1,
-                'nright' => 1,
-                'target' => 'sticker',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category_name' => 'T-shrit',
+                'category_descript' => 't-shrit product',
+                'url' => '/t-shrit',
+                'meta_keywords' => 't-shrit',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'siteid' => '1',
-                'parentid' => 1,
-                'level' => 1,
-                'code' => 'poster',
-                'label' => 'Poster',
+                'category_name' => 'Sticker',
+                'category_descript' => 'sticker',
+                'url' => '/sticker',
+                'meta_keywords' => 'sticker',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'category_name' => 'Poster',
+                'category_descript' => 'poster',
                 'url' => 'poster',
-                'config' => '{}',
-                'nleft' => 1,
-                'nright' => 1,
-                'target' => 'poster',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'meta_keywords' => 'poster',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'siteid' => '1',
-                'parentid' => 1,
-                'level' => 1,
-                'code' => 'bag',
-                'label' => 'Bag',
-                'url' => 'bag',
-                'config' => '{}',
-                'nleft' => 1,
-                'nright' => 1,
-                'target' => 'bag',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category_name' => 'Bag',
+                'category_descript' => 'bag',
+                'url' => '/bag',
+                'meta_keywords' => 'bag',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'siteid' => '1',
-                'parentid' => 1,
-                'level' => 1,
-                'code' => 'orther',
-                'label' => 'Orther',
-                'url' => 'orther',
-                'config' => '{}',
-                'nleft' => 1,
-                'nright' => 1,
-                'target' => 'orther',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category_name' => 'Orther',
+                'category_descript' => 'orther',
+                'url' => '/orther',
+                'meta_keywords' => 'orther',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
-        $Mug = [
-            'code' => 'mug',
-            'label' => 'Mug',
-            'url' => 'mug',
-        ];
-        DB::table('mshop_catalog')->where('label','Home')->update($Mug);
-        DB::table('mshop_catalog')->where('label','Best sellers')->delete();
-        DB::table('mshop_catalog')->where('label','Women')->delete();
-        DB::table('mshop_catalog')->where('label','Shirts')->delete();
-        DB::table('mshop_catalog')->where('label','Dresses')->delete();
-        DB::table('mshop_catalog')->where('label','Tops')->delete();
-        DB::table('mshop_catalog')->where('label','Men')->delete();
-        DB::table('mshop_catalog')->where('label','T-Shirts')->delete();
-        DB::table('mshop_catalog')->where('label','Muscle shirts')->delete();
-        DB::table('mshop_catalog')->where('label','Misc')->delete();
-        DB::table('mshop_catalog')->where('label','Events')->delete();
-        DB::table('mshop_catalog')->where('label','Vouchers')->delete();
-        DB::table('mshop_catalog')->where('label','New arrivals')->delete();
-        DB::table('mshop_catalog')->where('label','Hot deals')->delete();
-        DB::table('mshop_catalog')->insert($data);
+        DB::table('category')->insert($data);
     }
 }

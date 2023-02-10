@@ -1,8 +1,8 @@
 <!-- content -->
 <!-- Controller -->
 <?php
-use App\Models\Catalog;
-$Catalog = Catalog::orderBy('id', 'ASC')->get();
+use App\Models\Category;
+$Category = Category::orderBy('category_id', 'ASC')->get();
 ?>
 <!-- End Controler -->
 <div class="container-fluid Header_Style">
@@ -17,9 +17,9 @@ $Catalog = Catalog::orderBy('id', 'ASC')->get();
             </div>
             <div class="Category">
                 <ul>
-                    @foreach ($Catalog as $key => $data)
+                    @foreach ($Category as $key => $data)
                         <li>
-                            <a href="">{{ $data->label }}</a>
+                            <a href="{{$data->url}}">{{ $data->category_name }}</a>
                         </li>
                     @endforeach
                 </ul>
