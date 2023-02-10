@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\DB;
 $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_product.id','=','mshop_product_list.parentid')->join('mshop_media','mshop_product_list.refid','=','mshop_media.id')->join('mshop_text','mshop_product_list.refid','=','mshop_text.id')->join('mshop_price','mshop_product_list.refid','=','mshop_price.id')->get();
+echo '123';
 ?>
 <div class="best_seller">
     <div class="container container-globe">
@@ -18,13 +19,7 @@ $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_pro
             <div class="main-carousel row"
                  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
-                @foreach ($info_product as $key => $data)
-                        <?php
-                            echo '<pre>';
-                                print_r($data);
-                            echo '</pre>';
-                        ?>
-               @endforeach
+                
             </div>
         </div>
     </div>
