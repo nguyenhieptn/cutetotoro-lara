@@ -5,29 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BestSeller extends Model
+class Media extends Model
 {
-    public $timestamps = false;
     protected $fillable = [
         'siteid',
-        'dataset',
         'type',
-        'code',
+        'fsname',
+        'langid',
+        'domain',
         'label',
-        'url',
-        'config',
-        'start',
-        'end',
-        'scale',
-        'rating',
-        'ratings',
-        'instock',
-        'target',
+        'link',
+        'preview',
+        'mimetype',
         'status',
         'mtime',
         'ctime',
         'editor'
     ];
     protected $primaryKey = 'id';
-    protected $table = 'mshop_product';
+    protected $table = 'mshop_media';
 }

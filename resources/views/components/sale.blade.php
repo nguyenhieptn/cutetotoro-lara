@@ -1,7 +1,4 @@
-<?php
-use App\Models\BestSeller;
-$BestSeller = BestSeller::orderBy('id')->limit(6)->get();
-?>
+
 <div class="sale-category ">
     <div class="list-category d-flex justify-content-center">
         <div id="filters" class="button-group">
@@ -22,7 +19,7 @@ $BestSeller = BestSeller::orderBy('id')->limit(6)->get();
         </div>
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
-                @foreach ($BestSeller as $key => $data)
+                {{-- @foreach ($BestSeller as $key => $data)
                     <div class="grid-item grid-item-cus {{$data->type}}">
                         <a href="#" class="d-grid">
                             <img src="{{$data->url}}" alt="">
@@ -32,52 +29,7 @@ $BestSeller = BestSeller::orderBy('id')->limit(6)->get();
                             </div>
                         </a>
                     </div>
-                @endforeach
-                {{-- <div class="grid-item grid-item-cus mug">
-                    <a href="#" class="d-grid">
-                        <img src="{{ asset('FrontEnd/Image/sale/2.png') }}" alt="">
-                        <div class="sale-price">
-                            <span>15,99$</span>
-                            <span>14,00$</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item grid-item-cus poster">
-                    <a href="#" class="d-grid">
-                        <img src="{{ asset('FrontEnd/Image/sale/3.png') }}" alt="">
-                        <div class="sale-price">
-                            <span>15,99$</span>
-                            <span>14,00$</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item grid-item-cus poster">
-                    <a href="#" class="d-grid">
-                        <img src="{{ asset('FrontEnd/Image/sale/4.png') }}" alt="">
-                        <div class="sale-price">
-                            <span>15,99$</span>
-                            <span>14,00$</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item grid-item-cus poster">
-                    <a href="#" class="d-grid">
-                        <img src="{{ asset('FrontEnd/Image/sale/5.png') }}" alt="">
-                        <div class="sale-price">
-                            <span>15,99$</span>
-                            <span>14,00$</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="grid-item grid-item-cus poster">
-                    <a href="#" class="d-grid">
-                        <img src="{{ asset('FrontEnd/Image/sale/6.png') }}" alt="">
-                        <div class="sale-price">
-                            <span>15,99$</span>
-                            <span>14,00$</span>
-                        </div>
-                    </a>
-                </div> --}}
+                @endforeach --}}
             </div>
         </div>
     </div>
