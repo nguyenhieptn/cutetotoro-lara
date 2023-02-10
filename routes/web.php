@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Catalog\CatalogController;
+use App\Http\Controllers\showDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,7 @@ Route::get('/product-detail', function(){
 Route::get('/all-product', function(){
     return view('Pages.allProduct');
 });
+Route::get('/checkout', function(){
+    return view('Pages.checkOut');
+});
+Route::get('/product-detail/{idProduct}',[showDetailController::class,'show_detail']);

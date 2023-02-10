@@ -330,8 +330,9 @@
     }
 
     .grid-item-cus{
-        width: 100%;
+        width: 50%;
         margin-left: 0;
+        padding: 0px 10px;
     }
     .button-group button {
         font-size: 15px;
@@ -341,5 +342,15 @@
 
     .sale-price{
         margin-top: 15px;
+    }
+    .sale-price span{
+        font-size: 17px;
+        margin: 0;
+    }
+    .sale-category{
+        margin: 0 10px;
+    }
+    .grid-item-cus-img{
+        height: 87%;
     }
 }

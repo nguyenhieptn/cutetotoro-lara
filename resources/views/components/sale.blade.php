@@ -30,7 +30,7 @@ $info_product = DB::table('mshop_text')
                 @foreach ($info_product as $key => $data)
                     <div class="grid-item grid-item-cus {{$data->type}}">
                         <a href="/product-detail/{{$data->parentid}}" class="d-grid">
-                            <img src="/aimeos/{{$data->link }}" alt="product">
+                            <img src="/aimeos/{{$data->link }}" alt="product" class="grid-item-cus-img">
                             <div class="sale-price">
                                 <span>{{ $data->value }}$</span>
                                 <?php
