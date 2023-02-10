@@ -28,7 +28,7 @@ $info_product = DB::table('mshop_text')
                         <a href="/product-detail"><img src="/aimeos/{{ $info->link }}"></a>
                         <div class="best_seller_bottom">
                             <span>
-                                {{ $info->content }}
+                                {!! $info->content !!}
                             </span>
                             <div class="best_seller-price">
                                 <p style="display: flex; align-item: center"><strike
