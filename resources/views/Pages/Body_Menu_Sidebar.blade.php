@@ -120,54 +120,6 @@ $Category = Category::orderBy('category_id', 'ASC')->get();
             </span>
         </div>
         @include('Pages.menuSidebar')
-        {{-- <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Mug</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#home">Mug</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction1()" class="dropbtn1">T-shrit</button>
-            <div id="myDropdown1" class="dropdown-content1">
-                <a href="#home">T-Shrit</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction2()" class="dropbtn2">Sticker</button>
-            <div id="myDropdown2" class="dropdown-content2">
-                <a href="#home">Sticker</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button onclick="myFunction3()" class="dropbtn3">Poster</button>
-            <div id="myDropdown3" class="dropdown-content3">
-                <a href="#home">Poster</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="dropdown" style="margin-top: 20px">
-            <button onclick="myFunction4()" class="dropbtn4">Bag</button>
-            <div id="myDropdown4" class="dropdown-content4">
-                <a href="#home">Bag</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-        <div class="dropdown" style="margin-top: 20px">
-            <button onclick="myFunction5()" class="dropbtn5">Orther</button>
-            <div id="myDropdown5" class="dropdown-content5">
-                <a href="#home">Orther</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div> --}}
     </div>
 </div>
 {{-- end sidebar menu --}}

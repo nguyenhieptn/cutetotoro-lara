@@ -1,3 +1,4 @@
+
 <!-- Home page -->
 <!DOCTYPE html>
 <html>
@@ -40,7 +41,13 @@
                 <div class=" col col-12 breadcrumb-main-details">
                     <p class="d-flex">
                         <a href="/">Home </a>
-                        <span style="margin: 0 10px;">/</span> Mug
+                        <span style="margin: 0 10px;">/</span>
+                        <?php
+                            $name = Session::get('name');
+                            $link = Session::get('link');
+                            $sale = $infoAll->value - $infoAll->rebate;
+                            echo $name;
+                        ?>
                     </p>
                 </div>
             </div>
@@ -50,31 +57,11 @@
                     <div class="row d-flex">
                         <div class="col col-12 col-xl-2 detail-son">
                             <div class="row main-detail-sb">
+                               
                                 <div class="col col-3 col-xl-12 detail-sb">
                                     <div class="detail-sb-wr">
                                         <img style="width: 100%; height: 100%"
-                                            src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
-                                    </div>
-                                </div>
-
-                                <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr">
-                                        <img style="width: 100%; height: 100%"
-                                            src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
-                                    </div>
-                                </div>
-
-                                <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr">
-                                        <img style="width: 100%; height: 100%"
-                                            src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
-                                    </div>
-                                </div>
-
-                                <div class="col col-3 col-xl-12 detail-sb">
-                                    <div class="detail-sb-wr">
-                                        <img style="width: 100%; height: 100%"
-                                            src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}" alt="">
+                                            src="/aimeos/{{$link}}" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +69,7 @@
 
                         <div class="col col-12 col-xl-10 detail-dad">
                             <div class="main-detail-image" style="width: 100%">
-                                <img style="width: 100% ; height: 100%" src="{{ asset('FrontEnd/Image/hehehe.png') }}"
+                                <img style="width: 100% ; height: 100%" src="/aimeos/{{$link}}"
                                     alt="">
                             </div>
                         </div>
@@ -92,7 +79,7 @@
                 <div class="col col-12 col-xl-4 pt-3">
                     <div class="main-details-content-wrap">
                         <ul class="main-details-content mb-0">
-                            <li>
+                            {{-- <li>
                                 <ul class="md-assets">
                                     <li>
                                         <p>Star Seller</p>
@@ -103,20 +90,23 @@
                                             src="{{ asset('FrontEnd/Image/start-pro.png') }}" alt="">
                                     </li>
                                 </ul>
+                            </li> --}}
+                            <li>
+                                <p>{{$infoAll->label}}</p>
                             </li>
                             <li style="margin-top: 30px">
                                 <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span>
-                                <span>Spirited away Soot Sprite Character Mug, with quote: “Finish what you
-                                    started Human” Based on Spirited away movie. Coffee Mug
+                                <span>
+                                    {!!$infoAll->content!!}
                                 </span>
                             </li>
                             <li style="margin-top: 35px">
                                 <ul class="md-price d-flex">
                                     <li style="margin-right: 20px">
-                                        <span>14,00$</span>
+                                        <span>{{$sale}}$</span>
                                     </li>
                                     <li>
-                                        <span style="font-weight: 400; font-size: 30px; line-height: 33px;"><strike>15,99
+                                        <span style="font-weight: 400; font-size: 30px; line-height: 33px;"><strike>{{$infoAll->value}}
                                                 $</strike></span>
                                     </li>
                                 </ul>
@@ -269,14 +259,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li style="margin-top: 35px">
+                            {{-- <li style="margin-top: 35px">
                                 <p>Star Seller. This seller consistently earned 5-star reviews, shipped on time, and
                                     replied quickly to any messages they received.
                                     <br>
 
                                     Arrives by Feb 8-14 if you order today.
                                 </p>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -291,8 +281,7 @@
                             onclick="openCity(event,'Paris')"><span>REVIEWS</span></button>
                     </div>
                     <div id="London" class=" city tab-content">
-                        <p class="pt-0">Add a detailed description of the demo article that may be a little bit
-                            longer.</p>
+                        <p class="pt-0">{!! $infoAll->content !!}</p>
                     </div>
 
                     <div id="Paris" class="city tab-content" style="display:none">
