@@ -51,3 +51,6 @@ Route::get('/product-detail', function(){
 Route::get('/all-product', function(){
     return view('Pages.allProduct');
 });
+Route::get('/checkout', function(){
+    return view('Pages.checkOut');
+});
