@@ -20,9 +20,17 @@ $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_pro
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($info_product as $key => $data)
                         <?php
-                            $content = DB::table('mshop_text')->get();
+                            $content = DB::table('mshop_text')->delete();
+                            $price = DB::table('mshop_price')->delete();
+                            $list = DB::table('mshop_product_list')->delete();
+                            $product = DB::table('mshop_product')->delete();
+                            $media = DB::table('mshop_media')->delete();
                             echo '<pre>';
                             print_r($content);
+                            print_r($price);
+                            print_r($list);
+                            print_r($product);
+                            print_r($media);
                             echo '</pre>';
                         ?>
                @endforeach
