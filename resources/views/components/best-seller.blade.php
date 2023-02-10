@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\DB;
-$info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_product.id','=','mshop_product_list.parentid')->join('mshop_media','mshop_product_list.ctime','=','mshop_media.ctime')->join('mshop_text','mshop_product_list.ctime','=','mshop_text.ctime')->join('mshop_price','mshop_product_list.ctime','=','mshop_price.ctime')->get();
+$info_product =  DB::table('mshop_text')->join('mshop_media','mshop_text.mtime','=','mshop_media.mtime')->join('mshop_price','mshop_text.mtime','=','mshop_price.mtime')->join('mshop_product_list','mshop_text.mtime','=','mshop_product_list.mtime')->join('mshop_product','mshop_product_list.parentid','=','mshop_product.parentid')->get();
 dd($info_product);
 ?>
 <div class="best_seller">
