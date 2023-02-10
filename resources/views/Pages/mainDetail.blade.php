@@ -253,7 +253,9 @@
                                         </div>
                                         <div class="modal-footer" style="justify-content: center">
                                             <button style="font-family: 'Manjari'; font-style: normal; font-weight: 700; font-size: 16px; color: #000000;" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button style="font-family: 'Manjari'; font-style: normal; font-weight: 700; font-size: 16px; color: #ffffff;" type="button" class="btn btn-primary">Checkout</button>
+                                            <button style="font-family: 'Manjari'; font-style: normal; font-weight: 700; font-size: 16px; color: #ffffff;" type="button" class="btn btn-primary">
+                                            <a href="/checkout">Checkout</a>
+                                            </button>
                                         </div>
                                         </div>
                                     </div>
