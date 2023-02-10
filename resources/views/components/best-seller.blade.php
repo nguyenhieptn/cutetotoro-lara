@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Facades\DB;
 $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_product.id','=','mshop_product_list.parentid')->join('mshop_media','mshop_product_list.refid','=','mshop_media.id')->join('mshop_text','mshop_product_list.refid','=','mshop_text.id')->join('mshop_price','mshop_product_list.refid','=','mshop_price.id')->get();
-dd(DB::table('mshop_text')->get());
+dd(DB::table('mshop_product_list')->get());
 ?>
 <div class="best_seller">
     <div class="container container-globe">
