@@ -25,7 +25,7 @@ $info_product = DB::table('mshop_text')
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($info_product as $key => $data)
                         <div class="carousel-cell" style="position: relative">
-                            <a href="/product-detail"><img src="/aimeos/{{$data->link }}"></a>
+                            <a href="/product-detail/{{$data->parentid}}"><img src="/aimeos/{{$data->link }}"></a>
                                 {{-- class="girl img-responsive" alt="" /> --}}
                                 <div class="best_seller_bottom">
                                     <span>
