@@ -81,6 +81,10 @@ p {
         border-radius: 20px;
     }
 
+    .carousel-cell > a{
+        display: block;
+    }
+
     .container-globe {
         padding: 0 25px;
     }
@@ -93,9 +97,12 @@ p {
         display: none;
     }
 
-    .view-all {
+    /* .view-all {
         bottom: 100%;
         right: 2%;
+    } */
+    .a-view-all{
+        padding-right: 10px;
     }
 
     .view-all p {
@@ -109,6 +116,8 @@ p {
         font-style: normal;
         font-weight: 700;
         font-size: 1em;
+        line-height: 26px;
+        letter-spacing: -1px;
     }
 
     .best_seller-price {
@@ -118,6 +127,8 @@ p {
 
     .best_seller-price p:first-child {
         font-size: 1em;
+        text-decoration: line-through;
+        margin-right: 15px;
     }
 
     .best_seller-price p:last-child {

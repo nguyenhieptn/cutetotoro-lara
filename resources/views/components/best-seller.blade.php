@@ -19,24 +19,24 @@ $info_product = DB::table('mshop_text')
 <section id="slider" class="slider-slictiky">
     <div class="container container-globe" style="position: relative">
         <div class="row">
-            <a href="/all-product" class="a-view-all text-end">View all</a>
+            <a href="/all-product" class="a-view-all text-end ">View all</a>
             <div class="main-carousel row"
-                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
+                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true,   "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($info_product as $key => $data)
                         <div class="carousel-cell" style="position: relative">
-                            <a href="/product-detail/{{$data->parentid}}"><img src="/aimeos/{{$data->link }}"></a>
+                                <a href="/product-detail/{{$data->parentid}}"><img style="width: 100%" src="/aimeos/{{$data->link }}"></a>
                                 {{-- class="girl img-responsive" alt="" /> --}}
                                 <div class="best_seller_bottom">
                                     <span>
                                         {!! $data->content !!}
                                     </span>
                                     <div class="best_seller-price">
-                                        <p style="display: flex; align-item: center"><strike style="line-height: 34px">{{ $data->value }}$</strike></p>
+                                        <p>{{ $data->value }}$</p>
                                         <?php
                                             $sale = $data->value - $data->rebate
                                         ?>
-                                        <p>{{ $sale}}$</p>
+                                        <p style="display: flex; align-item: center">{{ $sale}}$</p>
                                     </div>
                                 </div>
                         </div>
