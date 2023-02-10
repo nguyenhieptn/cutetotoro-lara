@@ -19,11 +19,11 @@ $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_pro
                  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($info_product as $key => $data)
-                        @php
+                        <?php
                             echo '<pre>';
                                 print_r($data);
                             echo '</pre>';
-                        @endphp
+                        ?>
                @endforeach
             </div>
         </div>
