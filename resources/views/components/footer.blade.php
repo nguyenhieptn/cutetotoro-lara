@@ -49,11 +49,11 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 30px" >
+    <div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 0px" >
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-xs-12 col-xl-6">
-                    <div class="ft-bt-left">
+                    <div class="ft-bt ft-bt-left">
                         <ul style="list-style: none; padding-left: 0; margin-bottom: 0px">
                             <li><a href="#">wishlist</a></li>
                             <li><a href="#">about us</a></li>
@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="col col-12 col-xs-12 col-xl-6">
-                    <div class="ft-bt-right d-flex justify-content-center">
+                    <div class="ft-bt ft-bt-right d-flex justify-content-center">
                         <p style="margin-bottom: 0px">Contact with us:</p>
                         <ul style="list-style: none; padding-left: 0px; margin-bottom: 0px">
                             <li>

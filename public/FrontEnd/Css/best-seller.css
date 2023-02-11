@@ -29,7 +29,6 @@ p {
     /*display: flex;*/
     /*align-items: center;*/
     text-align: justify;
-    color: #000000;
 
 }
 
@@ -86,7 +85,7 @@ p {
     }
 
     .container-globe {
-        padding: 0 25px;
+        padding: 0 20px;
     }
 
     .main-carousel .flickity-prev-next-button {
@@ -116,7 +115,7 @@ p {
         font-style: normal;
         font-weight: 700;
         font-size: 1em;
-        line-height: 26px;
+        line-height: 25px;
         letter-spacing: -1px;
     }
 
@@ -133,17 +132,21 @@ p {
 
     .best_seller-price p:last-child {
         /*padding-left: 28px;*/
-        font-size: 1.3em;
+        font-size: 1.2em;
+    }
+
+    .wrap-about{
+        padding: 0px;
     }
 
     .about p {
         line-height: 35px;
         padding: 0px;
-        font-size: 23px;
+        font-size: 1.3em;
     }
 
     .about-l > h1 {
-        font-size: 25px;
+        font-size: 1.5em;
         font-weight: 700;
     }
 
@@ -159,10 +162,11 @@ p {
     }
 
     .ft-top h1, span, a {
-        font-size: 23px;
+        font-size: 18px;
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
+        text-decoration: none;
     }
 
     .ft-top {
@@ -171,6 +175,10 @@ p {
 
     .ft-top h1 {
         text-align: center;
+    }
+    .ft-contact >li p{
+        line-height: 35px;
+        font-size: 18px;
     }
 
     .ft-bt-left > ul li {
@@ -189,7 +197,10 @@ p {
     .view-all {
         right: 0;
     }
-
+    
+    .wrap-about{
+        padding: 15px;
+    }
     .about-img-top p {
         display: unset;
         font-size: 20px;
@@ -268,7 +279,7 @@ p {
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
-        line-height: 35px;
+        line-height: 30px;
     }
 
     .best_seller-price p:first-child {
@@ -296,6 +307,11 @@ p {
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
+    }
+
+    .ft-contact >li p{
+        line-height: 35px;
+        font-size: 20px;
     }
 
     .ft-bt-left > ul li {
