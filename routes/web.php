@@ -33,7 +33,6 @@ if( env( 'SHOP_MULTISHOP' ) )
     $conf['prefix'] .= '/{site}';
     $conf['where']['site'] = '[A-Za-z0-9\.\-]+';
 }
-
 if( $conf['prefix'] )
 {
     Route::get('/', function () use ($params) {
@@ -42,7 +41,7 @@ if( $conf['prefix'] )
 }
 
 Route::group($conf ?? [], function() {
-    require __DIR__.'/auth.php';
+//    require __DIR__.'/auth.php';
 });
 // catalog
 Route::get('/product-detail', function(){
