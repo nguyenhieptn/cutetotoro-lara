@@ -1,25 +1,18 @@
-<!-- content -->
-<!-- Controller -->
-<?php
-use App\Models\Category;
-$Category = Category::orderBy('category_id', 'ASC')->get();
-?>
-<!-- End Controler -->
 <div class="container-fluid Header_Style">
     <div class="container d-flex container1 wrap-header">
         <div class="wrap-nav-left">
             <div class="wrap-bar">
                 <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                    aria-controls="offcanvasScrolling"><img src="{{ asset('FrontEnd/Image/bar.png') }}"
-                        alt="bar_tool"></button>
+                        aria-controls="offcanvasScrolling"><img src="{{ asset('FrontEnd/Image/bar.png') }}"
+                                                                alt="bar_tool"></button>
                 {{-- sidebar menu --}}
                 {{-- end sidebar menu --}}
             </div>
             <div class="Category">
                 <ul>
-                    @foreach ($Category as $key => $data)
+                    @foreach (getCategoriesMenu() as $key => $data)
                         <li>
-                            <a href="{{$data->url}}">{{ $data->category_name }}</a>
+                            <a href="{{$data->url}}">{{ $data->label }}</a>
                         </li>
                     @endforeach
                 </ul>
@@ -27,7 +20,7 @@ $Category = Category::orderBy('category_id', 'ASC')->get();
         </div>
         <div class="d-flex">
             <div class="Logo">
-                <a href="/home-page">
+                <a href="{{route('home')}}">
                     <img src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
                 </a>
             </div>
@@ -36,7 +29,8 @@ $Category = Category::orderBy('category_id', 'ASC')->get();
             <ul class="Search">
                 <li class="wrap-search">
                     <div class="d-flex">
-                        <input style="border: none" class="Search_Input" type="text" name="Search" placeholder="Search...">
+                        <input style="border: none" class="Search_Input" type="text" name="Search"
+                               placeholder="Search...">
                         <span>
                             <a href="/search-items">
                                 <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
@@ -52,7 +46,7 @@ $Category = Category::orderBy('category_id', 'ASC')->get();
                             </a>
                         </li>
                         <li>
-                            <a class="Cart_Icon" href="/cart">
+                            <a class="Cart_Icon" href="{{ route('cart') }}">
                                 <img class="cart_shippping" src="{{ asset('FrontEnd/Image/cart.png') }}">
                             </a>
                         </li>
@@ -63,45 +57,11 @@ $Category = Category::orderBy('category_id', 'ASC')->get();
         </div>
     </div>
 </div>
-<div class="container-fluid p-0">
-    <div class="banner_mobile">
-        <div id="carouselExample2" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/banner1.png') }}" alt="i love you">
-                </div>
-                <div class="carousel-item">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/sale.png') }}" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/bestchoose.png') }}" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img class="Banner_mobile" src="{{ asset('FrontEnd/Image/saleup.png') }}" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true">
-                    <img src="{{ asset('FrontEnd/Image/back.png') }}">
-                </span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true">
-                    <img src="{{ asset('FrontEnd/Image/next.png') }}">
-                </span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</div>
 {{-- CSS --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('FrontEnd/Css/StyleHomePage.css') }}">
 {{-- sidebar menu --}}
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+     id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
         <a href="/home-page">
             <img src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
@@ -112,7 +72,7 @@ $Category = Category::orderBy('category_id', 'ASC')->get();
         <p>Wellcom to Shop Totoro</p>
         <div class="d-flex">
             <input class="Search_Input" type="text" name="Search" placeholder="Search..."
-                style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
+                   style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
             <span>
                 <a href="/search-items">
                     <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">

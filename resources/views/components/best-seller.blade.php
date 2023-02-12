@@ -6,7 +6,7 @@ $info_product = DB::table('mshop_text')
     ->join('mshop_product_list', 'mshop_text.mtime', '=', 'mshop_product_list.mtime')
     ->join('mshop_product', 'mshop_product_list.parentid', '=', 'mshop_product.id')
     ->get();
-?>
+//?><!---->
 <div class="best_seller">
     <div class="container container-globe">
         <div class="row best_seller_top">
