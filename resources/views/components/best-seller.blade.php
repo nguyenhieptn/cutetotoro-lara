@@ -18,18 +18,14 @@
                 @foreach ($bestSeller as $key => $data)
                     <div class="carousel-cell" style="position: relative">
                         <a href="/product-detail/{{ $data['product.id'] }}">
-                            <img src="/aimeos/{{$data['media'][0] }}">
+                            <img src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
                         </a>
-                        {{-- class="girl img-responsive" alt="" /> --}}
                         <div class="best_seller_bottom">
                                     <span>
-                                        {!! $data['product.url'] !!}
+                                        {!! $data['product.label'] !!}
                                     </span>
                             <div class="best_seller-price">
-                                <p style="display: flex; align-item: center">
-                                    {{--                                <strike style="line-height: 34px">{{ $data->value }}$</strike>--}}
-                                </p>
-                                <p></p>
+                                {!! $data['price'][0]['price_html'] !!}
                             </div>
                         </div>
                     </div>
