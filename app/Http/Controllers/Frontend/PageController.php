@@ -50,7 +50,9 @@ class PageController extends Controller
             foreach ($detail->getRefItems('media') as $media) {
                 $listItems['media'][] = $media->get('media.url');
             }
-
+            foreach ($detail->getRefItems('text') as $text) {
+                $listItems['text'][] = $text->get('text.content');
+            }
             foreach ($detail->getRefItems('catalog') as $catalog) {
                 $listItems['catalog'][] = [
                     'label' => $catalog->label,

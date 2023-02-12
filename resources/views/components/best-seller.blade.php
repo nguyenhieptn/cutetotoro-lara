@@ -1,3 +1,4 @@
+
 <div class="best_seller">
     <div class="container container-globe">
         <div class="row best_seller_top">
@@ -22,7 +23,7 @@
                         </a>
                         <div class="best_seller_bottom">
                                     <span>
-                                        {!! $data['product.label'] !!}
+                                        {!! $data['text'][0] !!}
                                     </span>
                             <div class="best_seller-price">
                                 {!! $data['price'][0]['price_html'] !!}
