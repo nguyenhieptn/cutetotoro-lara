@@ -8,6 +8,7 @@ $data = DB::table('mshop_product_list')
     ->select('parentid','link','content','currencyid','quantity','value','costs','rebate','taxrate','code','url','rating','ratings','instock')
     ->groupBy('parentid','link','content','currencyid','quantity','value','costs','rebate','taxrate','code','url','rating','ratings','instock')
     ->get();
+   
 ?>
 <div class="sale-category ">
     <div class="list-category d-flex justify-content-center">
