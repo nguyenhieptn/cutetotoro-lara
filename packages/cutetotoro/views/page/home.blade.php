@@ -35,7 +35,7 @@
         </div>
     </div>
         <div style="margin-top: 100px">
-{{--            @include('components.best-seller')--}}
+            @include('components.best-seller')
         </div>
 
 
