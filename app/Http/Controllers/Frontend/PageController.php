@@ -63,6 +63,7 @@ class PageController extends Controller
                 $price = $price->getRefItem();
                 $listItems['price'][] = [
                     'actual' => $price->get('price.value'),
+                    'rebate' => $price->get('price.rebate'),
                     'sale'   => getSalePrice($price->get('price.value'), $price->get('rebate')),
                     'price_html'=> getPriceHtml($price->get('price.value'), $price->get('rebate')),
                 ];
