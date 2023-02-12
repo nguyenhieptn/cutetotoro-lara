@@ -112,14 +112,14 @@ $cart = Session::get('cart');
                                                 <div class="quantity col-4 quantity col-4">
                                                     &nbsp;
                                                     <input class="value" type="number" required="required"
-                                                        name="b" value="{{$carts['productQuantity']}}" step="1"
+                                                        name="b" value="{{$carts['product_Quantity']}}" step="1"
                                                         min="1" max="2147483647">
                                                     
                                                     <a class="minibutton change up"
                                                         href="/shop/basket?b_action=edit&b_position=0&b_quantity=2">+</a>
                                                 </div>
-                                                <div class="unitprice col-4">{{$carts['productPrice']}}</div> {{-- € 100.00 --}}
-                                                <div class="price col-3">{{$carts['productPrice']}}</div>{{--  € 100.00 --}}
+                                                <div class="unitprice col-4">{{$carts['product_Price']}}</div> {{-- € 100.00 --}}
+                                                <div class="price col-3">{{$carts['product_Price']}}</div>{{--  € 100.00 --}}
                                                 <div class="action col-1">
                                                     <a class="minibutton delete"
                                                         href="/shop/basket?b_action=delete&b_position=0"></a>
@@ -132,7 +132,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Sub-total</div>
-                                                <div class="price col-3">{{$carts['productPrice']}}</div>
+                                                <div class="price col-3">{{$carts['product_Price']}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Shipping</div>
-                                                <div class="price col-3">{{$carts['productPrice']}}</div>
+                                                <div class="price col-3">{{$carts['product_Price']}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -149,9 +149,9 @@ $cart = Session::get('cart');
                                     <div class="total row g-0">
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0 price-total">
-                                                <div class="quantity col-4">{{$carts['productQuantity']}} article</div>
+                                                <div class="quantity col-4">{{$carts['product_Quantity']}} article</div>
                                                 <div class="col-4 total-text">Total</div>
-                                                <div class="price col-3">{{$carts['productPrice']}}</div>
+                                                <div class="price col-3">{{$carts['product_Price']}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
