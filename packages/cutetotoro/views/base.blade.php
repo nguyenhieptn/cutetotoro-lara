@@ -1,7 +1,7 @@
 <!-- Home page -->
 <!DOCTYPE html>
 <html>
-    @include('Pages.Header') {{-- Header --}}
+    @include('Pages.header') {{-- Header --}}
     <link type="text/css" rel="stylesheet" href="{{ asset('vendor/shop/themes/default/aimeos.css?v=' . config( 'shop.version', 1 ) ) }}">
     <body>
     @include('cutetotoro::layouts.head')
