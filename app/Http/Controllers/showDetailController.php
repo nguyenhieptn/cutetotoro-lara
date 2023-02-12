@@ -22,4 +22,8 @@ class showDetailController extends Controller
         Session::put('link',$infoAll->link);
         return view('Pages.mainDetail')->with(compact('infoAll'));
     }
+    public function show_cart()
+    {
+        return view('Pages.cart.show_cart');
+    }
 }

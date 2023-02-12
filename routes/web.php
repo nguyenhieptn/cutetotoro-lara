@@ -56,3 +56,4 @@ Route::get('/checkout', function(){
     return view('Pages.checkOut');
 });
 Route::get('/product-detail/{idProduct}',[showDetailController::class,'show_detail']);
+Route::get('/cart',[showDetailController::class,'show_cart']);
