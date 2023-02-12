@@ -2,39 +2,19 @@
 <!DOCTYPE html>
 <html>
     @include('Pages.Header') {{-- Header --}}
-<body>
-    <div>
-        @include('Pages.Body_Menu_Sidebar') 
-    </div>
+    <link type="text/css" rel="stylesheet" href="{{ asset('vendor/shop/themes/default/aimeos.css?v=' . config( 'shop.version', 1 ) ) }}">
+    <body>
+    @include('cutetotoro::layouts.head')
 	{{-- best-seller --}}
-	<div style="margin-top: 100px">
-		@include('components.best-seller')
-	</div>
-	{{-- end-best-seller --}}
+    <div class="content">
+{{--        @yield('aimeos_stage')--}}'
+        <main>
+{{--            @yield('aimeos_body')--}}
 
-        {{-- best-seller --}}
-        {{-- <div style="margin-top: 10px">
-            @include('components.best-seller')
-        </div> --}}
-        {{-- end-best-seller --}}
-
-    <!-- sale product -->
-    <div style="margin-top: 70px">
-        @include('components.sale')
+            @yield('content')
+        </main>
     </div>
-    <!-- end sale product -->
-
-    {{-- about --}}
-    <div>
-        @include('components.about')
-    </div>
-    {{-- end-about --}}
-
-    {{-- footer --}}
-    <div>
-        @include('components.footer')
-    </div>
-    {{-- end-footer --}}
+    @include('cutetotoro::layouts.footer')
 
 </body>
 <footer>

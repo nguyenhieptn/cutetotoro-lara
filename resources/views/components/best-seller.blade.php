@@ -1,7 +1,12 @@
 <?php
 use Illuminate\Support\Facades\DB;
-$info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_product.id','=','mshop_product_list.parentid')->join('mshop_media','mshop_product_list.refid','=','mshop_media.id')->join('mshop_text','mshop_product_list.refid','=','mshop_text.id')->join('mshop_price','mshop_product_list.refid','=','mshop_price.id')->get();
-?>
+$info_product = DB::table('mshop_text')
+    ->join('mshop_media', 'mshop_text.mtime', '=', 'mshop_media.mtime')
+    ->join('mshop_price', 'mshop_text.mtime', '=', 'mshop_price.mtime')
+    ->join('mshop_product_list', 'mshop_text.mtime', '=', 'mshop_product_list.mtime')
+    ->join('mshop_product', 'mshop_product_list.parentid', '=', 'mshop_product.id')
+    ->get();
+//?><!---->
 <div class="best_seller">
     <div class="container container-globe">
         <div class="row best_seller_top">
@@ -20,13 +25,14 @@ $info_product = DB::table('mshop_product')->join('mshop_product_list','mshop_pro
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($info_product as $key => $data)
                         <div class="carousel-cell" style="position: relative">
-                            <a href="/product-detail"><img src="/aimeos/{{$data->link }}"></a>
+                            <a href="/product-detail/{{$data->parentid}}"><img src="/aimeos/{{$data->link }}"></a>
+                                {{-- class="girl img-responsive" alt="" /> --}}
                                 <div class="best_seller_bottom">
                                     <span>
-                                        {{ $data->content }}
+                                        {!! $data->content !!}
                                     </span>
                                     <div class="best_seller-price">
-                                        <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data->value }}$</strike></p>
+                                        <p style="display: flex; align-item: center"><strike style="line-height: 34px">{{ $data->value }}$</strike></p>
                                         <?php
                                             $sale = $data->value - $data->rebate
                                         ?>
