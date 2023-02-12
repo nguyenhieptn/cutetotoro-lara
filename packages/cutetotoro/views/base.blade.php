@@ -1,6 +1,6 @@
 <!-- Home page -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
     @include('Pages.header') {{-- Header --}}
     <link type="text/css" rel="stylesheet" href="{{ asset('vendor/shop/themes/default/aimeos.css?v=' . config( 'shop.version', 1 ) ) }}">
     <body>
@@ -10,7 +10,6 @@
 {{--        @yield('aimeos_stage')--}}'
         <main>
 {{--            @yield('aimeos_body')--}}
-
             @yield('content')
         </main>
     </div>
