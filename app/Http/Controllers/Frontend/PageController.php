@@ -70,4 +70,9 @@ class PageController extends Controller
         }
         view()->share('bestSeller', $products);
     }
+    public function Grid(): \Illuminate\Http\Response
+    {
+        $this->getBestSellerProduct();
+        return Response::view('components.sale');
+    }
 }
