@@ -6,7 +6,7 @@
     <body>
     @include('cutetotoro::layouts.head')
 	{{-- best-seller --}}
-    <div class="content">
+    <div class="content" style="margin-top: -22px;">
 {{--        @yield('aimeos_stage')--}}'
         <main>
 {{--            @yield('aimeos_body')--}}
@@ -16,7 +16,7 @@
     @include('cutetotoro::layouts.footer')
 
 </body>
-<footer>
+<footer style="display: none;">
     <!-- footer page -->
 
     <!-- script -->

@@ -141,7 +141,7 @@
 }
 </style>
 <div class='container d-flex ft'>
-    <div class='a'>
+    <div class='a' style="padding-left: 4rem;">
         <p>ABOUT US</p>
         <p>We founded Cute Totoro with one simple goal:</p>
         <p>To make you so special and so cute with Totoro.</p>
@@ -177,7 +177,7 @@ color: #000000;">cutetoro.com@gmail.com</a></p>
         </ul>
     </div>
 </div>
-<div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 30px" >
+<div class="container-fluid footer-botom" style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 30px; margin-bottom: -16px;" >
         <div class="container">
             <div class="row">
                 <div class="col col-12 col-xs-12 col-xl-6">
@@ -189,7 +189,7 @@ color: #000000;">cutetoro.com@gmail.com</a></p>
                             <li><a href="#"> shipping policy</a></li>
                             <li><a href="#">terms of service</a></li>
                         </ul>
-                        <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2016 © cutetotoro</p>
+                        <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2023 © cutetotoro</p>
                     </div>
                 </div>
 
