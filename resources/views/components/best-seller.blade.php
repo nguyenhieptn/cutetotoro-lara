@@ -26,7 +26,7 @@
                                         {!! $data['text'][0] !!}
                                     </span>
                             <div class="best_seller-price">
-                                {!! $data['price_html'] !!}
+                                {!! $data['price'][0]['price_html'] !!}
                             </div>
                         </div>
                     </div>
