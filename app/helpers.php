@@ -50,6 +50,7 @@ if(!function_exists('convertAimeosProductToProduct'))
             $price = $price->getRefItem();
             $listItems['price'][] = [
                 'actual' => $price->get('price.value'),
+                'rebate' => $price->get('rebate'),
                 'sale'   => getSalePrice($price->get('price.value'),$price->get('rebate')),
                 'price_html'=> getPriceHtml($price->get('price.value'), $price->get('rebate')),
             ];
