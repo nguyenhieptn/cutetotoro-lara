@@ -123,6 +123,7 @@ class showDetailController extends Controller
     public function updateCart(Request $request)
     {
         $data = $request->all();
+        dd($data);
         $cart = Session::get('cart');
         if($cart==true){
             foreach($data['cartQuantity'] as $key => $qty){

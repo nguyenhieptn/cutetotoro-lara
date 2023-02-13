@@ -190,7 +190,7 @@ $cart = Session::get('cart');
                                 <div class="input-group coupon-new">
                                     <input class="form-control coupon-code" type="text" maxlength="255"
                                         placeholder="Coupon codes" name="b_coupon">
-                                    <button class="btn btn-primary" type="submit">Apply</button>
+                                    <button class="btn btn-primary" type="button">Apply</button>
                                 </div>
 
                             </div>
