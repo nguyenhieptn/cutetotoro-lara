@@ -243,6 +243,7 @@ $(document).ready(function(e) {
         var productImage = "{{$link}}";
         var productPrice = "{!! $product['price'][0]['price_html'] !!}";
         var productQuantity = 1;
+        var shipping = "{{$product['price'][0]['costs']}}";
         var _token = $('input[name="_token"]').val();
         $.ajax({
             url: '{{url('/add-cart')}}',
@@ -253,6 +254,7 @@ $(document).ready(function(e) {
                 productImage: productImage,
                 productPrice: productPrice,
                 productQuantity: productQuantity,
+                shipping: shipping,
                 _token: _token
             },
             success: function(data) {

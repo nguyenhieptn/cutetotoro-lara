@@ -114,12 +114,9 @@ $cart = Session::get('cart');
                                                     <input class="value" type="number" required="required"
                                                         name="b" value="{{$carts['product_Quantity']}}" step="1"
                                                         min="1" max="2147483647">
-                                                    
-                                                    <a class="minibutton change up"
-                                                        href="/shop/basket?b_action=edit&b_position=0&b_quantity=2">+</a>
                                                 </div>
-                                                <div class="unitprice col-4">{{$carts['product_Price']}}</div> {{-- € 100.00 --}}
-                                                <div class="price col-3">{{$carts['product_Price']}}</div>{{--  € 100.00 --}}
+                                                <div class="unitprice col-4">{{$carts['product_Price']}}</div>
+                                                <div class="price col-3">{{$carts['product_Price']}}</div>
                                                 <div class="action col-1">
                                                     <a class="minibutton delete"
                                                         href="/shop/basket?b_action=delete&b_position=0"></a>
@@ -141,7 +138,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Shipping</div>
-                                                <div class="price col-3">{{$carts['product_Price']}}</div>
+                                                <div class="price col-3">{{$carts['product_shipping']}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -151,7 +148,7 @@ $cart = Session::get('cart');
                                             <div class="row g-0 price-total">
                                                 <div class="quantity col-4">{{$carts['product_Quantity']}} article</div>
                                                 <div class="col-4 total-text">Total</div>
-                                                <div class="price col-3">{{$carts['product_Price']}}</div>
+                                                <div class="price col-3">{{$carts['product_Price']+$carts['product_shipping']}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -189,9 +186,9 @@ $cart = Session::get('cart');
                             </div>
                         </div>
                         <div class="button-group">
-                            <a class="btn btn-default btn-lg btn-back" href="/shop/demo-article">
+                            <a class="btn btn-default btn-lg btn-back" href="/">
                                 Back</a>
-                            <button class="btn btn-default btn-lg btn-update" type="submit">
+                            <button class="btn btn-default btn-lg btn-update" type="button">
                                 Update</button>
                             <a class="btn btn-primary btn-lg btn-action" href="/checkout">
                                 Checkout</a>

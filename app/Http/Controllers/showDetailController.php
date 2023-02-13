@@ -85,7 +85,8 @@ class showDetailController extends Controller
                     'product_Id'       => $data['productId'],
                     'product_Image'    => $data['productImage'],
                     'product_Quantity' => $data['productQuantity'],
-                    'product_Price'    => $data['productPrice']
+                    'product_Price'    => $data['productPrice'],
+                    'product_shipping'    => $data['shipping']
                 );
                 Session::put('cart', $cart);
             }
@@ -96,7 +97,8 @@ class showDetailController extends Controller
                 'product_Id'       => $data['productId'],
                 'product_Image'    => $data['productImage'],
                 'product_Quantity' => $data['productQuantity'],
-                'product_Price'    => $data['productPrice']
+                'product_Price'    => $data['productPrice'],
+                'product_shipping'    => $data['shipping']
             );
         }
         Session::put('cart', $cart);
