@@ -55,6 +55,6 @@ Route::get('/checkout', function () {
     return view('Pages.checkOut');
 });
 Route::get('/product-detail/{idProduct}', [showDetailController::class, 'show_detail']);
-Route::post('/add-cart/{$id}',[showDetailController::class,'add_cart'])->name('product.addToCart');;
+Route::post('/add-cart',[showDetailController::class,'add_cart'])->name('product.addToCart');;
 Route::get('/cart',[showDetailController::class,'cart']);
 Route::get('/checkout',[showDetailController::class,'show_checkout']);
