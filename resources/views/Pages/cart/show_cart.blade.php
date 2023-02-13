@@ -19,9 +19,6 @@ $cart = Session::get('cart');
 
 
 @section('content')
-
-@stop
-
 <body class="page-basket-index">
     <div class="content">
         <div class="container-fluid">
@@ -181,5 +178,6 @@ $cart = Session::get('cart');
     <script src="https://laravel.demo.aimeos.org/vendor/shop/themes/default/app.js?v=1"></script>
     <script src="https://laravel.demo.aimeos.org/vendor/shop/themes/default/aimeos.js?v=1"></script>
 </body>
+</div>
+@stop
 
-</html>
