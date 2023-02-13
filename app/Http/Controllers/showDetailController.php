@@ -115,9 +115,27 @@ class showDetailController extends Controller
                 }
             }
             Session::put('cart',$cart);
-            return redirect()->back()->with('message','Deleta product susscess');
+            return redirect()->back()->with('message','Deleta product succsess');
         }else{
             return redirect()->back()->with('error','Not data product');
+        }
+    }
+    public function update_cart(Request $request)
+    {
+        $data = $request->all();
+        $cart = Session::get('cart');
+        if($cart==true){
+            foreach($data['cartQuantity'] as $key => $qty){
+                foreach($cart as $key2 => $value){
+                    if($value['session_id']==$key){
+                        $cart[$key2]['product_Quantity'] = $qty;
+                    }
+                }
+            }
+            Session::put('cart',$cart);
+            return redirect()->back()->with('message','Update cart succsess');
+        }else{
+            return redirect()->back()->with('message','Not data product');
         }
     }
     public function cart()

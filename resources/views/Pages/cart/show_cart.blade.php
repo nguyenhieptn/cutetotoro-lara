@@ -119,7 +119,7 @@ $cart = Session::get('cart');
                                                 <div class="quantity col-4 quantity col-4">
                                                     &nbsp;
                                                     <input class="value" type="number" required="required"
-                                                        name="b" value="{{$carts['product_Quantity']}}" step="1"
+                                                        name="cartQuantity{{$carts['session_id']}}" value="{{$carts['product_Quantity']}}" step="1"
                                                         min="1" max="2147483647">
                                                 </div>
                                                 <div class="unitprice col-4">{{$carts['product_Price']}}</div>
