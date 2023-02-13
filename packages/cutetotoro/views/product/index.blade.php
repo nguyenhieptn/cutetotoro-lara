@@ -231,8 +231,8 @@
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript">
 <?php
-dd($product);
-$link = $product['media'][0]['link']
+// dd($product);
+$link = $product['media'][0];
 ?>
 $(document).ready(function(e) {
     $('.addToCart').click(function() {
