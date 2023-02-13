@@ -104,4 +104,12 @@ class showDetailController extends Controller
     {
         return view('Pages.cart.show_cart');
     }
+<<<<<<< HEAD
 }
+=======
+    public function show_chekout()
+    {
+        return view('Pages.checkOut');
+    }
+}
+>>>>>>> e0884d1bec4f2a8a9cd4b5db007498fe10e430b1

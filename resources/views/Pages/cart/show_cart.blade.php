@@ -193,7 +193,7 @@ $cart = Session::get('cart');
                                 Back</a>
                             <button class="btn btn-default btn-lg btn-update" type="submit">
                                 Update</button>
-                            <a class="btn btn-primary btn-lg btn-action" href="/shop/checkout">
+                            <a class="btn btn-primary btn-lg btn-action" href="/checkout">
                                 Checkout</a>
                         </div>
                     </form>
