@@ -60,10 +60,13 @@ class showDetailController extends Controller
         if ($salePrice < 0) {
             $salePrice = 0;
         }
+        return Response::view(Shop::template('product.index'), [])
+            ->header('Cache-Control', 'no-store, , max-age=0')
+            ->with(compact('product', 'salePrice'));
         return view('Pages.mainDetail')->with(compact('product', 'salePrice'));
     }
 
-    public function add_cart(Request $request, $id)
+    public function add_cart(Request $request)
     {
         $data = $request->all();
         $session_id = substr(md5(microtime()), rand(0, 26), 5);
