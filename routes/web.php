@@ -46,9 +46,8 @@ Route::group($conf ?? [], function () {
     require __DIR__ . '/auth.php';
 });
 // catalog
-Route::get('/product-detail', function () {
-    return view('Pages.mainDetail');
-});
+Route::get('/product/{id}', 'App\Http\Controllers\Frontend\ProductController@detail')->name('product.detail');
+Route::get('/product/{id}/add-to-card', 'App\Http\Controllers\Frontend\ProductController@addToCart')->name('product.addToCart');
 Route::get('/all-product', function () {
     return view('Pages.allProduct');
 });

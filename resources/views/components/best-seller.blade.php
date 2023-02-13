@@ -17,7 +17,7 @@
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($bestSeller as $key => $data)
                     <div class="carousel-cell" style="position: relative">
-                        <a href="/product-detail/{{ $data['product.id'] }}">
+                        <a href="{{ route('product.detail',$data['product.id'] ) }}">
                             <img src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
                         </a>
                         <div class="best_seller_bottom">

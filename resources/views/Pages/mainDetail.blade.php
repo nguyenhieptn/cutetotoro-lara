@@ -41,15 +41,15 @@
                 <p class="d-flex">
                     <a href="/">Home </a>
                     <span style="margin: 0 10px;">/</span>
-                    <?php
-                    $name = Session::get('name');
-                    $link = Session::get('link');
-                    if (isset($infoAll))
-                        $sale = $infoAll->value - $infoAll->rebate;
-                    else
-                        $sale = 0;
-                    echo $name;
-                    ?>
+{{--                    <?php--}}
+{{--                    $name = Session::get('name');--}}
+{{--                    $link = Session::get('link');--}}
+{{--                    if (isset($infoAll))--}}
+{{--                        $sale = $infoAll->value - $infoAll->rebate;--}}
+{{--                    else--}}
+{{--                        $sale = 0;--}}
+{{--                    echo $name;--}}
+{{--                    ?>--}}
                 </p>
             </div>
         </div>
@@ -62,8 +62,8 @@
 
                             <div class="col col-3 col-xl-12 detail-sb">
                                 <div class="detail-sb-wr">
-                                    <img style="width: 100%; height: 100%"
-                                         src="/aimeos/{{$link}}" alt="">
+{{--                                    <img style="width: 100%; height: 100%"--}}
+{{--                                         src="/aimeos/{{$link}}" alt="">--}}
                                 </div>
                             </div>
                         </div>
@@ -71,8 +71,8 @@
 
                     <div class="col col-12 col-xl-10 detail-dad">
                         <div class="main-detail-image" style="width: 100%">
-                            <img style="width: 100% ; height: 100%" src="/aimeos/{{$link}}"
-                                 alt="">
+{{--                            <img style="width: 100% ; height: 100%" src="/aimeos/{{$link}}"--}}
+{{--                                 alt="">--}}
                         </div>
                     </div>
                 </div>
@@ -94,22 +94,22 @@
                             </ul>
                         </li> --}}
                         <li>
-                            <p>{{$infoAll->label}}</p>
+{{--                            <p>{{$infoAll->label}}</p>--}}
                         </li>
                         <li style="margin-top: 30px">
                             <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span>
                             <span>
-                                    {!!$infoAll->content!!}
+{{--                                    {!!$infoAll->content!!}--}}
                                 </span>
                         </li>
                         <li style="margin-top: 35px">
                             <ul class="md-price d-flex">
                                 <li style="margin-right: 20px">
-                                    <span>{{$sale}}$</span>
+{{--                                    <span>{{$sale}}$</span>--}}
                                 </li>
                                 <li>
-                                        <span style="font-weight: 400; font-size: 30px; line-height: 33px;"><strike>{{$infoAll->value}}
-                                                $</strike></span>
+{{--                                        <span style="font-weight: 400; font-size: 30px; line-height: 33px;"><strike>{{$infoAll->value}}--}}
+{{--                                                $</strike></span>--}}
                                 </li>
                             </ul>
                         </li>
@@ -321,7 +321,7 @@
                             onclick="openCity(event,'Paris')"><span>REVIEWS</span></button>
                 </div>
                 <div id="London" class=" city tab-content">
-                    <p class="pt-0">{!! $infoAll->content !!}</p>
+{{--                    <p class="pt-0">{!! $infoAll->content !!}</p>--}}
                 </div>
 
                 <div id="Paris" class="city tab-content" style="display:none">
