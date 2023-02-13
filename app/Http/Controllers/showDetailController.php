@@ -109,7 +109,7 @@ class showDetailController extends Controller
         $cart = Session::get('cart');
         if($cart == true){
             foreach($cart as $key => $carts){
-                if($val['session_id']==$session_id){
+                if($carts['session_id']==$session_id){
                     unset($cart[$key]);
                 }
             }
