@@ -21,7 +21,7 @@ class ProductController extends Controller
             ->join('mshop_text', 'mshop_product_list.refid', '=', 'mshop_text.id')
             ->join('mshop_price', 'mshop_product_list.refid', '=', 'mshop_price.id')
             ->join('mshop_product', 'mshop_product_list.parentid', '=', 'mshop_product.id')
-            ->where('parentid', $idProduct)
+            ->where('parentid', $id)
             ->first();
         $salePrice = $product->value - $product->rebate;
         if ($salePrice < 0) {
