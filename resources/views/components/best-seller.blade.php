@@ -1,4 +1,4 @@
-@dd($bestSeller)
+
 <div class="best_seller">
     <div class="container container-globe">
         <div class="row best_seller_top">
