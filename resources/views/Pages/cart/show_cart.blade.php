@@ -19,7 +19,7 @@ $cart = Session::get('cart');
 
 
 @section('content')
-<div class="content">
+<div class="container">
         <div class="container-fluid">
             <section class="aimeos basket-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
                 <div class="container-xxl">
