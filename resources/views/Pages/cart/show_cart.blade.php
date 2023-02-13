@@ -54,6 +54,7 @@ $cart = Session::get('cart');
 </head>
 
 <body class="page-basket-index">
+@extends('cutetotoro::base')
     <div class="content">
         <div class="container-fluid">
             <section class="aimeos basket-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
