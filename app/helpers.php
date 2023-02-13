@@ -10,7 +10,7 @@ if (!function_exists('getCategoriesMenu')) {
 if (!function_exists('getSalePrice')) {
     function getSalePrice($regular, $rebate)
     {
-        if ($rebate > $regular) {
+        if ($rebate >= $regular) {
             return $regular;
         } else
             return $regular - $rebate;

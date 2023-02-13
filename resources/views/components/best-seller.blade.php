@@ -26,11 +26,7 @@
                                         {!! $data['text'][0] !!}
                                     </span>
                             <div class="best_seller-price">
-                                <p style="display: flex; align-item: center"><strike style="line-height: 24px">{{ $data['price'][0]['actual'] }}$</strike></p>
-                                <?php
-                                    $sale = $data['price'][0]['actual'] - $data['price'][0]['rebate']
-                                ?>
-                                <p>{{$sale}}$</p>
+                                {!! $data['price_html'] !!}
                             </div>
                         </div>
                     </div>
