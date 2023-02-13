@@ -1,15 +1,9 @@
 @php
 $cart = Session::get('cart');
 @endphp
-{{--@section('aimeos_header')--}}
-{{--    <title>{{ __( 'Basket') }}</title>--}}
-{{--    <?= $aiheader['locale/select'] ?? '' ?>--}}
-{{--    <?= $aiheader['catalog/search'] ?? '' ?>--}}
-{{--    <?= $aiheader['catalog/tree'] ?? '' ?>--}}
-{{--    <?= $aiheader['basket/bulk'] ?? '' ?>--}}
-{{--    <?= $aiheader['basket/standard'] ?? '' ?>--}}
-{{--    <?= $aiheader['basket/related'] ?? '' ?>--}}
-{{--@stop--}}
+@section('aimeos_head_nav')
+    <?= $aibody['catalog/tree'] ?? '' ?>
+@stop
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
 
