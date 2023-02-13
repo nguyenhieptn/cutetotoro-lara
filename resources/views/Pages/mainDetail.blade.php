@@ -58,13 +58,8 @@
 
                     <div class="col col-12 col-xl-10 detail-dad">
                         <div class="main-detail-image" style="width: 100%">
-<<<<<<< HEAD
-{{--                            <img style="width: 100% ; height: 100%" src="/aimeos/{{$link}}"--}}
-{{--                                 alt="">--}}
-=======
                             <img style="width: 100% ; height: 100%" src="/aimeos/{{$product->link}}"
                                  alt="">
->>>>>>> 5e1eede63578a2618552d993a406b538cf88a425
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-
+@dd($bestSeller)
 <div class="best_seller">
     <div class="container container-globe">
         <div class="row best_seller_top">
@@ -30,7 +30,7 @@
                                 <?php
                                     $sale = $data['price'][0]['actual'] - $data['price'][0]['rebate']
                                 ?>
-                                <p>{{ $sale}}$</p>
+                                <p>{{$sale}}$</p>
                             </div>
                         </div>
                     </div>
