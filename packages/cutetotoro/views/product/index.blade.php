@@ -230,9 +230,10 @@
 <script src="{{ asset('js/sweetalert.min.js') }}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript">
-@php
+<?php
+dd($product);
 $link = $product['media'][0]['link']
-@endphp
+?>
 $(document).ready(function(e) {
     $('.addToCart').click(function() {
         var id = {{$product['product.id']}};
