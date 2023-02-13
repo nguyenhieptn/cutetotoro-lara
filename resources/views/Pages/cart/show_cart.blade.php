@@ -58,7 +58,8 @@ $cart = Session::get('cart');
         <div class="container-fluid">
             <section class="aimeos basket-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
                 <div class="container-xxl">
-                    <form>
+                    <form action="/update-cart" method="Post">
+                        @csrf
                         <div class="row header">
                             <h1 class="col-12 col-sm-6">Cart Product</h1>
                         </div>
@@ -78,7 +79,6 @@ $cart = Session::get('cart');
                                             </div>
                                         </div>
                                     </div>
-                                   
                                     @if(Session::get('cart')==true)
                                     @php
                                         $total = 0;
@@ -117,7 +117,7 @@ $cart = Session::get('cart');
                                                 <div class="price col-3">{{$carts['product_Price']}}</div>
                                                 <div class="action col-1">
                                                     <a class="minibutton delete"
-                                                        href="/shop/basket?b_action=delete&b_position=0"></a>
+                                                        href="{{url::to('/delete-product/'.$carts['session_id'])}}"></a>
                                                 </div>
 
                                             </div>
@@ -166,6 +166,7 @@ $cart = Session::get('cart');
                                             Please add product to cart
                                         </div>
                                     @endif
+                                    
                                 </div>
                             </div>
                         </div>
@@ -177,8 +178,7 @@ $cart = Session::get('cart');
                                 <div class="input-group coupon-new">
                                     <input class="form-control coupon-code" type="text" maxlength="255"
                                         placeholder="Coupon codes" name="b_coupon">
-                                    <!--
---><button class="btn btn-primary" type="submit">Apply</button>
+                                    <button class="btn btn-primary" type="submit">Apply</button>
                                 </div>
 
                             </div>
@@ -186,7 +186,7 @@ $cart = Session::get('cart');
                         <div class="button-group">
                             <a class="btn btn-default btn-lg btn-back" href="/">
                                 Back</a>
-                            <button class="btn btn-default btn-lg btn-update" type="button">
+                            <button class="btn btn-default btn-lg btn-update" type="submit">
                                 Update</button>
                             <a class="btn btn-primary btn-lg btn-action" href="/checkout">
                                 Checkout</a>
