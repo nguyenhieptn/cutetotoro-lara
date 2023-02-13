@@ -261,7 +261,7 @@
                                             var productQuantity = 1;
                                             var _token = $('input[name="_token"]').val();
                                             $.ajax({
-                                                url: '{{url('/add-cart')}}',
+                                                url: '{{url('/add-cart/')}}',
                                                 method: 'POST',
                                                 data:{
                                                     productId:productId,
