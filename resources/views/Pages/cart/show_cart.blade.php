@@ -1,62 +1,25 @@
 @php
 $cart = Session::get('cart');
 @endphp
+@extends('cutetotoro::base')
+
+{{--@section('aimeos_header')--}}
+{{--    <title>{{ __( 'Basket') }}</title>--}}
+{{--    <?= $aiheader['locale/select'] ?? '' ?>--}}
+{{--    <?= $aiheader['catalog/search'] ?? '' ?>--}}
+{{--    <?= $aiheader['catalog/tree'] ?? '' ?>--}}
+{{--    <?= $aiheader['basket/bulk'] ?? '' ?>--}}
+{{--    <?= $aiheader['basket/standard'] ?? '' ?>--}}
+{{--    <?= $aiheader['basket/related'] ?? '' ?>--}}
+{{--@stop--}}
+
 @section('aimeos_head_nav')
     <?= $aibody['catalog/tree'] ?? '' ?>
 @stop
-<!DOCTYPE html>
-<html class="no-js" lang="en" dir="ltr">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="mR8HsEtio3RkDJKMPJX3UgaWVNSBoWvCRCBEdt4Y">
 
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self'; default-src 'self' 'nonce-yOWAR3gr1xA+Hl4FHFgOGQ=='; style-src &#039;unsafe-inline&#039; &#039;self&#039;; img-src &#039;self&#039; data: https://aimeos.org; frame-src https://www.youtube.com https://player.vimeo.com">
-
-    <link type="text/css" rel="stylesheet"
-        href="{{asset('/default/app.css?v=1')}}">
-    <link type="text/css" rel="stylesheet"
-        href="{{asset('/default/aimeos.css?v=1')}}" />
-
-    <title>Basket</title>
-    <link rel="stylesheet" href="{{asset('/default/locale-select.css?v=1')}}">
-    <script defer src="{{asset('/default/locale-select.js?v=1')}}"></script>
-    <script defer src="/shop/count"></script>
-
-    <link rel="stylesheet" href="{{asset('/default/catalog-filter.css?v=1')}}">
-    <script defer src="{{asset('/default/catalog-filter.js?v=1')}}"></script>
-    <link rel="stylesheet" href="{{asset('/default/basket-bulk.css?v=1')}}">
-    <script defer src="{{asset('/default/basket-bulk.js?v=1')}}"></script>
-    <title>Basket | Default</title>
-
-    <link class="basket-standard" rel="stylesheet"
-        href="{{asset('/default/summary.css?v=1')}}">
-    <link class="basket-standard" rel="stylesheet"
-        href="{{asset('/default/basket-standard.css?v=1')}}">
-    <script defer class="basket-standard"
-        src="{{asset('/default/basket-standard.js?v=1')}}"></script>
-    <link rel="stylesheet" href="{{asset('/default/basket-related.css?v=1')}}">
-    <script defer src="{{asset('/default/basket-related.js?v=1')}}"></script>
-
-    <style nonce="yOWAR3gr1xA+Hl4FHFgOGQ==">
-        :root {}
-    </style>
-
-    <link rel="icon" href="https://laravel.demo.aimeos.org/aimeos/../vendor/shop/themes/default/assets/icon.png" />
-
-    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-regular.woff2"
-        as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-700.woff2" as="font"
-        type="font/woff2" crossorigin>
-    <link rel="preload" href="/vendor/shop/themes/default/assets/bootstrap-icons.woff2" as="font"
-        type="font/woff2" crossorigin>
-</head>
-
-<body class="page-basket-index">
-    <div class="content">
+@section('content')
+<div class="content">
         <div class="container-fluid">
             <section class="aimeos basket-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
                 <div class="container-xxl">
@@ -208,9 +171,8 @@ $cart = Session::get('cart');
                     </form>
                 </div>
             </section>
-    <!-- Scripts -->
-    <script src="https://laravel.demo.aimeos.org/vendor/shop/themes/default/app.js?v=1"></script>
-    <script src="https://laravel.demo.aimeos.org/vendor/shop/themes/default/aimeos.js?v=1"></script>
-</body>
+        </div>
+    </div>
+@stop
 
-</html>
+
