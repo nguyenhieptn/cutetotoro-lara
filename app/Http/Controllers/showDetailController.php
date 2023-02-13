@@ -6,7 +6,7 @@ use Aimeos\MShop;
 use App;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use redireact;
+use Redireact;
 
 session_start();
 
