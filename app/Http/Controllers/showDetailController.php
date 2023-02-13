@@ -63,7 +63,7 @@ class showDetailController extends Controller
         return view('Pages.mainDetail')->with(compact('product', 'salePrice'));
     }
 
-    public function add_cart(Request $request)
+    public function add_cart(Request $request, $id)
     {
         $data = $request->all();
         $session_id = substr(md5(microtime()), rand(0, 26), 5);
