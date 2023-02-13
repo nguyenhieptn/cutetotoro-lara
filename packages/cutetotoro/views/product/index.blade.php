@@ -237,11 +237,7 @@ $link = $product['media'][0];
 $(document).ready(function(e) {
     $('.addToCart').click(function() {
         var id = {{$product['product.id']}};
-        var productId = {
-            {
-                $product['product.id']
-            }
-        };
+        var productId = {{$product['product.id']}};
         var productName = "{{$product['product.label']}}";
         var productImage = "{{$link}}";
         var productPrice = {!! $product['price'][0]['price_html'] !!};
