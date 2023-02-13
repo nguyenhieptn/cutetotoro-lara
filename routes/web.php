@@ -47,7 +47,7 @@ Route::group($conf ?? [], function () {
 });
 // catalog
 Route::get('/product/{id}', 'App\Http\Controllers\Frontend\ProductController@detail')->name('product.detail');
-Route::get('/product/{id}/add-to-card', 'App\Http\Controllers\Frontend\ProductController@addToCart')->name('product.addToCart');
+//Route::get('/product/{id}/add-to-card', 'App\Http\Controllers\Frontend\ProductController@addToCart')->name('product.addToCart');
 Route::get('/all-product', function () {
     return view('Pages.allProduct');
 });
@@ -55,3 +55,6 @@ Route::get('/checkout', function () {
     return view('Pages.checkOut');
 });
 Route::get('/product-detail/{idProduct}', [showDetailController::class, 'show_detail']);
+Route::post('/add-cart',[showDetailController::class,'add_cart']);
+Route::get('/cart',[showDetailController::class,'cart']);
+
