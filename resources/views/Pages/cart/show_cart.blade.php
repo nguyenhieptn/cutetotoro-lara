@@ -78,15 +78,15 @@ $cart = Session::get('cart');
                                             </div>
                                         </div>
                                     </div>
-                                   
+                                    @php
+                                    dd(Session::get('cart'))    
+                                    @endphp
                                     @if(Session::get('cart')==true)
                                     @php
                                         $total = 0;
                                     @endphp
                                     @foreach($cart as $key => $carts)
-                                    @php
-                                        
-                                    @endphp
+                                    
                                     <div class="supplier">
                                         <h3 class="supplier-name">{{$carts['product_Name']}}</h3>
                                     </div>
