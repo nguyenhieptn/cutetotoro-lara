@@ -16,14 +16,14 @@ class ProductController extends Controller
 {
     public function detail($id): \Illuminate\Http\Response
     {
-        $product = DB::table('mshop_product_list')
+        $products = DB::table('mshop_product_list')
             ->join('mshop_media', 'mshop_product_list.refid', '=', 'mshop_media.id')
             ->join('mshop_text', 'mshop_product_list.refid', '=', 'mshop_text.id')
             ->join('mshop_price', 'mshop_product_list.refid', '=', 'mshop_price.id')
             ->join('mshop_product', 'mshop_product_list.parentid', '=', 'mshop_product.id')
             ->where('parentid', $id)
             ->first();
-        $salePrice = $product->value - $product->rebate;
+        $salePrice = $products->value - $products->rebate;
         if ($salePrice < 0) {
             $salePrice = 0;
         }
@@ -31,7 +31,7 @@ class ProductController extends Controller
         $product = $productManager->get($id, ['text', 'media', 'price', 'catalog']);
         $product = convertAimeosProductToProduct($product);
         view()->share('product', $product);
-        return Response::view(Shop::template('product.index'), [])->with(compact('product', 'salePrice'))
+        return Response::view(Shop::template('product.index'), [])->with(compact('products', 'salePrice'))
             ->header('Cache-Control', 'no-store, , max-age=0');
     }
 
