@@ -241,7 +241,7 @@ $(document).ready(function(e) {
         var productId = {{$product['product.id']}};
         var productName = "{{$product['product.label']}}";
         var productImage = "{{$link}}";
-        var productPrice = "{!! $product['price'][0]['price_html'] !!}";
+        var productPrice = "{{ $product['price'][0]['actual'] -  $product['price'][0]['rebate']}}";
         var productQuantity = 1;
         var shipping = "{{$product['price'][0]['costs']}}";
         var _token = $('input[name="_token"]').val();
