@@ -104,7 +104,21 @@ class showDetailController extends Controller
         Session::put('cart', $cart);
         Session::save();
     }
-
+    public function deleteProduct($session_id)
+    {
+        $cart = Session::get('cart');
+        if($cart == true){
+            foreach($cart as $key => $carts){
+                if($val['session_id']==$session_id){
+                    unset($cart[$key]);
+                }
+            }
+            Session::put('cart',$cart);
+            return redireact()->back()->with('message','Deleta product susscess');
+        }else{
+            return redireact()->back()->with('error','Not data product');
+        }
+    }
     public function cart()
     {
         return view('Pages.cart.show_cart');
