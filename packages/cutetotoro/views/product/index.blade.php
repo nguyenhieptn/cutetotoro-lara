@@ -229,8 +229,8 @@
 <script src="{{asset('js/main.js')}}"></script>
 <script src="{{ asset('js/sweetalert.min.js') }}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script type="text/javascript">
 <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
+<script type="text/javascript">
 <?php
 // dd($product);
 $link = $product['media'][0];
