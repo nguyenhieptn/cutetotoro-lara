@@ -8,10 +8,7 @@
 	{{-- best-seller --}}
     <div class="content" style="margin-top: -22px;">
 {{--        @yield('aimeos_stage')--}}'
-        <main>
-{{--            @yield('aimeos_body')--}}
-            @yield('content')
-        </main>
+        @yield('content')
     </div>
     @include('cutetotoro::layouts.footer')
 
