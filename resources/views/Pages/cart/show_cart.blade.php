@@ -19,6 +19,34 @@ $cart = Session::get('cart');
 
 
 @section('content')
+<head>
+    <link type="text/css" rel="stylesheet"
+        href="{{asset('/default/app.css?v=1')}}">
+    <link type="text/css" rel="stylesheet"
+        href="{{asset('/default/aimeos.css?v=1')}}" />
+    <link rel="stylesheet" href="{{asset('/default/locale-select.css?v=1')}}">
+    <script defer src="{{asset('/default/locale-select.js?v=1')}}"></script>
+    <script defer src="/shop/count"></script>
+    <link rel="stylesheet" href="{{asset('/default/catalog-filter.css?v=1')}}">
+    <script defer src="{{asset('/default/catalog-filter.js?v=1')}}"></script>
+    <link rel="stylesheet" href="{{asset('/default/basket-bulk.css?v=1')}}">
+    <script defer src="{{asset('/default/basket-bulk.js?v=1')}}"></script>
+    <link class="basket-standard" rel="stylesheet"
+        href="{{asset('/default/summary.css?v=1')}}">
+    <link class="basket-standard" rel="stylesheet"
+        href="{{asset('/default/basket-standard.css?v=1')}}">
+    <script defer class="basket-standard"
+        src="{{asset('/default/basket-standard.js?v=1')}}"></script>
+    <link rel="stylesheet" href="{{asset('/default/basket-related.css?v=1')}}">
+    <script defer src="{{asset('/default/basket-related.js?v=1')}}"></script>
+    </style>
+    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-regular.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-700.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/shop/themes/default/assets/bootstrap-icons.woff2" as="font"
+        type="font/woff2" crossorigin>
+</head>
 <body class="page-basket-index">
     <div class="content">
         <div class="container-fluid">
