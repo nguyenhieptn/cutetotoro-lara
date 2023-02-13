@@ -81,7 +81,7 @@
                                 </ul>
                             </li>
                             <li style="margin-top: 30px">
-                                <a href="{{ route('product.addToCart'/ $product['product.id']) }}" class="btn btn-dark w-100" style="font-size: 2em">Add to cart
+                                <a href="{{ route('product.addToCart', $product['product.id']) }}" class="btn btn-dark w-100" style="font-size: 2em">Add to cart
                                 </a>
 
                             </li>
