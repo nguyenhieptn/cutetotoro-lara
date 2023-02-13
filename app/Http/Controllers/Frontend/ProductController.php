@@ -8,6 +8,9 @@ use Aimeos\Shop\Facades\Shop;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
+session_start();
 
 class ProductController extends Controller
 {
