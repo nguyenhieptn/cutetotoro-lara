@@ -109,7 +109,7 @@ class showDetailController extends Controller
     {
         return view('Pages.cart.show_cart');
     }
-    public function show_chekout()
+    public function show_checkout()
     {
         return view('Pages.checkOut');
     }
