@@ -230,6 +230,9 @@
 <script src="{{ asset('js/sweetalert.min.js') }}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script type="text/javascript">
+@php
+$link = $product['media'][0]['link']
+@endphp
 $(document).ready(function(e) {
     $('.addToCart').click(function() {
         var id = {{$product['product.id']}};
@@ -239,7 +242,7 @@ $(document).ready(function(e) {
             }
         };
         var productName = "{{$product['product.label']}}";
-        var productImage = "{{$products->link}}";
+        var productImage = "{{$link}}";
         var productPrice = {!! $product['price'][0]['price_html'] !!};
         var productQuantity = 1;
         var _token = $('input[name="_token"]').val();
