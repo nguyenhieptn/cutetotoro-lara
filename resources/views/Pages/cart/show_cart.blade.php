@@ -117,7 +117,7 @@ $cart = Session::get('cart');
                                                 <div class="price col-3">{{$carts['product_Price']}}</div>
                                                 <div class="action col-1">
                                                     <a class="minibutton delete"
-                                                        href="{{url::to('/delete-product/'.$carts['session_id'])}}"></a>
+                                                        href="{{url('/delete-product/'.$carts['session_id'])}}"></a>
                                                 </div>
 
                                             </div>
