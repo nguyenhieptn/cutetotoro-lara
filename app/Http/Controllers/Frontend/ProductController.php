@@ -30,8 +30,8 @@ class ProductController extends Controller
         $productManager = MShop::create(app('aimeos.context')->get(), 'product');
         $product = $productManager->get($id, ['text', 'media', 'price', 'catalog']);
         $product = convertAimeosProductToProduct($product);
-        view()->share('product', $product);
-        return Response::view(Shop::template('product.index'), [])->with(compact('products', 'salePrice'))
+        view()->share('product', $product)->share('products', $products);
+        return Response::view(Shop::template('product.index'), [])
             ->header('Cache-Control', 'no-store, , max-age=0');
     }
 

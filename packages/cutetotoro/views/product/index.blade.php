@@ -239,7 +239,7 @@ $(document).ready(function(e) {
             }
         };
         var productName = "{{$product['product.label']}}";
-        var productImage = {{$product['media'][0]['link']}};
+        var productImage = "{{$products->link}}";
         var productPrice = {!! $product['price'][0]['price_html'] !!};
         var productQuantity = 1;
         var _token = $('input[name="_token"]').val();
