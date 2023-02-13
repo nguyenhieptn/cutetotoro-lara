@@ -2,6 +2,10 @@
     font-family: 'Manjari';
 }
 
+a{
+    text-decoration: none;
+}
+
 .list-category ul li {
     list-style: none;
     text-transform: uppercase;
@@ -153,6 +157,9 @@
 
 .mug-product span {
     font-size: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 .mug-layer {
@@ -162,8 +169,8 @@
 
 .mug-sticker {
     position: absolute;
-    left: 13px;
-    bottom: 113px;
+    left: 15px;
+    bottom: 127px;
 }
 
 .mug-sticker img:first-child {
@@ -206,7 +213,7 @@
     font-size: 12px;
     line-height: 14px;
     right: 25px;
-    bottom: 20px;
+    bottom: 15px;
 }
 
 /* -------------------------------------------about  */

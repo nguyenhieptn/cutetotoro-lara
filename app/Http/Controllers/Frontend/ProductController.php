@@ -16,17 +16,6 @@ class ProductController extends Controller
 {
     public function detail($id): \Illuminate\Http\Response
     {
-        $products = DB::table('mshop_product_list')
-            ->join('mshop_media', 'mshop_product_list.refid', '=', 'mshop_media.id')
-            ->join('mshop_text', 'mshop_product_list.refid', '=', 'mshop_text.id')
-            ->join('mshop_price', 'mshop_product_list.refid', '=', 'mshop_price.id')
-            ->join('mshop_product', 'mshop_product_list.parentid', '=', 'mshop_product.id')
-            ->where('parentid', $id)
-            ->first();
-        $salePrice = $products->value - $products->rebate;
-        if ($salePrice < 0) {
-            $salePrice = 0;
-        }
         $productManager = MShop::create(app('aimeos.context')->get(), 'product');
         $product = $productManager->get($id, ['text', 'media', 'price', 'catalog']);
         $product = convertAimeosProductToProduct($product);
@@ -44,4 +33,6 @@ class ProductController extends Controller
         dd($basket);
         return $basket;
     }
+
+    
 }
