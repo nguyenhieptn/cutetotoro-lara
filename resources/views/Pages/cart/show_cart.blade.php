@@ -2,7 +2,6 @@
 $cart = Session::get('cart');
 
 @endphp
-@extends('cutetotoro::base')
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
 
