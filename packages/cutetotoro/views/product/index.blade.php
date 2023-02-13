@@ -232,23 +232,15 @@
 <script type="text/javascript">
 $(document).ready(function(e) {
     $('.addToCart').click(function() {
-        var id = {
-            {
-                $product - > parentid
-            }
-        };
+        var id = {{$product['product.id']}};
         var productId = {
             {
-                $product - > parentid
+                $product['product.id']
             }
         };
-        var productName = "{{$product->label}}";
-        var productImage = "{{$product->link}}";
-        var productPrice = {
-            {
-                $salePrice
-            }
-        };
+        var productName = "{{$product['product.label']}}";
+        var productImage = "{{$product['media'][0]['link']}}";
+        var productPrice = {!! $product['price'][0]['price_html'] !!};
         var productQuantity = 1;
         var _token = $('input[name="_token"]').val();
         $.ajax({
