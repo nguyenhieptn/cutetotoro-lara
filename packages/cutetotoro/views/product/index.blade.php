@@ -240,7 +240,7 @@ $(document).ready(function(e) {
         var productId = {{$product['product.id']}};
         var productName = "{{$product['product.label']}}";
         var productImage = "{{$link}}";
-        var productPrice = {!! $product['price'][0]['price_html'] !!};
+        var productPrice = "{!! $product['price'][0]['price_html'] !!}";
         var productQuantity = 1;
         var _token = $('input[name="_token"]').val();
         $.ajax({
