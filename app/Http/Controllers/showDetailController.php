@@ -120,7 +120,7 @@ class showDetailController extends Controller
             return redirect()->back()->with('error','Not data product');
         }
     }
-    public function update_cart(Request $request)
+    public function updateCart(Request $request)
     {
         $data = $request->all();
         $cart = Session::get('cart');
