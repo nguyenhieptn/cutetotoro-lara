@@ -36,19 +36,7 @@
                 <p class="d-flex">
                     <a href="/">Home </a>
                     <span style="margin: 0 10px;">/</span>
-<<<<<<< HEAD
-{{--                    <?php--}}
-{{--                    $name = Session::get('name');--}}
-{{--                    $link = Session::get('link');--}}
-{{--                    if (isset($infoAll))--}}
-{{--                        $sale = $infoAll->value - $infoAll->rebate;--}}
-{{--                    else--}}
-{{--                        $sale = 0;--}}
-{{--                    echo $name;--}}
-{{--                    ?>--}}
-=======
                     {{$product->label}}
->>>>>>> 5e1eede63578a2618552d993a406b538cf88a425
                 </p>
             </div>
         </div>
@@ -61,13 +49,8 @@
 
                             <div class="col col-3 col-xl-12 detail-sb">
                                 <div class="detail-sb-wr">
-<<<<<<< HEAD
-{{--                                    <img style="width: 100%; height: 100%"--}}
-{{--                                         src="/aimeos/{{$link}}" alt="">--}}
-=======
                                     <img style="width: 100%; height: 100%"
                                          src="/aimeos/{{$product->link}}" alt="">
->>>>>>> 5e1eede63578a2618552d993a406b538cf88a425
                                 </div>
                             </div>
                         </div>

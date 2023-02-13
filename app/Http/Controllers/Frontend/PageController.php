@@ -44,32 +44,8 @@ class PageController extends Controller
         $manager = MShop::create(app('aimeos.context')->get(true), 'product');
         $items = $manager->search(clone $manager->filter(), ['text', 'media', 'price', 'catalog'], $limit);
         $products = [];
-        foreach ($items as $key => $item) {
-            $detail = $item;
-            $listItems = [];
-            foreach ($detail->getRefItems('media') as $media) {
-                $listItems['media'][] = $media->get('media.url');
-            }
-            foreach ($detail->getRefItems('text') as $text) {
-                $listItems['text'][] = $text->get('text.content');
-            }
-            foreach ($detail->getRefItems('catalog') as $catalog) {
-                $listItems['catalog'][] = [
-                    'label' => $catalog->label,
-                    'id' => $catalog->id,
-                ];
-            }
-            foreach ($detail->getListItems('price') as $price) {
-                $price = $price->getRefItem();
-                $listItems['price'][] = [
-                    'actual' => $price->get('price.value'),
-                    'rebate' => $price->get('price.rebate'),
-                    'sale'   => getSalePrice($price->get('price.value'), $price->get('rebate')),
-                    'price_html'=> getPriceHtml($price->get('price.value'), $price->get('rebate')),
-                ];
-            }
-            $product = array_merge($detail->toArray(), $listItems);
-            $products[] = $product;
+        foreach ($items as $item) {
+            $products[] = convertAimeosProductToProduct($item);
         }
         view()->share('bestSeller', $products);
     }
