@@ -220,7 +220,7 @@
                     <img src="/aimeos/{{ $dt['media'][0] }}" alt="down">
                 @endforeach
 
-                <span>Xem thêm =></span>
+                <span>view more</span>
             </div>
         </div>
     </div>
