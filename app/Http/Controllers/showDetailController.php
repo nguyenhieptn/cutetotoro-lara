@@ -109,4 +109,8 @@ class showDetailController extends Controller
     {
         return view('Pages.cart.show_cart');
     }
+    public function show_chekout()
+    {
+        return view('Pages.checkOut');
+    }
 }

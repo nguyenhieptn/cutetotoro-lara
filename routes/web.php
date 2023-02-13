@@ -58,3 +58,4 @@ Route::get('/checkout', function () {
 Route::get('/product-detail/{idProduct}', [showDetailController::class, 'show_detail']);
 Route::post('/add-cart',[showDetailController::class,'add_cart']);
 Route::get('/cart',[showDetailController::class,'cart']);
+Route::get('/checkout',[showDetailController::class,'show_checkout']);
