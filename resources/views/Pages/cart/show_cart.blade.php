@@ -78,9 +78,7 @@ $cart = Session::get('cart');
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- @php
-                                    Session::forget('cart')
-                                    @endphp -->
+                                   
                                     @if(Session::get('cart')==true)
                                     @php
                                         $total = 0;
