@@ -79,7 +79,7 @@ $cart = Session::get('cart');
                                         </div>
                                     </div>
                                     @php
-                                    Session::forget('cart'))    
+                                    Session::forget('cart')    
                                     @endphp
                                     @if(Session::get('cart')==true)
                                     @php
