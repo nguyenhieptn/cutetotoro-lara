@@ -93,7 +93,10 @@ $cart = Session::get('cart');
                                         $total = 0;
                                     @endphp
                                     @foreach($cart as $key => $carts)
-                                    
+                                    @php
+                                        $subtotal = $carts['product_Price'] * $carts['product_Quantity'];
+                                        $total+=$subtotal;
+                                    @endphp
                                     <div class="supplier">
                                         <h3 class="supplier-name">{{$carts['product_Name']}}</h3>
                                     </div>
@@ -123,7 +126,7 @@ $cart = Session::get('cart');
                                                         min="1" max="2147483647">
                                                 </div>
                                                 <div class="unitprice col-4">{{$carts['product_Price']}}</div>
-                                                <div class="price col-3">{{$carts['product_Price']}}</div>
+                                                <div class="price col-3">{{$carts['product_Price'] * $carts['product_Quantity']}}</div>
                                                 <div class="action col-1">
                                                     <a class="minibutton delete"
                                                         href="{{('/delete-product/'.$carts['session_id'])}}"></a>
@@ -136,7 +139,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Sub-total</div>
-                                                <div class="price col-3">{{$carts['product_Price']}}</div>
+                                                <div class="price col-3">{{$subtotal}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -155,7 +158,7 @@ $cart = Session::get('cart');
                                             <div class="row g-0 price-total">
                                                 <div class="quantity col-4">{{$carts['product_Quantity']}} article</div>
                                                 <div class="col-4 total-text">Total</div>
-                                                <div class="price col-3">{{$carts['product_Price']+$carts['product_shipping']}}</div>
+                                                <div class="price col-3">{{$subtotal+$carts['product_shipping']}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
