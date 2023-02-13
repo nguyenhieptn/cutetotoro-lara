@@ -115,9 +115,9 @@ class showDetailController extends Controller
                 }
             }
             Session::put('cart',$cart);
-            return redireact()->back()->with('message','Deleta product susscess');
+            return redirect()->back()->with('message','Deleta product susscess');
         }else{
-            return redireact()->back()->with('error','Not data product');
+            return redirect()->back()->with('error','Not data product');
         }
     }
     public function cart()
