@@ -1,7 +1,8 @@
 <div class="sale-category ">
     <div class="list-category d-flex justify-content-center">
         <div id="filters" class="button-group">
-            <button class="button is-checked" data-filter=".Mug">mug</button>
+            <button class="button is-checked" data-filter="*">all</button>
+            <button class="button" data-filter=".Mug">mug</button>
             <button class="button" data-filter=".Poster">poster</button>
             <button class="button" data-filter=".T-shirt">t-shirt</button>
             <button class="button" data-filter=".Sticker">sticker</button>

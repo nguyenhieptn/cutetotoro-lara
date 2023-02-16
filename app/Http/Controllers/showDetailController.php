@@ -7,6 +7,8 @@ use App;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Redireact;
+use DB;
+use Response;
 
 session_start();
 

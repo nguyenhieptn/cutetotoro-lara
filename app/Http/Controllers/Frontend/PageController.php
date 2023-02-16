@@ -54,4 +54,9 @@ class PageController extends Controller
         $this->getBestSellerProduct();
         return Response::view('components.sale');
     }
+    public function allProduct(): \Illuminate\Http\Response
+    {
+        $this->getBestSellerProduct();
+        return Response::view('Pages.allProduct');
+    }
 }
