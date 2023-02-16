@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Aimeos\MShop;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,149 +16,167 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $product = [
+        $productManager = MShop::create(app('aimeos.context')->get(), 'product');
+        $categoryManager = MShop::create(app('aimeos.context')->get(), 'catalog');
+        $priceManager = MShop::create(app('aimeos.context')->get(), 'price');
+        $products = [
             [
-                'siteid' => '1',
-                'dataset' => '1',
-                'type' => 'mug',
-                'code' => 'pro1',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 1,
-                'rating' => 15.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category'      => ['Mug'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/09/P5YHE5mAGkpXXf4q-scaled.jpeg'
+                ]
             ],
             [
-                'siteid' => '2',
-                'dataset' => '2',
-                'type' => 'poster',
-                'code' => 'pro2',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 2,
-                'rating' => 15.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category'      => ['Mug'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/09/P5YHE5mAGkpXXf4q-scaled.jpeg'
+                ]
             ],
             [
-                'siteid' => '2',
-                'dataset' => '2',
-                'type' => 't-shirt',
-                'code' => 'pro3',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 2,
-                'rating' => 14.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category'      => ['Mug'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/09/P5YHE5mAGkpXXf4q-scaled.jpeg'
+                ]
             ],
             [
-                'siteid' => '2',
-                'dataset' => '2',
-                'type' => 'mug',
-                'code' => 'pro4',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 2,
-                'rating' => 15.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category'      => ['Mug'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/09/P5YHE5mAGkpXXf4q-scaled.jpeg'
+                ]
             ],
             [
-                'siteid' => '2',
-                'dataset' => '2',
-                'type' => 't-shirt',
-                'code' => 'pro5',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 2,
-                'rating' => 15.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category'      => ['Mug'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/09/P5YHE5mAGkpXXf4q-scaled.jpeg'
+                ]
             ],
             [
-                'siteid' => '2',
-                'dataset' => '2',
-                'type' => 'sticker',
-                'code' => 'pro6',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 2,
-                'rating' => 15.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
+                'category'      => ['Poster'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
             ],
             [
-                'siteid' => '2',
-                'dataset' => '2',
-                'type' => 't-shirt',
-                'code' => 'pro7',
-                'label' => 'Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based on Spirited away movie. Coffee Mug',
-                'url' => 'https://drive.google.com/uc?export=view&id=1Ii4kOkwDhzWr8Fhz2CSwCw43Yzs_GfPV',
-                'config' => '[]',
-                'start' => now(),
-                'end' => now(),
-                'scale' => 2,
-                'rating' => 15.00,
-                'ratings' => 14.00,
-                'instock' => 0,
-                'target' => '14.00',
-                'status' => 1,
-                'mtime' => now(),
-                'ctime' => now(),
-                'editor' => 'Admin@aimeos.laravel'
-            ]
+                'category'      => ['Poster'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Poster'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Poster'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Poster'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Poster'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Bag'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Bag'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Bag'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Bag'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
+            [
+                'category'      => ['Bag'],
+                'title'         => 'Spirited away Soot Sprite Character Mug, with qoute: "Finish what you started Human" Based on Spirited away movie. Coffee Mug',
+                'regular_price' => 15.99,
+                'sale_price'    => 14,
+                'images'        => [
+                    'https://giran.nyc3.digitaloceanspaces.com/cutetotoro.com/2020/10/1601084507085.jpeg'
+                ]
+            ],
         ];
-        DB::table('mshop_product')->delete();
-        DB::table('mshop_product')->insert($product);
+        foreach ($products as $product) {
+            $data = [
+                "product.type" => "select",
+                "product.label" => $product['title'],
+            ];
+            $priceArray = [
+                'price.value'=> $product['regular_price'],
+                'price.currencyid' => 'USD',
+                'price.costs' => $product['sale_price'],
+
+            ];
+        }
+
     }
 }

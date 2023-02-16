@@ -18,7 +18,6 @@ if( config( 'app.shop_multishop' ) ) {
 	] ];
 }
 
-
 return $routes + [
 
 	'apc_enabled' => false, // enable for maximum performance if APCu is available

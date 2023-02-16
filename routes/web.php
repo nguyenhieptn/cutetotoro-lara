@@ -15,44 +15,48 @@ use App\Http\Controllers\showDetailController;
 |
 */
 
-Route::get('/ready', function() {
+Route::get('/ready', function () {
     return 'OK';
 });
 
 $params = [];
 $conf = ['prefix' => '', 'where' => []];
 
-if( env( 'SHOP_MULTILOCALE' ) )
-{
+if (env('SHOP_MULTILOCALE')) {
     $conf['prefix'] .= '{locale}';
     $conf['where']['locale'] = '[a-z]{2}(\_[A-Z]{2})?';
     $params = ['locale' => app()->getLocale()];
 }
 
-if( env( 'SHOP_MULTISHOP' ) )
-{
+if (env('SHOP_MULTISHOP')) {
     $conf['prefix'] .= '/{site}';
     $conf['where']['site'] = '[A-Za-z0-9\.\-]+';
 }
-
-if( $conf['prefix'] )
-{
-    Route::get('/', function () use ($params) {
-        return redirect(airoute('aimeos_home', $params));
-    });
-}
-
-Route::group($conf ?? [], function() {
-    require __DIR__.'/auth.php';
+//if( $conf['prefix'] )
+//{
+//    Route::get('/{page?}', App\Http\Controllers\Frontend\PageController::page());
+//}
+//Route::get('/{page?}', ['App\Http\Controllers\Frontend\PageController', 'page']);
+Route::match(array('GET', 'POST'), '/', array(
+    'as'   => 'home',
+    'uses' => 'App\Http\Controllers\Frontend\PageController@page'
+))->where(['locale' => '[a-z]{2}(\_[A-Z]{2})?', 'site' => '[A-Za-z0-9\.\-]+']);
+Route::get('shop/basket', 'App\Http\Controllers\Frontend\CartController@index')->name('cart');
+Route::group($conf ?? [], function () {
+    require __DIR__ . '/auth.php';
 });
 // catalog
-Route::get('/product-detail', function(){
-    return view('Pages.mainDetail');
-});
-Route::get('/all-product', function(){
+Route::get('/product/{id}', 'App\Http\Controllers\Frontend\ProductController@detail')->name('product.detail');
+//Route::get('/product/{id}/add-to-card', 'App\Http\Controllers\Frontend\ProductController@addToCart')->name('product.addToCart');
+Route::get('/all-product', function () {
     return view('Pages.allProduct');
 });
-Route::get('/checkout', function(){
+Route::get('/checkout', function () {
     return view('Pages.checkOut');
 });
-Route::get('/product-detail/{idProduct}',[showDetailController::class,'show_detail']);
+Route::get('/product-detail/{idProduct}', [showDetailController::class, 'show_detail']);
+Route::post('/add-cart',[showDetailController::class,'add_cart'])->name('product.addToCart');;
+Route::get('/cart',[showDetailController::class,'cart']);
+Route::get('/checkout',[showDetailController::class,'show_checkout']);
+Route::post('/update-cart',[showDetailController::class,'updateCart']);
+Route::get('/delete-product/{session_id}',[showDetailController::class,'deleteProduct']);
