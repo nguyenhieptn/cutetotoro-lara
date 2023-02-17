@@ -1,44 +1,49 @@
 <div class="footer_desktop">
     @include('components.footer')
+    
 </div>
 <style>
-@media screen and (min-width: 601px) {
-    .footer_mobile {
-        display: none;
-    }
-    .ft_mobile{
-        display: none;
-    }
-}
+    @media screen and (min-width: 601px) {
+        .footer_mobile {
+            display: none;
+        }
 
-@media screen and (max-width: 600px) {
-    .footer_desktop {
-        display: none;
+        .ft_mobile {
+            display: none;
+        }
     }
-}
-.footer_mobile p{
-    font-family: 'Manjari';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    color: #000000;
-    text-align: center;
 
-}
-.titel_ft{
-    text-align: center;
-}
-.list{
-    font-family: 'Manjari';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    justify-content: center;
-    color: #000000;
-    text-decoration: underline;
-}
+    @media screen and (max-width: 600px) {
+        .footer_desktop {
+            display: none;
+        }
+    }
+
+    .footer_mobile p {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+        text-align: center;
+
+    }
+
+    .titel_ft {
+        text-align: center;
+    }
+
+    .list {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        justify-content: center;
+        color: #000000;
+        text-decoration: underline;
+    }
 </style>
 <div class="footer_mobile">
     <div class='container'>
@@ -74,7 +79,7 @@
 <br>
 <div class="container-fluid ft_mobile" style="color: #a4a4a4">
     <style>
-        .ft_list{
+        .ft_list {
             font-family: 'Manjari';
             font-style: normal;
             font-weight: 700;
@@ -85,7 +90,8 @@
             text-transform: lowercase;
             color: #000000;
         }
-        .ft_list_cp{
+
+        .ft_list_cp {
             font-family: 'Manjari';
             font-style: normal;
             font-weight: 700;
@@ -96,7 +102,8 @@
             color: #000000;
             align-items: center;
         }
-        .text-center1{
+
+        .text-center1 {
             font-family: 'Manjari';
             font-style: normal;
             font-weight: 700;
@@ -120,7 +127,7 @@
     <br>
     <div class="text-center1 d-flex">
         <p class="ft_list_cp" style="padding-right: 1rem">Contact</p>
-        <img src="{{asset('/FrontEnd/Image/Line4.png')}}" alt="" style="height: 34px;padding-bottom: 1rem;">
+        <img src="{{ asset('/FrontEnd/Image/Line4.png') }}" alt="" style="height: 34px;padding-bottom: 1rem;">
         <p class="ft_list_cp" style="padding-left: 1rem">About</p>
     </div>
     <div class="text-center">

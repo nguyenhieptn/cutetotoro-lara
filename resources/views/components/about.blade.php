@@ -7,7 +7,7 @@
             </div>
             <div class="col col-12 about-img-bottom d-flex">
                <div class="row">
-                <div class="col col-12 col-xl-6 align-item-center d-flex">
+                <div class="col col-12 col-xl-6 wrap-about align-item-center d-flex">
                     <div class="about-l justify-content-center align-item-center d-flex" style="flex-direction: column">
                         <h1 class='h1' style="text-align: center; font-family: 'Manjari';padding-right: 4rem;color: #b19075">
                             ABOUT US
@@ -52,7 +52,7 @@
                     </div>
                 </div>
     
-                <div class="col col-12 col-xl-6">
+                <div class="col col-12 col-xl-6 wrap-about">
                     <div class="about-img">
                         <img src="{{ asset('FrontEnd/Image/about.PNG') }}" alt="">
                     </div>

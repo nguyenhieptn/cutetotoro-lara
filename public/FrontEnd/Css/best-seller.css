@@ -29,7 +29,6 @@ p {
     /*display: flex;*/
     /*align-items: center;*/
     text-align: justify;
-    color: #000000;
 
 }
 
@@ -81,8 +80,12 @@ p {
         border-radius: 20px;
     }
 
+    .carousel-cell > a{
+        display: block;
+    }
+
     .container-globe {
-        padding: 0 25px;
+        padding: 0 20px;
     }
 
     .main-carousel .flickity-prev-next-button {
@@ -93,9 +96,12 @@ p {
         display: none;
     }
 
-    .view-all {
+    /* .view-all {
         bottom: 100%;
         right: 2%;
+    } */
+    .a-view-all{
+        padding-right: 10px;
     }
 
     .view-all p {
@@ -109,30 +115,38 @@ p {
         font-style: normal;
         font-weight: 700;
         font-size: 1em;
+        line-height: 25px;
+        letter-spacing: -1px;
     }
 
     .best_seller-price {
         /*margin-top: 30px;*/
-        display: flex
+        display: flex;
     }
 
-    .best_seller-price p:first-child {
+    .best_seller-price span:first-child {
         font-size: 1em;
+        text-decoration: line-through;
+        margin-right: 15px;
     }
 
-    .best_seller-price p:last-child {
+    .best_seller-price span:last-child {
         /*padding-left: 28px;*/
-        font-size: 1.3em;
+        font-size: 1.2em;
+    }
+
+    .wrap-about{
+        padding: 0px;
     }
 
     .about p {
         line-height: 35px;
         padding: 0px;
-        font-size: 23px;
+        font-size: 1.3em;
     }
 
     .about-l > h1 {
-        font-size: 25px;
+        font-size: 1.5em;
         font-weight: 700;
     }
 
@@ -148,10 +162,11 @@ p {
     }
 
     .ft-top h1, span, a {
-        font-size: 23px;
+        font-size: 18px;
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
+        text-decoration: none;
     }
 
     .ft-top {
@@ -161,9 +176,39 @@ p {
     .ft-top h1 {
         text-align: center;
     }
+    .ft-contact >li p{
+        line-height: 35px;
+        font-size: 18px;
+    }
 
     .ft-bt-left > ul li {
         display: none;
+    }
+
+    /* add */
+    .a {
+        padding-right: 8rem;
+    }
+
+    .a p {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        justify-content: center;
+        color: #000000;
+    }
+
+    .b {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        justify-content: center;
+        color: #000000;
+        text-decoration: underline;
     }
 }
 
@@ -178,7 +223,10 @@ p {
     .view-all {
         right: 0;
     }
-
+    
+    .wrap-about{
+        padding: 15px;
+    }
     .about-img-top p {
         display: unset;
         font-size: 20px;
@@ -215,6 +263,17 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 23%;
     }
+
+
+    .a{
+        padding-left: 0;
+        padding-right: 2rem;
+     }
+ 
+     .line{
+         padding-right: 0;
+         display:  none;
+     }
 }
 
 @media screen and (min-width: 768px) {
@@ -243,6 +302,8 @@ p {
         top: 30%;
     }
 
+   
+
 }
 
 @media screen and (min-width: 920px) {
@@ -257,16 +318,16 @@ p {
         font-style: normal;
         font-weight: 700;
         font-size: 20px;
-        line-height: 35px;
+        line-height: 30px;
     }
 
-    .best_seller-price p:first-child {
+    .best_seller-price span:first-child {
         font-size: 20px;
     }
 
-    .best_seller-price p:last-child {
+    .best_seller-price span:last-child {
         padding-left: 28px;
-        font-size: 1em;
+        font-size: 20px;
     }
 
     .about-img-top p {
@@ -281,10 +342,19 @@ p {
 
 
     .ft-top h1, span, a {
-        font-size: 20px;
+        font-size: 18px;
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
+    }
+
+    .ft-contact >li p{
+        line-height: 35px;
+        font-size: 20px;
+    }
+
+    .ft-bt-left, .ft-bt-right p{
+        font-size: 18px;
     }
 
     .ft-bt-left > ul li {
@@ -318,6 +388,10 @@ p {
         padding: 0px;
     }
 
+    .ft-bt-left p{
+        font-size: 18px;
+    }
+
     .ft-top h1 {
         text-align: left;
     }
@@ -325,6 +399,21 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 28%;
     }
+
+
+    .a{
+        padding-left: 0;
+        padding-right: 8rem;
+     }
+
+     .a p{
+        font-size: 16px;
+     }
+ 
+     .line{
+         padding-right: 1.5rem;
+         display:  unset;
+     }
 
 }
 
@@ -336,7 +425,7 @@ p {
     }
 
 
-    .best_seller-price p:last-child {
+    .best_seller-price span:last-child {
         padding-left: 28px;
         font-size: 22px;
     }
@@ -355,6 +444,17 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 25%;
     }
+
+
+    .col-ft >a{
+        padding-left: 0;
+        padding-right: 8rem;
+     }
+ 
+     .line{
+         padding-right: 7rem;
+
+     }
 
 }
 
@@ -381,7 +481,7 @@ p {
     display: flex
 }
 
-.best_seller-price p {
+.best_seller-price span {
     margin-bottom: 0;
 }
 

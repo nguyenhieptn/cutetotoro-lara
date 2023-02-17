@@ -58,6 +58,7 @@ class showDetailController extends Controller
         view()->share('product', $product);
         return Response::view(Shop::template('product.index'), [])
             ->header('Cache-Control', 'no-store, , max-age=0');
+            // $this->getBestSellerProduct();
     }
 
     public function add_cart(Request $request)
