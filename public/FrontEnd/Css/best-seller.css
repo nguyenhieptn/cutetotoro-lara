@@ -184,6 +184,32 @@ p {
     .ft-bt-left > ul li {
         display: none;
     }
+
+    /* add */
+    .a {
+        padding-right: 8rem;
+    }
+
+    .a p {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        justify-content: center;
+        color: #000000;
+    }
+
+    .b {
+        font-family: 'Manjari';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        justify-content: center;
+        color: #000000;
+        text-decoration: underline;
+    }
 }
 
 @media screen and (min-width: 480px) {
@@ -237,6 +263,17 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 23%;
     }
+
+
+    .a{
+        padding-left: 0;
+        padding-right: 2rem;
+     }
+ 
+     .line{
+         padding-right: 0;
+         display:  none;
+     }
 }
 
 @media screen and (min-width: 768px) {
@@ -264,6 +301,8 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 30%;
     }
+
+   
 
 }
 
@@ -303,7 +342,7 @@ p {
 
 
     .ft-top h1, span, a {
-        font-size: 20px;
+        font-size: 18px;
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
@@ -312,6 +351,10 @@ p {
     .ft-contact >li p{
         line-height: 35px;
         font-size: 20px;
+    }
+
+    .ft-bt-left, .ft-bt-right p{
+        font-size: 18px;
     }
 
     .ft-bt-left > ul li {
@@ -345,6 +388,10 @@ p {
         padding: 0px;
     }
 
+    .ft-bt-left p{
+        font-size: 18px;
+    }
+
     .ft-top h1 {
         text-align: left;
     }
@@ -352,6 +399,21 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 28%;
     }
+
+
+    .a{
+        padding-left: 0;
+        padding-right: 8rem;
+     }
+
+     .a p{
+        font-size: 16px;
+     }
+ 
+     .line{
+         padding-right: 1.5rem;
+         display:  unset;
+     }
 
 }
 
@@ -382,6 +444,17 @@ p {
     .main-carousel .flickity-prev-next-button {
         top: 25%;
     }
+
+
+    .col-ft >a{
+        padding-left: 0;
+        padding-right: 8rem;
+     }
+ 
+     .line{
+         padding-right: 7rem;
+
+     }
 
 }
 

@@ -66,6 +66,7 @@ class showDetailController extends Controller
         return Response::view(Shop::template('product.index'), [])
             ->header('Cache-Control', 'no-store, , max-age=0')
             ->with(compact('product', 'salePrice'));
+        // $this->getBestSellerProduct();
         return view('Pages.mainDetail')->with(compact('product', 'salePrice'));
     }
 

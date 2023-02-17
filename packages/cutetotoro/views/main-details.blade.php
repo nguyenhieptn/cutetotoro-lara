@@ -98,7 +98,7 @@
     </div> --}}
     <!-- end header -->
     {{-- details-product --}}
-    <div class="detail-content" style="margin-top: 80px">
+    <div class="detail-contentt" style="margin-top: 300px; background-color: white">
         <div class="container">
             <div class="row mb-5">
                 <div class=" col col-12 breadcrumb-main-details">
