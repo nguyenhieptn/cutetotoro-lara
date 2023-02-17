@@ -91,7 +91,11 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
+<<<<<<< HEAD
             "php-http/discovery": true
+=======
+            "php-http/discovery": false
+>>>>>>> e52e0024cf10a965a0b8be2cb5107f4ddf385326
         }
     },
     "minimum-stability": "dev",
