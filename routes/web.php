@@ -5,6 +5,7 @@ use App\Http\Controllers\Catalog\CatalogController;
 use App\Http\Controllers\showDetailController;
 use App\Http\Controllers\Frontend\ProductController;
 use App\Http\Controllers\Frontend\PageController;
+use App\Http\Controllers\Cart\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,3 +61,4 @@ Route::get('/cart',[showDetailController::class,'cart'])->name('cart');
 Route::get('/checkout',[showDetailController::class,'show_checkout']);
 Route::post('/update-cart',[showDetailController::class,'updateCart']);
 Route::get('/delete-product/{session_id}',[showDetailController::class,'deleteProduct']);
+Route::post('/delivery',[CartController::class,'Delivery']);
