@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 use Redireact;
 use DB;
 use Response;
-
+use Aimeos\Shop\Facades\Shop;
 session_start();
 
 class showDetailController extends Controller
@@ -50,23 +50,14 @@ class showDetailController extends Controller
         view()->share('bestSeller', $products);
     }
 
-    public function show_detail($idProduct)
+    public function show_detail($id): \Illuminate\Http\Response
     {
-        $product = DB::table('mshop_product_list')
-            ->join('mshop_media', 'mshop_product_list.refid', '=', 'mshop_media.id')
-            ->join('mshop_text', 'mshop_product_list.refid', '=', 'mshop_text.id')
-            ->join('mshop_price', 'mshop_product_list.refid', '=', 'mshop_price.id')
-            ->join('mshop_product', 'mshop_product_list.parentid', '=', 'mshop_product.id')
-            ->where('parentid', $idProduct)
-            ->first();
-        $salePrice = $product->value - $product->rebate;
-        if ($salePrice < 0) {
-            $salePrice = 0;
-        }
+        $productManager = MShop::create(app('aimeos.context')->get(), 'product');
+        $product = $productManager->get($id, ['text', 'media', 'price', 'catalog']);
+        $product = convertAimeosProductToProduct($product);
+        view()->share('product', $product);
         return Response::view(Shop::template('product.index'), [])
-            ->header('Cache-Control', 'no-store, , max-age=0')
-            ->with(compact('product', 'salePrice'));
-        return view('Pages.mainDetail')->with(compact('product', 'salePrice'));
+            ->header('Cache-Control', 'no-store, , max-age=0');
     }
 
     public function add_cart(Request $request)
