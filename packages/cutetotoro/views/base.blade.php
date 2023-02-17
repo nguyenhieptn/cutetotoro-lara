@@ -59,11 +59,14 @@
         });
         $('.button-group').each(function(i, buttonGroup) {
             var $buttonGroup = $(buttonGroup);
+            
             $buttonGroup.on('click', 'button', function() {
                 $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $buttonGroup.find('.d-n').removeClass('d-n');
                 $(this).addClass('is-checked');
             });
         });
+
     </script>
 </footer>
 

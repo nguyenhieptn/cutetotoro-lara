@@ -2,7 +2,7 @@
     font-family: 'Manjari';
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -13,7 +13,7 @@ a{
     padding: 20px 10px;
 }
 
-.button-group button{
+.button-group button {
     font-size: 15px;
     font-family: 'Manjari';
 }
@@ -28,6 +28,12 @@ a{
     width: 80px;
     font-size: 14px;
 }
+
+.tabcontent {
+    display: none;
+    animation: fadeIn 1s;
+}
+
 
 .button:active,
 .button.is-checked {
@@ -65,7 +71,7 @@ a{
     font-weight: 700;
 }
 
-.sale-price span:first-child{
+.sale-price span:first-child {
     margin-right: 20px;
 }
 
@@ -315,7 +321,7 @@ a{
 }
 
 @media screen and (max-width: 768px) {
-    .grid-item-cus{
+    .grid-item-cus {
         width: 50%;
         margin-left: 0;
         padding: 20px 15px;
@@ -330,26 +336,28 @@ a{
         padding: 0;
     }
 
-    .button-group{
+    .button-group {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
     }
 
-    .grid-item-cus{
+    .grid-item-cus {
         width: 50%;
         margin-left: 0;
         padding: 0px 10px;
     }
+
     .button-group button {
         font-size: 15px;
         padding: 0 5px;
         font-weight: 700;
     }
 
-    .sale-price{
+    .sale-price {
         margin-top: 15px;
     }
+<<<<<<< HEAD
     .sale-price span{
         font-size: 14px;
         margin: 0;
@@ -358,9 +366,19 @@ a{
         font-size: 17px;
     }
     .sale-category{
+=======
+
+    .sale-price span {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .sale-category {
+>>>>>>> b79deebfae8179fd9e922a4c6d0d526300928e84
         margin: 0 10px;
     }
-    .grid-item-cus-img{
+
+    .grid-item-cus-img {
         height: 87%;
     }
 }

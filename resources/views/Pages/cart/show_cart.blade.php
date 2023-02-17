@@ -2,28 +2,13 @@
 $cart = Session::get('cart');
 @endphp
 @extends('cutetotoro::base')
-
-{{--@section('aimeos_header')--}}
-{{--    <title>{{ __( 'Basket') }}</title>--}}
-{{--    <?= $aiheader['locale/select'] ?? '' ?>--}}
-{{--    <?= $aiheader['catalog/search'] ?? '' ?>--}}
-{{--    <?= $aiheader['catalog/tree'] ?? '' ?>--}}
-{{--    <?= $aiheader['basket/bulk'] ?? '' ?>--}}
-{{--    <?= $aiheader['basket/standard'] ?? '' ?>--}}
-{{--    <?= $aiheader['basket/related'] ?? '' ?>--}}
-{{--@stop--}}
-
-@section('aimeos_head_nav')
+{{-- @section('aimeos_head_nav')
     <?= $aibody['catalog/tree'] ?? '' ?>
-@stop
-
-
+@stop --}}
 @section('content')
 <head>
-    <link type="text/css" rel="stylesheet"
-        href="{{asset('/default/app.css?v=1')}}">
-    <link type="text/css" rel="stylesheet"
-        href="{{asset('/default/aimeos.css?v=1')}}" />
+    <link type="text/css" rel="stylesheet" href="{{asset('/default/app.css?v=1')}}">
+    <link type="text/css" rel="stylesheet" href="{{asset('/default/aimeos.css?v=1')}}" />
     <link rel="stylesheet" href="{{asset('/default/locale-select.css?v=1')}}">
     <script defer src="{{asset('/default/locale-select.js?v=1')}}"></script>
     <script defer src="/shop/count"></script>
@@ -31,21 +16,15 @@ $cart = Session::get('cart');
     <script defer src="{{asset('/default/catalog-filter.js?v=1')}}"></script>
     <link rel="stylesheet" href="{{asset('/default/basket-bulk.css?v=1')}}">
     <script defer src="{{asset('/default/basket-bulk.js?v=1')}}"></script>
-    <link class="basket-standard" rel="stylesheet"
-        href="{{asset('/default/summary.css?v=1')}}">
-    <link class="basket-standard" rel="stylesheet"
-        href="{{asset('/default/basket-standard.css?v=1')}}">
-    <script defer class="basket-standard"
-        src="{{asset('/default/basket-standard.js?v=1')}}"></script>
+    <link class="basket-standard" rel="stylesheet" href="{{asset('/default/summary.css?v=1')}}">
+    <link class="basket-standard" rel="stylesheet" href="{{asset('/default/basket-standard.css?v=1')}}">
+    <script defer class="basket-standard" src="{{asset('/default/basket-standard.js?v=1')}}"></script>
     <link rel="stylesheet" href="{{asset('/default/basket-related.css?v=1')}}">
     <script defer src="{{asset('/default/basket-related.js?v=1')}}"></script>
     </style>
-    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-regular.woff2"
-        as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-700.woff2" as="font"
-        type="font/woff2" crossorigin>
-    <link rel="preload" href="/vendor/shop/themes/default/assets/bootstrap-icons.woff2" as="font"
-        type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/shop/themes/default/assets/bootstrap-icons.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="page-basket-index">
     <div class="content">
@@ -85,11 +64,17 @@ $cart = Session::get('cart');
                                     @if(Session::get('cart')==true)
                                     @php
                                         $total = 0;
+                                        $number_product = 0;
+                                        $total_shipping = 0;
                                     @endphp
                                     @foreach($cart as $key => $carts)
                                     @php
                                         $subtotal = $carts['product_Price'] * $carts['product_Quantity'];
                                         $total+=$subtotal;
+                                        $total_number_product = $carts['product_Quantity'];
+                                        $number_product+=$total_number_product;
+                                        $shipping_price = $carts['product_shipping'];
+                                        $total_shipping+=$shipping_price;
                                     @endphp
                                     <div class="supplier">
                                         <h3 class="supplier-name">{{$carts['product_Name']}}</h3>
@@ -105,9 +90,11 @@ $cart = Session::get('cart');
                                                 </div>
                                                 <div class="details col-12 col-lg-8">
                                                     <p class="code">
-                                                        <span class="name">{{$carts['product_Id']}}</span>
                                                         <span class="name">{{$carts['product_Name']}}</span>
                                                     </p> 
+                                                    <p>
+                                                        <span class="name" style="font-size: 15px"><span>Shipping price: </span> {{$carts['product_shipping']}}</span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -129,11 +116,12 @@ $cart = Session::get('cart');
                                             </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                     <div class="subtotal row g-0">
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Sub-total</div>
-                                                <div class="price col-3">{{$subtotal}}</div>
+                                                <div class="price col-3">{{$total}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -141,8 +129,8 @@ $cart = Session::get('cart');
                                     <div class="delivery row g-0">
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
-                                                <div class="col-8">Shipping</div>
-                                                <div class="price col-3">{{$carts['product_shipping']}}</div>
+                                                <div class="col-8">Total shipping</div>
+                                                <div class="price col-3">{{$total_shipping}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -150,9 +138,9 @@ $cart = Session::get('cart');
                                     <div class="total row g-0">
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0 price-total">
-                                                <div class="quantity col-4">{{$carts['product_Quantity']}} article</div>
+                                                <div class="quantity col-4">{{$number_product}} article</div>
                                                 <div class="col-4 total-text">Total</div>
-                                                <div class="price col-3">{{$subtotal+$carts['product_shipping']}}</div>
+                                                <div class="price col-3">{{$total+$total_shipping}}</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -166,7 +154,6 @@ $cart = Session::get('cart');
                                             </div>
                                         </div>
                                     </div>
-                                    @endforeach
                                     @else
                                         <div>
                                             Please add product to cart
@@ -192,7 +179,7 @@ $cart = Session::get('cart');
                         <div class="button-group">
                             <a class="btn btn-default btn-lg btn-back" href="/">
                                 Back</a>
-                            <button class="btn btn-default btn-lg btn-update" type="submit">
+                            <button class="btn btn-default btn-lg" type="submit">
                                 Update</button>
                             <a class="btn btn-primary btn-lg btn-action" href="/checkout">
                                 Checkout</a>
@@ -208,4 +195,3 @@ $cart = Session::get('cart');
 </body>
 </div>
 @stop
-

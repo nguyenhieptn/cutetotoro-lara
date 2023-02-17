@@ -10,13 +10,14 @@
 </div>
 <section id="slider" class="slider-slictiky">
     <div class="container container-globe" style="position: relative">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <a href="/all-product" class="a-view-all text-end">View all</a>
 
             <div class="main-carousel row"
                  data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true,   "adaptiveHeight": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($bestSeller as $data)
+              
                     <div class="carousel-cell" style="position: relative">
                         <a href="{{ route('product.detail',$data['product.id'] ) }}">
                             <img src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
@@ -26,7 +27,12 @@
                                         {!! $data['text'][0] !!}
                                     </span>
                             <div class="best_seller-price">
-                                {!! $data['price'][0]['price_html'] !!}
+                                    <span>{{ $data['price'][0]['actual'] }}$</span>
+                                    @php
+                                        $sale =  $data['price'][0]['actual']  -  $data['price'][0]['rebate'];
+                                    @endphp
+                                    <span>{{$sale}}$</span>
+                                
                             </div>
                         </div>
                     </div>
