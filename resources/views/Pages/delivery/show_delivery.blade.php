@@ -56,9 +56,9 @@
                 </nav>
                 <form class="container-xxl" method="POST" action="/shop/checkout/payment">
                     @if(Session::get('info_address_buyer')==true)
-                        <p>This order have info delivery</p>
+                        <p>This order have info address</p>
                     @else
-                        <p>This order do not info delivery</p>
+                        <p>This order do not info address</p>
                     @endif
                     <input class="csrf-token" type="hidden" name="_token"
                         value="pW0kI04GSNVKT3Q2Cr0aIHYtMfIvtWtgmdaJBaoi">
