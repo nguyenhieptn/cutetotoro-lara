@@ -208,7 +208,7 @@ p {
         line-height: 18px;
         justify-content: center;
         color: #000000;
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
 }
 
