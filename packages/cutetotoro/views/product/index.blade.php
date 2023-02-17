@@ -247,19 +247,7 @@ $(document).ready(function(e) {
                 _token: _token
             },
             success: function(data) {
-                swal({
-                        title: "Added in the cart",
-                        text: "You can chose product or go to page check out",
-                        showCancelButton: true,
-                        cancelButtonText: "A Here",
-                        confirmButtonClass: "btn-success",
-                        confirmButtonText: "Go to the cart",
-                        closeOnConfirm: false
-                    },
-                    function() {
-                        window.location.href = "{{url('/cart')}}";
-                    }
-                );
+                window.location.href = "{{url('/cart')}}";
             }
         });
     });

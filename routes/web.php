@@ -61,4 +61,5 @@ Route::get('/cart',[showDetailController::class,'cart'])->name('cart');
 Route::get('/checkout',[showDetailController::class,'show_checkout']);
 Route::post('/update-cart',[showDetailController::class,'updateCart']);
 Route::get('/delete-product/{session_id}',[showDetailController::class,'deleteProduct']);
-Route::post('/delivery',[CartController::class,'Delivery']);
+Route::post('/payment',[CartController::class,'Payment']);
+Route::post('/summary',[CartController::class,'Summary']);

@@ -45,23 +45,19 @@
                 <nav class="container-xxl">
                     <ol class="steps">
                         <li class="step active basket">
-                            <a href="/shop/basket">
+                            <a href="/cart">
                                 Cart
                             </a>
                         </li>
                         <li class="step current address">
-                            Address</li>
-                        <li class="step delivery">
-                            Delivery</li>
+                            Checkout
+                        </li>
                         <li class="step payment">
-                            Payment</li>
-                        <li class="step summary">
-                            Summary</li>
-                        <li class="step process">
-                            process</li>
+                            Payment
+                        </li>
                     </ol>
                 </nav>
-                <form class="container-xxl" method="POST" action="/delivery">
+                <form class="container-xxl" method="POST" action="/payment">
                     @csrf
                     <section class="checkout-standard-address">
                         <h2>Address</h2>
@@ -187,7 +183,7 @@
                                             <div class="col-md-7">
                                                 <input class="form-control" type="text"
                                                     id="address-billing-postal-"
-                                                    name="postal_code]" value=""
+                                                    name="postal_code" value=""
                                                     placeholder="Postal code">
                                             </div>
                                         </div>

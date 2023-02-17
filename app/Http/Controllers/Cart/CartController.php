@@ -9,9 +9,17 @@ session_start();
 
 class CartController extends Controller
 {
-    public function Delivery(Request $request){
+    public function Payment(Request $request){
         $data = $request->all();
         Session::put('info_address_buyer',$data);
-        return view('Pages.delivery.show_delivery');
+        Session::get('cart');
+        return view('Pages.payment.show_payment');
+    }
+    public function Summary(Request $request){
+        $data = $request->all();
+        Session::put('info_payment',$data);
+        Session::get('info_address_buyer');
+        Session::get('cart');
+        return view('Pages.summary.show_summary');
     }
 }
