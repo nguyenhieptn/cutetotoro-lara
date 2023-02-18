@@ -20,7 +20,7 @@
               
                     <div class="carousel-cell" style="position: relative">
                         <a href="{{ route('product.detail',$data['product.id'] ) }}">
-                            <img src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
+                            <img style="width: 100%" src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
                         </a>
                         <div class="best_seller_bottom">
                                     <span>

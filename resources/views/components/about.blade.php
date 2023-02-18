@@ -1,10 +1,19 @@
 <div class="about">
+    <div class="container-fluid">
+        <div class="row">
+             <div class=" col col-12 about-img-top p-0" style="width: 100%; position: relative; margin-bottom: 50px">
+                <img style="width: 100%; height: 100%" src="{{ asset('FrontEnd/Image/image 3.png') }}" alt="">
+                <p style="positon: absolute">SALE UP</p>
+                <p style="positon: absolute">TO 70%</p>
+            </div>
+        </div>
+    </div>
     <div class="container container-globe">
         <div class="row d-flex flex-direction-column">
-            <div class=" col col-12 about-img-top" style="width: 100%; position: relative; margin-bottom: 50px">
+            {{-- <div class=" col col-12 about-img-top" style="width: 100%; position: relative; margin-bottom: 50px">
                 <img style="width: 100%; height: 100%" src="{{ asset('FrontEnd/Image/image 3.png') }}" alt="">
                 <p style="positon: absolute">SALE UP TO 70%</p>
-            </div>
+            </div> --}}
             <div class="col col-12 about-img-bottom d-flex">
                <div class="row">
                 <div class="col col-12 col-xl-6 wrap-about align-item-center d-flex">
@@ -15,7 +24,7 @@
                         <h1 class='h11' style="text-align: center; font-family: 'Manjari'; color: #b19075">
                             ABOUT US
                         </h1>
-                        <p class="text_about" style="padding-right: 4rem; color:#b3b3b3">
+                        <p class="text_about" style="color:#b3b3b3">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo

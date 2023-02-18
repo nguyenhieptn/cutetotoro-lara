@@ -89,7 +89,7 @@ p {
     }
 
     .main-carousel .flickity-prev-next-button {
-        top: 21%;
+        top: 25%;
     }
 
     .about-img-top p {
@@ -241,18 +241,45 @@ p {
         letter-spacing: 15px;
         margin-bottom: 0px;
     }
+
+    .about-img-top p:last-child {
+        display: unset;
+        font-size: 20px;
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
+        top: 41%;
+        left: 60%;
+        text-align: center;
+        line-height: 20px;
+        letter-spacing: 15px;
+        margin-bottom: 0px;
+    }
     .best_seller_top-image {
         max-width: 400px;
     }
 
+    .main-carousel .flickity-prev-next-button {
+        top: 28%;
+    }
 
 }
 
 @media screen and (min-width: 576px) {
 
     .about-img-top p {
-        top: 42%;
+        top: 45%;
         left: 16%;
+    }
+
+    .about-img-top p:last-child {
+        font-size: 20px;
+        top: 45%;
+        left: 61%;
+        line-height: 20px;
+        letter-spacing: 15px;
+     
     }
 
     .about-l h1 {
@@ -260,7 +287,7 @@ p {
     }
 
     .main-carousel .flickity-prev-next-button {
-        top: 23%;
+        top: 31%;
     }
 
 
@@ -284,9 +311,18 @@ p {
 
     .about-img-top p {
         top: 48%;
-        left: 16%;
+        left: 15%;
         font-size: 29px;
         letter-spacing: 20px;
+    }
+
+    .about-img-top p:last-child {
+        font-size: 29px;
+        top: 48%;
+        left: 61%;
+        line-height: 20px;
+        letter-spacing: 15px;
+     
     }
 
     .best_seller_top-image {
@@ -298,9 +334,23 @@ p {
     }
 
     .main-carousel .flickity-prev-next-button {
-        top: 30%;
+        top: 36%;
     }
 
+    .best_seller_bottom span,
+    p {
+        font-size: 18px;
+    }
+
+    .ft-bt-left ul::before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 74%;
+        background-color: black;
+        top: 85%;
+        left: 13%;
+     }
    
 
 }
@@ -308,7 +358,7 @@ p {
 @media screen and (min-width: 920px) {
 
     .carousel-cell {
-        width: 34%;
+        width: 33.333%;
     }
 
     .best_seller_bottom span,
@@ -316,7 +366,7 @@ p {
         font-family: 'Manjari';
         font-style: normal;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
     }
 
@@ -330,9 +380,18 @@ p {
     }
 
     .about-img-top p {
-        top: 47%;
-        left: 14%;
+        top: 49%;
+        left: 17%;
         font-size: 35px;
+    }
+
+    .about-img-top p:last-child {
+        font-size: 35px;
+        top: 49%;
+        left: 61%;
+        line-height: 20px;
+        letter-spacing: 15px;
+     
     }
 
     .about-img-bottom p {
@@ -362,12 +421,34 @@ p {
 
     .ft-bt-left ul li {
         padding: 0 10px;
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
 
     .main-carousel .flickity-prev-next-button {
-        top: 22%;
+        top: 27%;
     }
+
+    .ft-bt-left ul::before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 74%;
+        background-color: black;
+        top: 85%;
+        left: 13%;
+     }
+}
+
+@media screen and (min-width: 920px) {
+    .ft-bt-left ul::before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 56%;
+        background-color: black;
+        top: 85%;
+        left: 22%;
+     }
 }
 
 @media screen and (min-width: 1200px) {
@@ -378,9 +459,18 @@ p {
 
     .about-img-top p {
         top: 52%;
-        left: 16%;
+        left: 14%;
         font-size: 50px;
         letter-spacing: 30px;
+    }
+
+    .about-img-top p:last-child {
+        font-size: 50px;
+        top: 52%;
+        left: 61%;
+        line-height: 20px;
+        letter-spacing: 15px;
+     
     }
 
     .ft-bt-left ul li {
@@ -401,8 +491,8 @@ p {
 
 
     .a{
-        padding-left: 0;
-        padding-right: 8rem;
+        padding-left: 7rem;
+        padding-right: 5rem;
      }
 
      .a p{
@@ -412,6 +502,24 @@ p {
      .line{
          padding-right: 1.5rem;
          display:  unset;
+     }
+
+     .text_about {
+        padding-right: 4rem; 
+     }
+
+     .ft-bt-left ul::before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 94%;
+        background-color: black;
+        top: 85%;
+        left: 3%;
+     }
+
+     .about-l >p{
+        padding: 0 40px;
      }
 
 }
@@ -431,9 +539,18 @@ p {
 
     .about-img-top p {
         top: 55%;
-        left: 10%;
+        left: 8%;
         font-size: 70px;
         letter-spacing: 40px;
+    }
+
+    .about-img-top p:last-child {
+        font-size: 70px;
+        top: 55%;
+        left: 62%;
+        line-height: 20px;
+        letter-spacing: 15px;
+     
     }
 
     .ft-contact li {
@@ -441,7 +558,7 @@ p {
     }
 
     .main-carousel .flickity-prev-next-button {
-        top: 25%;
+        top: 29%;
     }
 
 
@@ -451,15 +568,38 @@ p {
      }
  
      .line{
-         padding-right: 7rem;
+         padding-right: 1rem;
 
      }
 
+     .ft-bt-left ul::before{
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 82%;
+        background-color: black;
+        top: 85%;
+        left: 9%;
+     }
 }
 
 @media screen and (min-width: 1700px) {
     .ft-contact li {
         padding-bottom: 15px;
+    }
+
+    .about-img-top p {
+        top: 55%;
+        left: 12%;
+        font-size: 90px;
+        letter-spacing: 40px;
+    }
+
+    .about-img-top p:last-child {
+        top: 55%;
+        left: 62%;
+        font-size: 90px;
+        letter-spacing: 40px;
     }
 }
 
@@ -533,6 +673,23 @@ p {
 .ft-bt-left ul {
     display: flex;
     justify-content: center;
+    position: relative;
+    /* border-bottom: 1px solid black ; */
+}
+
+/* .ft-bt-left ul::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 82%;
+    background-color: black;
+    top: 85%;
+    left: 9%;
+
+} */
+
+.ft-bt-left ul li{
+    padding: 0 5px;
 }
 
 
@@ -549,8 +706,29 @@ p {
     display: flex;
 }
 
+.ft-bt-right ul:first-child li{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ft-bt-right ul:first-child li::before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 85%;
+    background-color: black;
+    top: 0;
+    right: 0;
+}
+
+.ft-bt-right ul:first-child li a{
+    display: block;
+   
+}
+
 .ft-bt-right ul li {
-    padding: 0 10px;
+    padding: 0 15px;
 }
 
 .ft-bt-right ul li:first-child {
@@ -564,4 +742,12 @@ p {
 
 .ft-bt-right ul li a i {
     font-size: 30px;
+}
+
+.ft-inf-u li {
+    padding: 1px 0;
+}
+
+.b{
+    text-decoration: underline;
 }

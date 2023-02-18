@@ -3,7 +3,7 @@
     
 </div>
 <style>
-    @media screen and (min-width: 601px) {
+    @media screen and (min-width: 769px) {
         .footer_mobile {
             display: none;
         }
@@ -13,7 +13,7 @@
         }
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         .footer_desktop {
             display: none;
         }
