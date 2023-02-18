@@ -43,8 +43,10 @@
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
                 @php
-                if($bestSeller['product.label'] == 'Mug'){
-                    $sale_product = array_slice($bestSeller, 0, 6);
+                foreach ($bestSeller as $dt){
+                    if($dt['product.label'] == 'Mug'){
+                        $sale_product = array_slice($dt, 0, 6);
+                    }
                 }
                 @endphp
                 @foreach ($sale_product as $dt)
