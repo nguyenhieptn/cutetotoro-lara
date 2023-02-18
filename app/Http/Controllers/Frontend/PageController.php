@@ -40,7 +40,7 @@ class PageController extends Controller
      */
     public function getBestSellerProduct()
     {
-        $limit = 6;
+        $limit = 10;
         $manager = MShop::create(app('aimeos.context')->get(true), 'product');
         $items = $manager->search(clone $manager->filter(), ['text', 'media', 'price', 'catalog'], $limit);
         $products = [];
