@@ -42,7 +42,7 @@
         </div>
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
-                @foreach ($sale_product as $dt)
+                @foreach ($bestSeller as $dt)
                     <div class="grid-item grid-item-cus {{ array_slice($dt['product.label'], 0, 6)}}">
                         <a href="/product-detail/{{ $dt['product.id'] }}" class="d-grid">
                             <img src="/aimeos/{{ $dt['media'][0] }}" alt="Ảnh sản phẩm" class="grid-item-cus-img">
