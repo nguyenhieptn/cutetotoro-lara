@@ -3,17 +3,17 @@
         <div class="wrap-nav-left">
             <div class="wrap-bar">
                 <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                        aria-controls="offcanvasScrolling"><img src="{{ asset('FrontEnd/Image/bar.png') }}"
-                                                                alt="bar_tool"></button>
+                    aria-controls="offcanvasScrolling"><img src="{{ asset('FrontEnd/Image/bar.png') }}"
+                        alt="bar_tool"></button>
                 {{-- sidebar menu --}}
                 {{-- end sidebar menu --}}
             </div>
             <div class="Category">
                 <ul>
                     @foreach (getCategoriesMenu() as $key => $data)
-                        <li>
-                            <a href="{{$data->url}}">{{ $data->label }}</a>
-                        </li>
+                    <li>
+                        <a href="{{$data->url}}">{{ $data->label }}</a>
+                    </li>
                     @endforeach
                 </ul>
             </div>
@@ -25,15 +25,25 @@
                 </a>
             </div>
         </div>
-        <div class=" wrap-nav-right">
+        <div class="row align-items-start">
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+            <div class="col">
+                One of three columns
+            </div>
+        </div>
+        <!-- <div class=" wrap-nav-right">
             <ul class="Search">
                 <li class="wrap-search">
                     <div class="d-flex">
-                        <input style="border: none" class="Search_Input" type="text" name="Search"
-                               placeholder="Search...">
+                        <input type="text" name="Search" placeholder="Search...">
                         <span>
                             <a href="/search-items">
-                                <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
+                                <img src="{{ asset('FrontEnd/Image/search.png') }}">
                             </a>
                         </span>
                     </div>
@@ -46,22 +56,22 @@
                             </a>
                         </li>
                         <li>
-                            <a class="Cart_Icon" href="{{ route('cart') }}">
-                                <img class="cart_shippping" src="{{ asset('FrontEnd/Image/cart.png') }}">
+                            <a href="{{ route('cart') }}">
+                                <img src="{{ asset('FrontEnd/Image/cart.png') }}">
                             </a>
                         </li>
                     </ul>
                 </li>
             </ul>
 
-        </div>
+        </div> -->
     </div>
 </div>
 {{-- CSS --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('FrontEnd/Css/StyleHomePage.css') }}">
 {{-- sidebar menu --}}
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-     id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
         <a href="/home-page">
             <img src="{{ asset('FrontEnd/Image/logo_totoro.png') }}" alt="logo_page">
@@ -72,16 +82,24 @@
         <p>Wellcome to Shop Totoro</p>
         <div class="d-flex">
             <input class="Search_Input" type="text" name="Search" placeholder="Search..."
-                   style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
+                style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
             <span>
                 <a href="/search-items">
                     <img class="Icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
                     <style>
-                        .Icon_search{
+                    .Icon_search {
+                        position: absolute;
+                        right: 1.9rem;
+                        top: 9.9rem;
+                    }
+
+                    @media screen and (max-width: 600px) {
+                        .Icon_search {
                             position: absolute;
                             right: 1.9rem;
-                            top: 9.9rem;
+                            top: 9.6rem;
                         }
+                    }
                     </style>
                 </a>
             </span>
