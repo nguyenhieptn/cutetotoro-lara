@@ -29,21 +29,20 @@ dd($bestSeller);
                 </div>
                 <div id="Poster" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/1.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
                 <div id="T-shirt" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/2.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
                 <div id="Sticker" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/3.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
                 <div id="Other" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/4.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
-
             </div>
         </div>
         <div class="col-xxl-8 col-lg-8 col-12">
@@ -80,7 +79,6 @@ dd($bestSeller);
         }
         document.getElementById(typeName).style.display = "block";
         evt.currentTarget.className += " active";
-
     }
     document.getElementById("defaultOpen").click();
 </script>
