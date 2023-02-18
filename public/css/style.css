@@ -365,7 +365,6 @@ a {
     .sale-price {
         margin-top: 15px;
     }
-<<<<<<< HEAD
     .sale-price span{
         font-size: 14px;
         margin: 0;
@@ -374,15 +373,6 @@ a {
         font-size: 17px;
     }
     .sale-category{
-=======
-
-    .sale-price span {
-        font-size: 17px;
-        margin: 0;
-    }
-
-    .sale-category {
->>>>>>> b79deebfae8179fd9e922a4c6d0d526300928e84
         margin: 0 10px;
     }
 
