@@ -75,7 +75,14 @@
                    style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
             <span>
                 <a href="/search-items">
-                    <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
+                    <img class="Icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
+                    <style>
+                        .Icon_search{
+                            position: absolute;
+                            right: 1.9rem;
+                            top: 9.9rem;
+                        }
+                    </style>
                 </a>
             </span>
         </div>

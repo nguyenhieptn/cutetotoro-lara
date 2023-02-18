@@ -34,23 +34,18 @@
         </div>
     </div>
 </div>
-
 <div>
     @include('components.best-seller')
 </div>
-
-
 {{--         <div style="margin-top: 10px">--}}
 {{--            @include('components.best-seller')--}}
 {{--        </div>--}}
 {{--        --}}
-
 <!-- sale product -->
 <div style="margin-top: 70px">
     @include('components.sale')
 </div>
 <!-- end sale product -->
-
 <div>
     @include('components.about')
 </div>
