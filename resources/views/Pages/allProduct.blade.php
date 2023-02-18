@@ -1,5 +1,4 @@
 <!-- Home page -->
-{{-- @dd($bestSeller) --}}
 <!DOCTYPE html>
 <html>
 
