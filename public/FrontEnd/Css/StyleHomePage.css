@@ -191,6 +191,11 @@
 
 /* responsive */
 @media screen and (min-width: 0px) {
+
+    .Banner_mobile{
+        height: 200px;
+    }
+
     .wrap-nav-left .Category {
         display: none;
     }
