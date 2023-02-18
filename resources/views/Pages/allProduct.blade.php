@@ -36,37 +36,41 @@
                 <span style="margin: 0 10px;">/</span>Product
             </p>
         </div>
-        <div class="mug-banner">
-            <img src="{{ asset('FrontEnd/Image/mug/banner.png') }}" alt="banner" style="transform: translateX(-5px);">
+        <div class="row">
+            <div class="mug-banner">
+                <img src="{{ asset('FrontEnd/Image/mug/banner.png') }}" alt="banner" style="width: 100%;">
+            </div>
         </div>
-        <div class="mug-button d-flex justify-content-end dropdown">
-            <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">price
-                <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            <button type="button" class="mug-btn " data-bs-toggle="dropdown"
-                aria-expanded="false">colors
-                <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
-                <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-            <div class="d-flex align-items-center">
-                <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
+        <div class="row">
+            <div class="mug-button d-flex justify-content-end dropdown">
+                <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">price
+                    <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <button type="button" class="mug-btn " data-bs-toggle="dropdown"
+                    aria-expanded="false">colors
+                    <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
+                    <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
+                </div>
             </div>
         </div>
 
@@ -163,7 +167,7 @@
                     </div>
                 </div>
             </div>
-            <div class="element-item" style="margin-right: 0">
+            <div class="element-item">
                 <div class="mug-product">
                     <img src="{{ asset('FrontEnd/Image/mug/product.png') }}" class="girl img-responsive"
                         alt="" />
@@ -220,7 +224,7 @@
                     <img src="/aimeos/{{ $dt['media'][0] }}" alt="down">
                 @endforeach
 
-                <span>view more</span>
+                <span>View more</span>
             </div>
         </div>
     </div>
