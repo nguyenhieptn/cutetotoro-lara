@@ -1,7 +1,7 @@
 
 @extends('cutetotoro::base')
 @section('content')
-<div class="detail-content" style="padding-top: 50px; background-color: white">
+<div class="detail-content">
     <div class="container">
         <div class="row mb-5">
             <div class=" col col-12 breadcrumb-main-details">
@@ -13,7 +13,7 @@
         </div>
 
         <div class="row row-np">
-            <div class="col col-12 col-md-8 ">
+            <div class="col col-12 col-md-7 ">
                 <div class="row d-flex">
                     <div class="col col-12 col-xl-2 detail-son">
                         <div class="row main-detail-sb">
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="col col-12 col-md-4 pt-3">
+            <div class="col col-12 col-md-5 pt-3">
                 <div class="main-details-content-wrap">
                     <ul class="main-details-content mb-0">
                         <li>
@@ -54,7 +54,7 @@
                             </ul>
                         </li>
                         <li style="margin-top: 30px">
-                             {{-- <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span> --}}
+                             <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span>
                             <span>Spirited away Soot Sprite Character Mug, with quote: “Finish what you
                                 started Human” Based on Spirited away movie. Coffee Mug
                             </span>
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 11.png') }}"
                             class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
                             <span>
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 12.png') }}"
                             class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
                             <span>
@@ -186,7 +186,7 @@
                         </div>
                     </div>
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 13.png') }}"
                             class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
                             <span>
@@ -201,7 +201,7 @@
                         </div>
                     </div>
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 14.png') }}"
                             class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
                             <span>
@@ -216,11 +216,11 @@
                         </div>
                     </div>
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 12.png') }}"
                             class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
                             <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Spirit ted away Soot Sprite Character Mug, with quote: “Finish what you started Human”
                                 Based on Spirited away movie. Coffee Mug
                             </span>
                             <div class="best_seller-price">
