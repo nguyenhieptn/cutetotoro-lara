@@ -42,8 +42,13 @@
         </div>
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
-                @foreach ($bestSeller as $dt)
-                    <div class="grid-item grid-item-cus {{ array_slice($dt['product.label'], 0, 6)}}">
+                @php
+                if($bestSeller['product.label'] == 'Mug'){
+                    $sale_product = array_slice($bestSeller, 0, 6);
+                }
+                @endphp
+                @foreach ($sale_product as $dt)
+                    <div class="grid-item grid-item-cus {{ $dt['product.label'] }}">
                         <a href="/product-detail/{{ $dt['product.id'] }}" class="d-grid">
                             <img src="/aimeos/{{ $dt['media'][0] }}" alt="Ảnh sản phẩm" class="grid-item-cus-img">
                             <div class="sale-price">
