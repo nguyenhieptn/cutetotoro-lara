@@ -205,9 +205,8 @@
     }
 
     .Header_Style {
-        padding-top: 52px;
-        padding-bottom: 13px;
-
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .wrap-cart {
@@ -242,7 +241,9 @@
     .Search li:last-child {
         padding-right: 0px;
     }
-
+    .Banner_mobile{
+        height: 200px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -259,6 +260,13 @@
 @media screen and (min-width: 480px) {
     .wrap-cart li:first-child{
         display: block;
+    }
+    .Header_Style {
+        padding-top: 52px;
+        padding-bottom: 13px;
+    }
+    .Banner_mobile{
+        height: unset;
     }
 }
 

@@ -1,8 +1,3 @@
-{{-- @php
-    
-dd($bestSeller);
-@endphp --}}
-
 <div class="sale-category ">
     <div class="list-category d-flex justify-content-center">
         <div id="filters" class="button-group tab">
@@ -29,27 +24,26 @@ dd($bestSeller);
                 </div>
                 <div id="Poster" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/1.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
                 <div id="T-shirt" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/2.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
                 <div id="Sticker" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/3.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
                 <div id="Other" class="tabcontent ">
                     <a href="#"><img class="img-sale-main"
-                            src="{{ asset('FrontEnd/Image/sale/4.png') }}"alt=""></a>
+                            src="{{ asset('FrontEnd/Image/sale/main.png') }}"alt=""></a>
                 </div>
-
             </div>
         </div>
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
                 @foreach ($bestSeller as $dt)
-                    <div class="grid-item grid-item-cus {{ $dt['product.type'] }}">
+                    <div class="grid-item grid-item-cus {{ $dt['product.label'] }}">
                         <a href="/product-detail/{{ $dt['product.id'] }}" class="d-grid">
                             <img src="/aimeos/{{ $dt['media'][0] }}" alt="Ảnh sản phẩm" class="grid-item-cus-img">
                             <div class="sale-price">
@@ -80,7 +74,6 @@ dd($bestSeller);
         }
         document.getElementById(typeName).style.display = "block";
         evt.currentTarget.className += " active";
-
     }
     document.getElementById("defaultOpen").click();
 </script>
