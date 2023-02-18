@@ -39,8 +39,14 @@
         <!-- <div class=" wrap-nav-right">
             <ul class="Search">
                 <li class="wrap-search">
+<<<<<<< HEAD
                     <div class="d-flex">
                         <input type="text" name="Search" placeholder="Search...">
+=======
+                    <div class="d-flex search-input">
+                        <input class="Search_Input" type="text" name="Search"
+                               placeholder="Search...">
+>>>>>>> f578724533d4348b543d5acd07e7caf57bba802d
                         <span>
                             <a href="/search-items">
                                 <img src="{{ asset('FrontEnd/Image/search.png') }}">

@@ -3,7 +3,7 @@
     <div class="container container-globe">
         <div class="row best_seller_top">
             <div class="best_seller_top-image">
-                {{--                <img class="bsl__bn" src="{{ asset('FrontEnd/Image/Group%204.png') }}" alt="">--}}
+                               <img class="bsl__bn" src="{{ asset('FrontEnd/Image/Group%204.png') }}" alt="">
             </div>
         </div>
     </div>
