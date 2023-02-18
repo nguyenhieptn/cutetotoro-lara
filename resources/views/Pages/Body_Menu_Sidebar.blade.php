@@ -28,8 +28,8 @@
         <div class=" wrap-nav-right">
             <ul class="Search">
                 <li class="wrap-search">
-                    <div class="d-flex">
-                        <input style="border: none" class="Search_Input" type="text" name="Search"
+                    <div class="d-flex search-input">
+                        <input class="Search_Input" type="text" name="Search"
                                placeholder="Search...">
                         <span>
                             <a href="/search-items">
@@ -70,9 +70,25 @@
     </div>
     <div class="offcanvas-body listItems">
         <p>Wellcome to Shop Totoro</p>
-        <div class="d-flex">
+        {{-- <div class="d-flex">
             <input class="Search_Input" type="text" name="Search" placeholder="Search..."
                    style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
+            <span>
+                <a href="/search-items">
+                    <img class="Icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
+                    <style>
+                        .Icon_search{
+                            position: absolute;
+                            right: 1.9rem;
+                            top: 9.9rem;
+                        }
+                    </style>
+                </a>
+            </span>
+        </div> --}}
+        <div class="d-flex search-input" style="width:100%">
+            <input class="Search_Input" type="text" name="Search" style="width:84%"
+                   placeholder="Search...">
             <span>
                 <a href="/search-items">
                     <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">

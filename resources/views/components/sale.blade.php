@@ -54,7 +54,10 @@ dd($bestSeller);
                             <img src="/aimeos/{{ $dt['media'][0] }}" alt="Ảnh sản phẩm" class="grid-item-cus-img">
                             <div class="sale-price">
                                 <span>{{ $dt['price'][0]['actual'] }}$</span>
-                                <span>{{ $dt['price'][0]['sale'] }}$</span>
+                                @php
+                                    $sale =  $dt['price'][0]['actual']  -  $dt['price'][0]['rebate'];
+                                @endphp
+                                <span>{{$sale}}$</span>
                             </div>
                         </a>
                     </div>
