@@ -212,7 +212,7 @@
     .wrap-nav-right {
         position: absolute;
         right: 0;
-        top: -50%;
+        top: 20%;
     }
 
     .wrap-nav-left {
@@ -230,6 +230,9 @@
     .Cart p {
         font-size: 18px;
     }
+    .wrap-cart li:first-child{
+        display: none;
+    }
 
     .Search li:last-child {
         padding-right: 0px;
@@ -240,7 +243,7 @@
 @media screen and (min-width: 768px) {
     .wrap-nav-right {
         top: 0;
-        transform: translateY(25%);
+        transform: translateY(20%);
     }
 
     .Search li:last-child {
@@ -248,7 +251,11 @@
     }
 }
 
-@media screen and (min-width: 920px) {}
+@media screen and (min-width: 480px) {
+    .wrap-cart li:first-child{
+        display: block;
+    }
+}
 
 
 @media screen and (min-width: 1200px) {
