@@ -69,7 +69,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body listItems">
-        <p>Wellcom to Shop Totoro</p>
+        <p>Wellcome to Shop Totoro</p>
         <div class="d-flex">
             <input class="Search_Input" type="text" name="Search" placeholder="Search..."
                    style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">

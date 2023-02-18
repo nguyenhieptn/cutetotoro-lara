@@ -1,23 +1,24 @@
+
 @extends('cutetotoro::base')
 @section('content')
-<div class="detail-content">
+<div class="detail-content" style="padding-top: 50px; background-color: white">
     <div class="container">
         <div class="row mb-5">
             <div class=" col col-12 breadcrumb-main-details">
                 <p class="d-flex">
                     <a href="{{ route('home') }}">Home </a>
-                    <span style="margin: 0 10px;">/{{ $product['product.label'] }}</span>
+                    <span style="margin: 0 10px; font-family: Manjari">/{{ $product['product.label'] }}</span>
                 </p>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col col-sm-12 col-md-8 p-2">
+        <div class="row row-np">
+            <div class="col col-12 col-md-8 ">
                 <div class="row d-flex">
                     <div class="col col-12 col-xl-2 detail-son">
                         <div class="row main-detail-sb">
                             @foreach($product['media'] as $img)
-                            <div class="col col-3 col-xl-12 detail-sb">
+                            <div class="col col-4 col-xl-12 detail-sb">
                                 <div class="detail-sb-wr">
                                     <img style="width: 100%; height: 100%" src="{{ asset('aimeos/'.$img) }}" alt="">
                                 </div>
@@ -27,15 +28,17 @@
                     </div>
 
                     <div class="col col-12 col-xl-10 detail-dad p-2">
-                        <div class="main-detail-image" style="width: 100%">
-                            <img style="width: 100% ; height: 100%" src="{{ asset('/aimeos/'.$product['media'][0]) }}"
-                                alt="">
-                        </div>
+                            
+                                <div class="main-detail-image" style="width: 100%">
+                                    <img style="width: 100% ; height: 100%; border-radius: 30px; " src="{{ asset('/aimeos/'.$product['media'][0]) }}"
+                                        alt="">
+                                </div>
+                            
                     </div>
                 </div>
             </div>
 
-            <div class="col col-sm-12 col-md-4 pt-3">
+            <div class="col col-12 col-md-4 pt-3">
                 <div class="main-details-content-wrap">
                     <ul class="main-details-content mb-0">
                         <li>
@@ -51,7 +54,7 @@
                             </ul>
                         </li>
                         <li style="margin-top: 30px">
-                            {{--                                <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span>--}}
+                             {{-- <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span> --}}
                             <span>Spirited away Soot Sprite Character Mug, with quote: “Finish what you
                                 started Human” Based on Spirited away movie. Coffee Mug
                             </span>
@@ -62,7 +65,7 @@
                                     <span>14,00$</span>
                                 </li>
                                 <li>
-                                    <span style="font-weight: 400; font-size: 30px; line-height: 33px;"><strike>15,99
+                                    <span style="font-weight: 400; line-height: 33px;"><strike>15,99
                                             $</strike></span>
                                 </li>
                             </ul>
@@ -70,7 +73,7 @@
                         <li style="margin-top: 30px">
                             <form>
                                 @csrf
-                                <button style="font-size: 2em" type="button" class="btn btn-dark w-100 addToCart" name="addToCart">
+                                <button type="button" class="btn btn-dark w-100 addToCart" name="addToCart">
                                     Add to cart
                                 </button>
                             </form>
@@ -115,100 +118,120 @@
         </div>
 
         <div class="row mt-5 detail-also-like">
+            {{-- <div class="main-carousel row"
+                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true,   "adaptiveHeight": true}'>
+             
+                @foreach ($bestSeller as $data)
+                    <div class="carousel-cell" style="position: relative">
+                        <a href="{{ route('product.detail',$data['product.id'] ) }}">
+                            <img src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
+                        </a>
+                        <div class="best_seller_bottom">
+                                    <span>
+                                        {!! $data['text'][0] !!}
+                                    </span>
+                            <div class="best_seller-price">
+                                {!! $data['price'][0]['price_html'] !!}
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div> --}}
             <div class="main-carousel"
-                data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
-                {{-- "autoPlay": 3000 --}}
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
-                        class="girl img-responsive" alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                            Based on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike
-                                    style="line-height: 24px">15,55$</strike></p>
-                            <p>14,00$</p>
+                    data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
+                    {{-- "autoPlay": 3000 --}}
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                        <div class="best_seller_bottom">
+                            <span>
+                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Based on Spirited away movie. Coffee Mug
+                            </span>
+                            <div class="best_seller-price">
+                                <span style="display: flex; align-item: center"><strike
+                                        style="line-height: 24px">15,55$</strike></span>
+                                <span>14,00$</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 11.png') }}"
-                        class="girl img-responsive" alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                            Based on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike
-                                    style="line-height: 24px">15,55$</strike></p>
-                            <p>14,00$</p>
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                        <div class="best_seller_bottom">
+                            <span>
+                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Based on Spirited away movie. Coffee Mug
+                            </span>
+                            <div class="best_seller-price">
+                                <span style="display: flex; align-item: center"><strike
+                                        style="line-height: 24px">15,55$</strike></span>
+                                <span>14,00$</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 12.png') }}"
-                        class="girl img-responsive" alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                            Based on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike
-                                    style="line-height: 24px">15,55$</strike></p>
-                            <p>14,00$</p>
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                        <div class="best_seller_bottom">
+                            <span>
+                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Based on Spirited away movie. Coffee Mug
+                            </span>
+                            <div class="best_seller-price">
+                                <span style="display: flex; align-item: center"><strike
+                                        style="line-height: 24px">15,55$</strike></span>
+                                <span>14,00$</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 13.png') }}"
-                        class="girl img-responsive" alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                            Based on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike
-                                    style="line-height: 24px">15,55$</strike></p>
-                            <p>14,00$</p>
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                        <div class="best_seller_bottom">
+                            <span>
+                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Based on Spirited away movie. Coffee Mug
+                            </span>
+                            <div class="best_seller-price">
+                                <span style="display: flex; align-item: center"><strike
+                                        style="line-height: 24px">15,55$</strike></span>
+                                <span>14,00$</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 14.png') }}"
-                        class="girl img-responsive" alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                            Based on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike
-                                    style="line-height: 24px">15,55$</strike></p>
-                            <p>14,00$</p>
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                        <div class="best_seller_bottom">
+                            <span>
+                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Based on Spirited away movie. Coffee Mug
+                            </span>
+                            <div class="best_seller-price">
+                                <span style="display: flex; align-item: center"><strike
+                                        style="line-height: 24px">15,55$</strike></span>
+                                <span>14,00$</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-cell" style="position: relative">
-                    <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
-                        class="girl img-responsive" alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                            Based on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike
-                                    style="line-height: 24px">15,55$</strike></p>
-                            <p>14,00$</p>
+                    <div class="carousel-cell" style="position: relative">
+                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
+                            class="girl img-responsive" alt="" />
+                        <div class="best_seller_bottom">
+                            <span>
+                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
+                                Based on Spirited away movie. Coffee Mug
+                            </span>
+                            <div class="best_seller-price">
+                                <span style="display: flex; align-item: center"><strike
+                                        style="line-height: 24px">15,55$</strike></span>
+                                <span>14,00$</span>
+                            </div>
                         </div>
                     </div>
+                    
                 </div>
-            </div>
         </div>
     </div>
 </div>
@@ -219,6 +242,22 @@
 <script src="{{ asset('js/sweetalert.min.js') }}"></script>
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <link rel="stylesheet" href="{{ asset('css/sweetalert.css') }}">
+ {{-- tab --}}
+ <script>
+    function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-tab", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " w3-tab";
+    }
+</script>
 <script type="text/javascript">
 <?php
 // dd($product);
@@ -247,19 +286,7 @@ $(document).ready(function(e) {
                 _token: _token
             },
             success: function(data) {
-                swal({
-                        title: "Added in the cart",
-                        text: "You can chose product or go to page check out",
-                        showCancelButton: true,
-                        cancelButtonText: "A Here",
-                        confirmButtonClass: "btn-success",
-                        confirmButtonText: "Go to the cart",
-                        closeOnConfirm: false
-                    },
-                    function() {
-                        window.location.href = "{{url('/cart')}}";
-                    }
-                );
+                window.location.href = "{{url('/cart')}}";
             }
         });
     });
