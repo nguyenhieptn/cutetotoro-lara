@@ -11,6 +11,7 @@
     {{-- long-css --}}
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="icon" type="image/png" sizes="180x180" href="{{ asset('FrontEnd/Image/icon.png') }}">
     <title>Cutetotoro</title>
     <style>
         .row{
