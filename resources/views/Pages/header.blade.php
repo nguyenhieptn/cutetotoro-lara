@@ -11,7 +11,7 @@
     {{-- long-css --}}
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <title>{{ env('APP_NAME') }}</title>
+    <title>Cutetotoro</title>
     <style>
         .row{
             margin-left: unset;
