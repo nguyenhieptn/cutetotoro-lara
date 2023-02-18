@@ -77,7 +77,7 @@
     </div>
 </div>
 <br>
-<div class="container-fluid ft_mobile" style="color: #a4a4a4">
+<div class="container-fluid ft_mobile" style="color: #a4a4a4; background-color: #a4a4a4; padding-top: 50px">
     <style>
         .ft_list {
             font-family: 'Manjari';
@@ -115,6 +115,28 @@
             align-items: center;
             justify-content: center;
         }
+
+        .ft_list_cp{
+            margin-bottom: 0px
+        }
+
+        .ft-ul-mb >li{
+            padding: 0 7px
+        }
+
+        .ft_list_cpu {
+            position: relative;
+        }
+
+        .ft_list_cpu::before{
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 80%;
+            top: 0;
+            right: 0;
+            background-color: black
+        }
     </style>
     <div class="text-center">
         <a href="" class="ft_list">WISHLIST</a>
@@ -126,9 +148,31 @@
     </div>
     <br>
     <div class="text-center1 d-flex">
-        <p class="ft_list_cp" style="padding-right: 1rem">Contact</p>
-        <img src="{{ asset('/FrontEnd/Image/Line4.png') }}" alt="" style="height: 34px;padding-bottom: 1rem;">
-        <p class="ft_list_cp" style="padding-left: 1rem">About</p>
+        <p class="ft_list_cp ft_list_cpu" style="padding-right: 1rem">Contact</p>
+        {{-- <img src="{{ asset('/FrontEnd/Image/Line4.png') }}" alt="" style="height: 34px;padding-bottom: 1rem;"> --}}
+        <p class="ft_list_cp ft_list_cpu" style="padding-left: 1rem; padding-right: 1rem">About</p>
+        <ul class=ft-ul-mb style="list-style: none; padding-left: 0px; margin-bottom: 0px; margin-left: 10px; display: flex">
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="text-center">
         <p class="ft_list_cp">Copyright 2023 © Cutetotoro</p>

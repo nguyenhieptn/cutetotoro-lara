@@ -93,13 +93,35 @@ p {
     }
 
     .about-img-top p {
-        display: none;
+        font-size: 18px;
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
+        top: 31%;
+        left: 11%;
+        text-align: center;
+        line-height: 20px;
+        letter-spacing: 10px;
+        margin-bottom: 0px;
     }
 
-    /* .view-all {
-        bottom: 100%;
-        right: 2%;
-    } */
+    .about-img-top p:last-child {
+        display: unset;
+        font-size: 18px;
+        position: absolute;
+        font-style: normal;
+        font-weight: 700;
+        color: #000000;
+        top: 42%;
+        left: 60%;
+        text-align: center;
+        line-height: 20px;
+        letter-spacing: 10px;
+        margin-bottom: 0px;
+    }
+
+  
     .a-view-all{
         padding-right: 10px;
     }
@@ -256,6 +278,7 @@ p {
         letter-spacing: 15px;
         margin-bottom: 0px;
     }
+
     .best_seller_top-image {
         max-width: 400px;
     }
@@ -558,7 +581,7 @@ p {
     }
 
     .main-carousel .flickity-prev-next-button {
-        top: 29%;
+        top: 26%;
     }
 
 

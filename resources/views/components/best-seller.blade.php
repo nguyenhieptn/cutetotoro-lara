@@ -14,11 +14,11 @@
             <a href="/all-product" class="a-view-all text-end">View all</a>
 
             <div class="main-carousel row"
-                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true,   "adaptiveHeight": true}'>
+                 data-flickity='{  "contain": true, "wrapAround": true}'>
                 {{-- "autoPlay": 3000 --}}
                 @foreach ($bestSeller as $data)
               
-                    <div class="carousel-cell" style="position: relative">
+                    <div class="carousel-cell" style="position: relative" aria-hidden="false">
                         <a href="{{ route('product.detail',$data['product.id'] ) }}">
                             <img style="width: 100%" src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
                         </a>
