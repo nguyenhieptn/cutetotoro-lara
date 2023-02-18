@@ -70,23 +70,7 @@
     </div>
     <div class="offcanvas-body listItems">
         <p>Wellcome to Shop Totoro</p>
-        {{-- <div class="d-flex">
-            <input class="Search_Input" type="text" name="Search" placeholder="Search..."
-                   style="width: -webkit-fill-available; border-color: rgba(24, 23, 23, 0.5)">
-            <span>
-                <a href="/search-items">
-                    <img class="Icon_search" src="{{ asset('FrontEnd/Image/search.png') }}">
-                    <style>
-                        .Icon_search{
-                            position: absolute;
-                            right: 1.9rem;
-                            top: 9.9rem;
-                        }
-                    </style>
-                </a>
-            </span>
-        </div> --}}
-        <div class="d-flex search-input" style="width:100%">
+        <div class="d-flex search-input" style="width:100%; margin-bottom: 20px;">
             <input class="Search_Input" type="text" name="Search" style="width:84%"
                    placeholder="Search...">
             <span>
