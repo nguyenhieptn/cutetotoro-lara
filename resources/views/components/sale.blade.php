@@ -43,14 +43,9 @@
         <div class="col-xxl-8 col-lg-8 col-12">
             <div class="grid">
                 @php
-                foreach ($bestSeller as $dt){
-                    if($dt['product.label'] == 'Mug'){
-                        $sale_product = array_slice($dt, 0, 6);
-                        Session::put('data',$sale_product);
-                    }
-                }
+                $sale_product = array_slice($bestSeller, 0, 6);
                 @endphp
-                @foreach (Session::get('data',$sale_product) as $dt)
+                @foreach ($sale_product as $dt)
                     <div class="grid-item grid-item-cus {{ $dt['product.label'] }}">
                         <a href="/product-detail/{{ $dt['product.id'] }}" class="d-grid">
                             <img src="/aimeos/{{ $dt['media'][0] }}" alt="Ảnh sản phẩm" class="grid-item-cus-img">
