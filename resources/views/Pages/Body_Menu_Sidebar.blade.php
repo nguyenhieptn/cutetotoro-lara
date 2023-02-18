@@ -28,8 +28,8 @@
         <div class=" wrap-nav-right">
             <ul class="Search">
                 <li class="wrap-search">
-                    <div class="d-flex">
-                        <input style="border: none" class="Search_Input" type="text" name="Search"
+                    <div class="d-flex search-input">
+                        <input class="Search_Input" type="text" name="Search"
                                placeholder="Search...">
                         <span>
                             <a href="/search-items">

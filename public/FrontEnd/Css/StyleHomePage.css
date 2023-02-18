@@ -40,7 +40,7 @@
     display: flex;
     list-style: none;
     padding-left: 0;
-    margin-bottom: 0px;
+    margin-bottom: -6px;
 }
 
 
@@ -80,7 +80,8 @@
 }
 
 .wrap-cart>li:first-child {
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-top: 11px;
     position: relative;
 }
 
@@ -121,16 +122,35 @@
     margin-bottom: 0;
 }
 
-.Search_Input {
+.search-input{
     width: 156px;
     height: 30px;
-    border-radius: 12px;
-    border-color: black;
+    position: relative;
+    border-radius: 38px;
+    background-color: #ececec;
+
+}
+.Search_Input {
+    margin-left: 16px;
+    padding-top: 10px;
+    width: 60%;
+    background-color: #ececec;
+    border: none;
+    font-weight: 700;
+}
+.Search_Input:focus{
+    border: none;
+    outline: none;
+}
+
+.Search_Input::placeholder{
+    padding-top: 5px;
 }
 
 .Search_Icon {
-    margin-left: -30px;
-    margin-top: 5px;
+    position: absolute;
+    top: 5px;
+    right: 19px;
 }
 
 .Cart {
@@ -180,8 +200,8 @@
     }
 
     .Header_Style {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 52px;
+        padding-bottom: 13px;
 
     }
 
