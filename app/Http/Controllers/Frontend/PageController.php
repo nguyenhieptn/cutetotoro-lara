@@ -40,7 +40,7 @@ class PageController extends Controller
      */
     public function getBestSellerProduct()
     {
-        $limit = 10;
+        $limit = 6;
         $manager = MShop::create(app('aimeos.context')->get(true), 'product');
         $items = $manager->search(clone $manager->filter(), ['text', 'media', 'price', 'catalog'], $limit);
         $products = [];
@@ -48,11 +48,6 @@ class PageController extends Controller
             $products[] = convertAimeosProductToProduct($item);
         }
         view()->share('bestSeller', $products);
-    }
-    public function Grid(): \Illuminate\Http\Response
-    {
-        $this->getBestSellerProduct();
-        return Response::view('components.sale');
     }
     public function allProduct(): \Illuminate\Http\Response
     {

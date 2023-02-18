@@ -1,8 +1,3 @@
-{{-- @php
-
-dd($bestSeller);
-@endphp --}}
-
 <div class="sale-category ">
     <div class="list-category d-flex justify-content-center">
         <div id="filters" class="button-group tab">
