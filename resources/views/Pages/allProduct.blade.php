@@ -73,143 +73,36 @@
             </div>
         </div>
 
-        <div class="element" style="margin-top: 21px;">
-            <div class="element-item">
-                <div class="mug-product">
-                    <img src="{{ asset('FrontEnd/Image/mug/product.png') }}" class="girl img-responsive"
-                        alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based
-                            on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike>15,55$</strike></p>
-                            <p>14,00$</p>
-                        </div>
-                    </div>
-                    <div class="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/mug/frame.png') }}" alt="mug-layer">
-                    </div>
-                    <div class="mug-sticker">
-                        <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
-                    </div>
-                </div>
-            </div>
-            <div class="element-item">
-                <div class="mug-product">
-                    <img src="{{ asset('FrontEnd/Image/mug/product.png') }}" class="girl img-responsive"
-                        alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based
-                            on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike>15,55$</strike></p>
-                            <p>14,00$</p>
-                        </div>
-                    </div>
-                    <div class="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/mug/frame.png') }}" alt="mug-layer">
-                    </div>
-                    <div class="mug-sticker">
-                        <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
-                    </div>
-                </div>
-            </div>
-            <div class="element-item">
-                <div class="mug-product">
-                    <img src="{{ asset('FrontEnd/Image/mug/product.png') }}" class="girl img-responsive"
-                        alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based
-                            on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike>15,55$</strike></p>
-                            <p>14,00$</p>
-                        </div>
-                    </div>
-                    <div class="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/mug/frame.png') }}" alt="mug-layer">
-                    </div>
-                    <div class="mug-sticker">
-                        <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
-                    </div>
-                </div>
-            </div>
-            <div class="element-item">
-                <div class="mug-product">
-                    <img src="{{ asset('FrontEnd/Image/mug/product.png') }}" class="girl img-responsive"
-                        alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based
-                            on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike>15,55$</strike></p>
-                            <p>14,00$</p>
-                        </div>
-                    </div>
-                    <div class="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/mug/frame.png') }}" alt="mug-layer">
-                    </div>
-                    <div class="mug-sticker">
-                        <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
-                    </div>
-                </div>
-            </div>
-            <div class="element-item">
-                <div class="mug-product">
-                    <img src="{{ asset('FrontEnd/Image/mug/product.png') }}" class="girl img-responsive"
-                        alt="" />
-                    <div class="best_seller_bottom">
-                        <span>
-                            Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human” Based
-                            on Spirited away movie. Coffee Mug
-                        </span>
-                        <div class="best_seller-price">
-                            <p style="display: flex; align-item: center"><strike>15,55$</strike></p>
-                            <p>14,00$</p>
-                        </div>
-                    </div>
-                    <div class="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/mug/frame.png') }}" alt="mug-layer">
-                    </div>
-                    <div class="mug-sticker">
-                        <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
-                        <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
-                    </div>
-                </div>
-            </div>
-            @foreach ($bestSeller as $dt)
+        <div class="element" style="margin-top: 81px;">
+            
+            @foreach ($bestSeller as $key => $dt)
                 <div class="element-item">
                     <div class="mug-product">
-                        <a href="/product-detail/{{ $dt['product.id'] }}">
-                            <img src="/aimeos/{{ $dt['media'][0] }}" class="girl img-responsive" alt=""
-                                style="width: 232px; height: 239px" />
+                        <a href="/product-detail/{{ $dt['product.id'] }}" style="display: block">
+                            <div class="mug-img">
+                                <img src="/aimeos/{{ $dt['media'][0] }}" class="girl img-responsive" alt=""/>
+                                <div class="mug-sticker" >
+                                    <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
+                                    <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
+                                </div>
+                                @if ($key < 5)
+                                    <div class="mug-layer">
+                                        <img src="{{ asset('FrontEnd/Image/mug/frame.png') }}" alt="mug-layer">
+                                    </div>
+                                @endif
+                            </div>
                             <div class="best_seller_bottom">
                                 <span>
                                     {!! $dt['text'][0] !!}
                                 </span>
                                 <div class="best_seller-price">
-                                    <p style="display: flex; align-item: center">
+                                    <p style="display: flex; align-item: center; margin-right: 15px">
                                         <strike>{{ $dt['price'][0]['actual'] }}$</strike>
                                     </p>
                                     <p>{{ $dt['price'][0]['sale'] }}$</p>
                                 </div>
                             </div>
-                            <div class="mug-sticker" style="bottom: 150px">
-                                <img src="{{ asset('FrontEnd/Image/heart.png') }}" alt="mug-layer">
-                                <img src="{{ asset('FrontEnd/Image/cart0.png') }}" alt="mug-layer">
-                            </div>
+                        
                         </a>
                     </div>
                 </div>
@@ -219,7 +112,10 @@
         <div class="mug-viewed">
             <p>viewed product</p>
             <div class="viewed-product d-flex">
-                @foreach ($bestSeller as $dt)
+                @php
+                $sale_product = array_slice($bestSeller, 0, 5);
+                @endphp
+                @foreach ($sale_product as $dt)
                     <img src="/aimeos/{{ $dt['media'][0] }}" alt="down">
                 @endforeach
 
