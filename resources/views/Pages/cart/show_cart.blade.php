@@ -21,6 +21,7 @@ $cart = Session::get('cart');
     <script defer class="basket-standard" src="{{asset('/default/basket-standard.js?v=1')}}"></script>
     <link rel="stylesheet" href="{{asset('/default/basket-related.css?v=1')}}">
     <script defer src="{{asset('/default/basket-related.js?v=1')}}"></script>
+    <link rel="stylesheet" href="{{ asset('FrontEnd/Css/main-details.css') }}">
     </style>
     <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/vendor/shop/themes/default/assets/roboto-condensed-v19-latin-700.woff2" as="font" type="font/woff2" crossorigin>
