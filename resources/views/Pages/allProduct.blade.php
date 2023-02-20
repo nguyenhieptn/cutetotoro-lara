@@ -74,11 +74,11 @@
         </div>
 
         <div class="element" style="margin-top: 81px;">
-            
+
             @foreach ($bestSeller as $key => $dt)
                 <div class="element-item">
                     <div class="mug-product">
-                        <a href="/product-detail/{{ $dt['product.id'] }}" style="display: block">
+                        <a href="{{ route('product.detail',$dt['product.id'] ) }}" style="display: block">
                             <div class="mug-img">
                                 <img src="/aimeos/{{ $dt['media'][0] }}" class="girl img-responsive" alt=""/>
                                 <div class="mug-sticker" >
@@ -102,7 +102,7 @@
                                     <p>{{ $dt['price'][0]['sale'] }}$</p>
                                 </div>
                             </div>
-                        
+
                         </a>
                     </div>
                 </div>
