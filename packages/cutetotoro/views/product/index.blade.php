@@ -111,7 +111,7 @@
             </div>
         </div>
         <div class="row mt-5 detail-also-like">
-            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
+            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true}'>
                 @foreach($all_product as $key => $data)
                     <div class="carousel-cell" style="position: relative">
                         <img style="width: 100%" src="{{ asset('/aimeos/'.$data['media'][0]) }}" class="girl img-responsive" alt="" />
