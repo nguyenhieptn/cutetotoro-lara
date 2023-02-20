@@ -1,3 +1,5 @@
+@extends('cutetotoro::base')
+@section('content')
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
 
@@ -104,3 +106,4 @@
 </body>
 
 </html>
+@stop
