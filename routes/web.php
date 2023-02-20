@@ -63,3 +63,4 @@ Route::post('/update-cart',[showDetailController::class,'updateCart']);
 Route::get('/delete-product/{session_id}',[showDetailController::class,'deleteProduct']);
 Route::post('/payment',[CartController::class,'Payment']);
 Route::post('/summary',[CartController::class,'Summary']);
+Route::post('/search',[\App\Http\Controllers\Frontend\HomeController::class,'Search_product']);

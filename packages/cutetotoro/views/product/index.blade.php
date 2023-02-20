@@ -98,9 +98,13 @@
                 </div>
 
                 <div id="Paris" class="city tab-content" style="display:none">
-                    <p>
-                        {!! $product['text'][0] !!}
-                    </p>
+                    <div>
+                        <label for="review">Send for Shop review of you</label>
+                    </div>
+                    <textarea name="" id="" cols="100" rows="10"></textarea>
+                    <span>
+                        <button style="margin-top: -23px" class="btn btn-primary">Submit</button>
+                    </span>
                 </div>
             </div>
         </div>
