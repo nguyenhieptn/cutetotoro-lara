@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en" dir="ltr">
+@extends('cutetotoro::base')
+@section('content')
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="0qptXRr7GC7EBB79hFprPydgfPIiBufdRwiV8SuP">
+        <meta http-equiv="Content-Security-Policy"
+            content="base-uri 'self'; default-src 'self' 'nonce-ExYB1eCaC2dW86TfTYq/aw=='; style-src &#039;unsafe-inline&#039; &#039;self&#039;; img-src &#039;self&#039; data: https://aimeos.org; frame-src https://www.youtube.com https://player.vimeo.com">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="0qptXRr7GC7EBB79hFprPydgfPIiBufdRwiV8SuP">
-    <meta http-equiv="Content-Security-Policy"
-        content="base-uri 'self'; default-src 'self' 'nonce-ExYB1eCaC2dW86TfTYq/aw=='; style-src &#039;unsafe-inline&#039; &#039;self&#039;; img-src &#039;self&#039; data: https://aimeos.org; frame-src https://www.youtube.com https://player.vimeo.com">
+        <link type="text/css" rel="stylesheet" href="{{asset('default/app.css?v=1')}}">
+        <link type="text/css" rel="stylesheet" href="{{asset('default/aimeos.css?v=1')}}" />
 
-    <link type="text/css" rel="stylesheet" href="{{asset('default/app.css?v=1')}}">
-    <link type="text/css" rel="stylesheet" href="{{asset('default/aimeos.css?v=1')}}" />
+        <title>Checkout</title>
+        <title>Address | Default</title>
+        <meta name="description" content="Default" />
 
-    <title>Checkout</title>
-    <title>Address | Default</title>
-    <meta name="description" content="Default" />
+        <link rel="stylesheet" href="{{asset('default/summary.css?v=1')}}">
+        <link rel="stylesheet" href="{{asset('default/checkout-standard.css?v=1')}}">
+        <script defer src="{{asset('default/checkout-standard.js?v=1')}}"></script>
+        <script defer src="/shop/count"></script>
 
-    <link rel="stylesheet" href="{{asset('default/summary.css?v=1')}}">
-    <link rel="stylesheet" href="{{asset('default/checkout-standard.css?v=1')}}">
-    <script defer src="{{asset('default/checkout-standard.js?v=1')}}"></script>
-    <script defer src="/shop/count"></script>
+        <link rel="stylesheet" href="{{asset('default/catalog-filter.css?v=1')}}">
+        <script defer src="{{asset('default/catalog-filter.js?v=1')}}"></script>
 
-    <link rel="stylesheet" href="{{asset('default/catalog-filter.css?v=1')}}">
-    <script defer src="{{asset('default/catalog-filter.js?v=1')}}"></script>
+        <style nonce="ExYB1eCaC2dW86TfTYq/aw==">
+            :root {}
+        </style>
 
-    <style nonce="ExYB1eCaC2dW86TfTYq/aw==">
-        :root {}
-    </style>
+        <link rel="icon" href="{{asset('/default/assets/icon.png')}}" />
 
-    <link rel="icon" href="{{asset('/default/assets/icon.png')}}" />
-
-    <link rel="preload" href="{{asset('default/assets/roboto-condensed-v19-latin-regular.woff2')}}"
-        as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{asset('default/assets/roboto-condensed-v19-latin-700.woff2')}}" as="font"
-        type="font/woff2" crossorigin>
-    <link rel="preload" href="{{asset('default/assets/bootstrap-icons.woff2')}}" as="font"
-        type="font/woff2" crossorigin>
-</head>
-
+        <link rel="preload" href="{{asset('default/assets/roboto-condensed-v19-latin-regular.woff2')}}"
+            as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="{{asset('default/assets/roboto-condensed-v19-latin-700.woff2')}}" as="font"
+            type="font/woff2" crossorigin>
+        <link rel="preload" href="{{asset('default/assets/bootstrap-icons.woff2')}}" as="font"
+            type="font/woff2" crossorigin>
+    </head>
 <body class="page-checkout-index">
     <div class="content">
         <div class="container-fluid">
@@ -814,4 +812,4 @@
     <script src="{{asset('default/app.js?v=1')}}"></script>
     <script src="{{asset('default/aimeos.js?v=1')}}"></script>
 </body>
-</html>
+@stop

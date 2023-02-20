@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<div class='container d-flex ft'>
+<div class='container d-flex ft' style="padding: 50px 0; background-color:#f0eded">
     <div class="row">
         <div class="col col-12 d-flex col-ft">
             <div class='a' >
@@ -42,7 +42,7 @@
     </div>
 </div>
 <div class="container-fluid footer-botom"
-    style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-top: 30px; margin-bottom: -16px;">
+    style="padding-top: 30px; padding-bottom: 30px; background-color: #d9d9d9; margin-bottom: -16px;">
     <div class="container">
         <div class="row">
             <div class="col col-12 col-xs-12 col-xl-6">

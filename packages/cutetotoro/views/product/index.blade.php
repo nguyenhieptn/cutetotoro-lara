@@ -1,4 +1,3 @@
-
 @extends('cutetotoro::base')
 @section('content')
 <div class="detail-content">
@@ -6,38 +5,30 @@
         <div class="row mb-5">
             <div class=" col col-12 breadcrumb-main-details">
                 <p class="d-flex">
-                    <a href="{{ route('home') }}">Home </a>
-                    <span style="margin: 0 10px; font-family: Manjari">/{{ $product['product.label'] }}</span>
+                    <a href="{{ route('home') }}">Home</a>
+                    <span style="margin: 0 10px; font-family: Manjari"> / {{ $product['product.label'] }}</span>
                 </p>
             </div>
         </div>
-
         <div class="row row-np">
             <div class="col col-12 col-md-7 ">
                 <div class="row d-flex">
                     <div class="col col-12 col-xl-2 detail-son">
                         <div class="row main-detail-sb">
-                            @foreach($product['media'] as $img)
                             <div class="col col-4 col-xl-12 detail-sb">
                                 <div class="detail-sb-wr">
-                                    <img style="width: 100%; height: 100%" src="{{ asset('aimeos/'.$img) }}" alt="">
+                                    <img style="width: 100%; height: 100%" src="{{ asset('aimeos/'.$product['media'][0]) }}" alt="Avatar_product">
                                 </div>
                             </div>
-                            @endforeach
                         </div>
                     </div>
-
                     <div class="col col-12 col-xl-10 detail-dad p-2">
-                            
-                                <div class="main-detail-image" style="width: 100%">
-                                    <img style="width: 100% ; height: 100%; border-radius: 30px; " src="{{ asset('/aimeos/'.$product['media'][0]) }}"
-                                        alt="">
-                                </div>
-                            
+                        <div class="main-detail-image" style="width: 100%">
+                            <img style="width: 100% ; height: 100%; border-radius: 30px; " src="{{ asset('/aimeos/'.$product['media'][0]) }}" alt="Avatar_product">
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div class="col col-12 col-md-5 pt-3">
                 <div class="main-details-content-wrap">
                     <ul class="main-details-content mb-0">
@@ -48,25 +39,28 @@
                                 </li>
                                 <li class="d-flex">
                                     <p style="margin-right: 10px">55 sales </p>
-                                    <img style="width: 86px; height: 20px"
-                                        src="{{ asset('FrontEnd/Image/start-pro.png') }}" alt="">
+                                    <img style="width: 86px; height: 20px" src="{{ asset('FrontEnd/Image/start-pro.png') }}" alt="">
                                 </li>
                             </ul>
                         </li>
                         <li style="margin-top: 30px">
                              <span style="margin-bottom: 10px; display: block ">Only 2 left in stock</span>
-                            <span>Spirited away Soot Sprite Character Mug, with quote: “Finish what you
-                                started Human” Based on Spirited away movie. Coffee Mug
+                            <span>
+                                {!! $product['text'][0] !!}
                             </span>
                         </li>
                         <li style="margin-top: 35px">
                             <ul class="md-price d-flex">
                                 <li style="margin-right: 20px">
-                                    <span>14,00$</span>
+                                    @php
+                                        $sale_price = $product['price'][0]['actual'] - $product['price'][0]['rebate'];
+                                    @endphp
+                                    <span>{{$sale_price}}$</span>
                                 </li>
                                 <li>
-                                    <span style="font-weight: 400; line-height: 33px;"><strike>15,99
-                                            $</strike></span>
+                                    <span style="font-weight: 400; line-height: 33px;">
+                                        <strike>{{$product['price'][0]['actual']}}$</strike>
+                                    </span>
                                 </li>
                             </ul>
                         </li>
@@ -82,7 +76,6 @@
                             <p>Star Seller. This seller consistently earned 5-star reviews, shipped on time, and
                                 replied quickly to any messages they received.
                                 <br>
-
                                 Arrives by Feb 8-14 if you order today.
                             </p>
                         </li>
@@ -90,7 +83,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row mt-5">
             <div class="col col-12">
                 <div class="w3-bar w3-white mb-4" style="border-bottom: 3px solid #000000 ">
@@ -100,13 +92,15 @@
                         onclick="openCity(event,'Paris')"><span>REVIEWS</span></button>
                 </div>
                 <div id="London" class=" city tab-content">
-                    <p class="pt-0">Add a detailed description of the demo article that may be a little bit
-                        longer.</p>
+                    <p class="pt-0">
+                        {!! $product['text'][0] !!}
+                    </p>
                 </div>
 
                 <div id="Paris" class="city tab-content" style="display:none">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, consequatesse cillum dolore eu
-                        fugiat nulla pariat laborum.</p>
+                    <p>
+                        {!! $product['text'][0] !!}
+                    </p>
                 </div>
             </div>
         </div>
@@ -116,122 +110,28 @@
                 <p style="margin-bottom: 0">May you also like</p>
             </div>
         </div>
-
         <div class="row mt-5 detail-also-like">
-            {{-- <div class="main-carousel row"
-                 data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true,   "adaptiveHeight": true}'>
-             
-                @foreach ($bestSeller as $data)
+            <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true}'>
+                @foreach($all_product as $key => $data)
                     <div class="carousel-cell" style="position: relative">
-                        <a href="{{ route('product.detail',$data['product.id'] ) }}">
-                            <img src="/aimeos/{{$data['media'][0] }}" class="girl img-responsive" alt="">
-                        </a>
+                        <img style="width: 100%" src="{{ asset('/aimeos/'.$data['media'][0]) }}" class="girl img-responsive" alt="" />
                         <div class="best_seller_bottom">
-                                    <span>
-                                        {!! $data['text'][0] !!}
-                                    </span>
+                            <span>
+                                {!! $data['text'][0] !!}
+                            </span>
                             <div class="best_seller-price">
-                                {!! $data['price'][0]['price_html'] !!}
+                                <span style="display: flex; align-item: center">
+                                    <strike style="line-height: 24px">{{$data['price'][0]['actual']}}$</strike>
+                                </span>
+                                @php
+                                    $sale_price = $data['price'][0]['actual'] - $data['price'][0]['rebate'];
+                                @endphp
+                                <span>{{$sale_price}}</span>
                             </div>
                         </div>
                     </div>
                 @endforeach
-            </div> --}}
-            <div class="main-carousel"
-                    data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "adaptiveHeight": true}'>
-                    {{-- "autoPlay": 3000 --}}
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 10.png') }}"
-                            class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                                Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <span style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">15,55$</strike></span>
-                                <span>14,00$</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 11.png') }}"
-                            class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                                Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <span style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">15,55$</strike></span>
-                                <span>14,00$</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 12.png') }}"
-                            class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                                Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <span style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">15,55$</strike></span>
-                                <span>14,00$</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 13.png') }}"
-                            class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                                Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <span style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">15,55$</strike></span>
-                                <span>14,00$</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 14.png') }}"
-                            class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirited away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                                Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <span style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">15,55$</strike></span>
-                                <span>14,00$</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('FrontEnd/Image/Rectangle 12.png') }}"
-                            class="girl img-responsive" alt="" />
-                        <div class="best_seller_bottom">
-                            <span>
-                                Spirit ted away Soot Sprite Character Mug, with quote: “Finish what you started Human”
-                                Based on Spirited away movie. Coffee Mug
-                            </span>
-                            <div class="best_seller-price">
-                                <span style="display: flex; align-item: center"><strike
-                                        style="line-height: 24px">15,55$</strike></span>
-                                <span>14,00$</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+            </div>
         </div>
     </div>
 </div>

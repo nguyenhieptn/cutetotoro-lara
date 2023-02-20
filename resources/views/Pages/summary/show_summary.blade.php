@@ -1,3 +1,5 @@
+@extends('cutetotoro::base')
+@section('content')
 <html class="" lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
@@ -313,7 +315,7 @@
                                                 <div class="details col-12 col-lg-8">
                                                     <p class="code">
                                                         <span class="name">{{$carts['product_Name']}}</span>
-                                                    </p> 
+                                                    </p>
                                                     <p>
                                                         <span class="name" style="font-size: 15px"><span>Shipping price: </span> {{$carts['product_shipping']}}</span>
                                                     </p>
@@ -381,7 +383,7 @@
                                             Please add product to cart
                                         </div>
                                     @endif
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -399,10 +401,10 @@
                             </div>
                         </div>
                         <div class="button-group">
-                            
+
                             <button class="btn btn-default btn-lg" type="submit">
                                 Update</button>
-                            
+
                         </div>
                     </form>
                 </div>
@@ -437,3 +439,4 @@
 </body>
 
 </html>
+@stop

@@ -1,4 +1,4 @@
-<div class="footer_desktop">
+<div class="footer_desktop" style="background-color: #f0eded">
     @include('components.footer')
     
 </div>
@@ -45,7 +45,7 @@
         text-decoration: underline;
     }
 </style>
-<div class="footer_mobile">
+<div class="footer_mobile" style="background-color: #f0eded; padding: 50px 0">
     <div class='container'>
         <div>
             <p class="titel_ft">ABOUT US</p>
@@ -71,13 +71,13 @@
                 <p class="list">About us</p>
                 <p class="list">Contact us</p>
                 <p class="list">Shipping Poplicy</p>
-                <p class="list">Terms of Service</p>
+                <p style="margin-bottom: 0" class="list">Terms of Service</p>
             </div>
         </div>
     </div>
 </div>
-<br>
-<div class="container-fluid ft_mobile" style="color: #a4a4a4; background-color: #a4a4a4; padding-top: 50px">
+
+<div class="container-fluid ft_mobile" style="color: #a4a4a4; background-color: #a4a4a4; padding-top: 30px">
     <style>
         .ft_list {
             font-family: 'Manjari';
@@ -138,7 +138,7 @@
             background-color: black
         }
     </style>
-    <div class="text-center">
+    <div class="text-center" style="margin-bottom: 10px">
         <a href="" class="ft_list">WISHLIST</a>
         <a href="" class="ft_list">ABOUT US</a>
         <a href="" class="ft_list">CONTACT US</a>
@@ -146,8 +146,7 @@
         <a href="" class="ft_list">POLICY</a>
         <a href="" class="ft_list">TERMS OF SERVICE</a>
     </div>
-    <br>
-    <div class="text-center1 d-flex">
+    <div class="text-center1 d-flex" style="margin-bottom: 3px">
         <p class="ft_list_cp ft_list_cpu" style="padding-right: 1rem">Contact</p>
         {{-- <img src="{{ asset('/FrontEnd/Image/Line4.png') }}" alt="" style="height: 34px;padding-bottom: 1rem;"> --}}
         <p class="ft_list_cp ft_list_cpu" style="padding-left: 1rem; padding-right: 1rem">About</p>
