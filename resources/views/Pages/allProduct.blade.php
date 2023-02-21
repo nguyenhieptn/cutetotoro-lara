@@ -103,7 +103,7 @@
         <div class="element" style="margin-top: 81px;">
             @foreach ($bestSeller as $key => $dt)
 {{--                {{$dt['product.config']['Color'] }}--}}
-                <div class="element-item {{ $dt['catalog'][0]['label'] }} ">
+                <div class="element-item {{-- $dt['catalog'][0]['label'] --}} ">
                     <div class="mug-product">
                         <a href="{{ route('product.detail', $dt['product.id']) }}" style="display: block">
                             <div class="mug-img">
@@ -124,11 +124,11 @@
                                     {!! $dt['text'][0] !!}
                                 </span>
                                 <div class="best_seller-price">
-                                    <p style="display: flex; align-item: center; margin-right: 15px">
-                                        <span>{{ $dt['price'][0]['actual'] }}</span> $
+                                    <p style="display: flex; align-item: center; margin-right: 15px; text-decoration: line-through">
+                                        {{ $dt['price'][0]['actual'] }} $
                                     </p>
                                     <p class="number">
-                                        {{ $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}</p>$
+                                        {{ $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}</p><p>$</p> 
                                     <p class="d-none weight">
                                         {{ 0 - $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}</p>
                                 </div>
