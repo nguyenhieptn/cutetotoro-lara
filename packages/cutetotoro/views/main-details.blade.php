@@ -60,7 +60,7 @@
                     <a class="link" href="/sticker">
                         <p class="T__Shirt">Sticker</p>
                     </a>
-                    <a class="link" href="/poster">
+                    <a class="link" href="/poster.blade.php">
                         <p class="T__Shirt">Poster</p>
                     </a>
                     <a class="link" href="/bag">
