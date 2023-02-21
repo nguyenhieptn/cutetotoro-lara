@@ -1,7 +1,6 @@
 <!-- Home page -->
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,12 +20,10 @@
     <link rel="stylesheet" href="{{ asset('FrontEnd/Css/best-seller.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-
 <body>
     <!-- header -->
     @include('cutetotoro::layouts.head')
     <!-- end header -->
-
     {{-- content  --}}
     <div class="container">
         <div class="mug-link">
@@ -46,18 +43,20 @@
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><a class="dropdown-item" href="#">Low to high</a></li>
+                    <li><a class="dropdown-item" href="#">High to low</a></li>
                 </ul>
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown"
                     aria-expanded="false">colors
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul id="filters" class="dropdown-menu button-group">
+                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Blue">Blue</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Red">Red</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".White">White</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Brown">Brown</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Yellow">Yellow</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Gray">Gray</button></li>
                 </ul>
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
@@ -75,11 +74,9 @@
                 </div>
             </div>
         </div>
-
         <div class="element" style="margin-top: 81px;">
-
             @foreach ($bestSeller as $key => $dt)
-                <div class="element-item {{ $dt['product.label'] }}">
+                <div class="element-item {{ $dt['catalog'][0]['label'] }} {{$dt['product.config']['Color']}}">
                     <div class="mug-product">
                         <a href="{{ route('product.detail',$dt['product.id'] ) }}" style="display: block">
                             <div class="mug-img">
@@ -105,13 +102,11 @@
                                     <p>{{ $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}$</p>
                                 </div>
                             </div>
-
                         </a>
                     </div>
                 </div>
             @endforeach
         </div>
-
         <div class="mug-viewed">
             <p>viewed product</p>
             <div class="viewed-product d-flex">
@@ -121,7 +116,6 @@
                 @foreach ($sale_product as $dt)
                     <img src="/aimeos/{{ $dt['media'][0] }}" alt="down">
                 @endforeach
-
                 <span>View more</span>
             </div>
         </div>
