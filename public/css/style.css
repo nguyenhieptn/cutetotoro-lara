@@ -222,7 +222,7 @@ a {
 .viewed-product img {
     width: 232px;
     height: 239px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 
 .viewed-product span {
@@ -230,7 +230,7 @@ a {
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-    right: 25px;
+    right: 52px;
     bottom: 15px;
 }
 
@@ -298,8 +298,20 @@ a {
 .about-side-content div img {
     margin-bottom: 4px;
 }
+.main-carousel-allproduct {
+    width: 100%;
+}
+
+
+/* .main-carousel-allproduct >.flickity-viewport{
+    height: 300px !important;
+} */
+.viewed-product .main-carousel-allproduct .flickity-prev-next-button{
+    top: 50%;
+}
 
 @media screen and (max-width: 1400px) {
+    
     .img-sale-main {
         width: 100%;
         margin-left: 0;
@@ -328,12 +340,22 @@ a {
         margin-right: 15px;
         margin-left: 15px;
     }
+   
 }
 
 @media screen and (max-width: 992px) {
     .img-sale-main {
         display: none;
     }
+    .viewed-product {
+        padding: 20px 10px;
+    } 
+   
+}
+@media screen and (max-width: 920px) {
+    .viewed-product {
+        padding: 25px 15px;
+    } 
 }
 
 @media screen and (max-width: 768px) {
@@ -346,10 +368,25 @@ a {
         margin: 0;
         padding: 0;
     }
+    .viewed-product span {
+        position: absolute;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        right: 15px;
+        bottom: 4px;
+    }
+    .viewed-product {
+        padding: 25px 15px;
+    } 
 }
 
 
 @media screen and (max-width: 480px) {
+    
+    .viewed-product {
+        padding: 25px 15px;
+    } 
     .button {
         height: 90px;
         margin: 0;
@@ -391,4 +428,23 @@ a {
     .grid-item-cus-img {
         height: 87%;
     }
+   
+}
+
+@media screen and (max-width: 390px) {
+    .main-carousel-allproduct .flickity-viewport .flickity-slider .carousel-cell{
+        width: 100%
+    }
+    .viewed-product {
+        padding: 30px 20px;
+    } 
+    .viewed-product span {
+        position: absolute;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        right: 15px;
+        bottom: 4px;
+    }
+
 }
