@@ -114,7 +114,7 @@
             <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true}'>
                 @foreach($all_product as $key => $data)
                     <div class="carousel-cell" style="position: relative">
-                        <img style="width: 100%" src="{{ asset('/aimeos/'.$data['media'][0]) }}" class="girl img-responsive" alt="" />
+                        <img style="width: 100%" src="{{ asset('/aimeos/'.$data['media'][0]) }}" class="girl" alt="" />
                         <div class="best_seller_bottom">
                             <span>
                                 {!! $data['text'][0] !!}
