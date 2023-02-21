@@ -98,13 +98,17 @@
                 </div>
 
                 <div id="Paris" class="city tab-content" style="display:none">
-                    <div>
-                        <label for="review">Send for Shop review of you</label>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                     </div>
-                    <textarea name="" id="" cols="100" rows="10"></textarea>
-                    <span>
-                        <button style="margin-top: -23px" class="btn btn-primary">Submit</button>
-                    </span>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Review</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="form-control btn btn-default" value="Submit">
+                    </div>
                 </div>
             </div>
         </div>
