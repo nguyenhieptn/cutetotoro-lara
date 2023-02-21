@@ -71,8 +71,12 @@
         <div class="d-flex search-input" style="width:100%; margin-bottom: 20px;">
             <form action="/search" method="post">
                 @csrf
-                <input class="Search_Input" type="text" name="keywords_submit" style="width:84%" placeholder="Search...">
-                <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
+                <input class="Search_Input" type="text" name="keywords_submit" style="width:125%" placeholder="Search...">
+                <button id="btn-search" type="submit" name="search_product" class="d-none">
+                </button>
+                <label for="btn-search" style="cursor: pointer">
+                    <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
+                </label>
             </form>
         </div>
         @include('Pages.menuSidebar')
