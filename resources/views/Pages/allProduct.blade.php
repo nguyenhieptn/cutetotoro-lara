@@ -50,24 +50,25 @@
                     aria-expanded="false">colors
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
-                <ul id="filters" class="dropdown-menu button-group">
-                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Blue">Blue</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Red">Red</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".White">White</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Brown">Brown</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Yellow">Yellow</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Gray">Gray</button></li>
+                <ul id="filters" class="dropdown-menu button-groupp">
+                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter="*">all</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Blue">Blue</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Red">Red</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".White">White</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Brown">Brown</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Yellow">Yellow</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Gray">Gray</button></li>
                 </ul>
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
-                <ul id="filters" class="dropdown-menu button-group">
-                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter="*">all</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Mug">mug</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Poster">poster</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".T-shirt">t-shirt</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Sticker">sticker</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Other">other</button></li>
+                <ul id="filters" class="dropdown-menu button-groupp" style="width: 150px; ">
+                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter="*">all</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Mug">mug</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Poster">poster</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".T-shirt">t-shirt</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Sticker">sticker</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Other">other</button></li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
@@ -76,7 +77,7 @@
         </div>
         <div class="element" style="margin-top: 81px;">
             @foreach ($bestSeller as $key => $dt)
-                <div class="element-item {{ $dt['catalog'][0]['label'] }} {{$dt['product.config']['Color']}}">
+                <div class="element-item {{ $dt['catalog'][0]['label'] }} {{ $dt['product.config']['Color'] }}">
                     <div class="mug-product">
                         <a href="{{ route('product.detail',$dt['product.id'] ) }}" style="display: block">
                             <div class="mug-img">
@@ -118,22 +119,8 @@
                         <div class="carousel-cell" style="position: relative">
                             <img style="width: 100%; height: 100%" src="/aimeos/{{ $dt['media'][0] }}" class="girl" alt="" />
                         </div>
-                        {{-- <div class="carousel-cell" style="position: relative">
-                            <span>hfghf</span>
-                        </div> --}}
                     @endforeach
                 </div>
-                {{-- @php
-                $sale_product = array_slice($bestSeller, 0, 5);
-                @endphp
-                @foreach ($sale_product as $dt)
-<<<<<<< HEAD
-                    <img src="/aimeos/{{ $dt['media'][0] }}" alt="down">
-                @endforeach
-=======
-                    <img src="/aimeos/{{ $dt['media'][0] }}" alt="down"> --}}
-
-
                 <span>View more</span>
             </div>
         </div>
@@ -341,7 +328,7 @@
                 filter: filterValue
             });
         });
-        $('.button-group').each(function(i, buttonGroup) {
+        $('.button-groupp').each(function(i, buttonGroup) {
             var $buttonGroup = $(buttonGroup);
 
             $buttonGroup.on('click', 'button', function() {
