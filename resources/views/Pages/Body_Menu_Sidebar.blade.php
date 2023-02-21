@@ -12,7 +12,7 @@
                 <ul>
                     @foreach (getCategoriesMenu() as $key => $data)
                         <li>
-                            <a href="{{$data->url}}">{{ $data->label }}</a>
+                            <a href="/{{ $data->label }}">{{ $data->label }}</a>
                         </li>
                     @endforeach
                 </ul>
@@ -29,13 +29,11 @@
             <ul class="Search">
                 <li class="wrap-search">
                     <div class="d-flex search-input">
-                        <input class="Search_Input" type="text" name="Search"
-                               placeholder="Search...">
-                        <span>
-                            <a href="/search-items">
-                                <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
-                            </a>
-                        </span>
+                        <form action="/search" method="post">
+                            @csrf
+                            <input class="Search_Input" type="text" name="keywords_submit" style="width:84%" placeholder="Search...">
+                            <img type="submit" class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
+                        </form>
                     </div>
                 </li>
                 <li>
@@ -71,13 +69,13 @@
     <div class="offcanvas-body listItems">
         <p>Wellcome to Shop Totoro</p>
         <div class="d-flex search-input" style="width:100%; margin-bottom: 20px;">
-            <input class="Search_Input" type="text" name="Search" style="width:84%"
-                   placeholder="Search...">
-            <span>
-                <a href="/search-items">
+            <form action="/search" method="post">
+                @csrf
+                <input class="Search_Input" type="text" name="keywords_submit" style="width:84%" placeholder="Search...">
+                <button type="submit" name="search_product">
                     <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
-                </a>
-            </span>
+                </button>
+            </form>
         </div>
         @include('Pages.menuSidebar')
     </div>

@@ -62,7 +62,6 @@
 
         $buttonGroup.on('click', 'button', function() {
             $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $buttonGroup.find('.d-n').removeClass('d-n');
             $(this).addClass('is-checked');
         });
     });

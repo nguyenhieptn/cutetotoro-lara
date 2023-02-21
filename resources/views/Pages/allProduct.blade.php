@@ -62,10 +62,13 @@
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul id="filters" class="dropdown-menu button-group">
+                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter="*">all</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Mug">mug</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Poster">poster</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".T-shirt">t-shirt</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Sticker">sticker</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Other">other</button></li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
@@ -74,11 +77,11 @@
         </div>
 
         <div class="element" style="margin-top: 81px;">
-            
+
             @foreach ($bestSeller as $key => $dt)
-                <div class="element-item">
+                <div class="element-item {{ $dt['product.label'] }}">
                     <div class="mug-product">
-                        <a href="/product-detail/{{ $dt['product.id'] }}" style="display: block">
+                        <a href="{{ route('product.detail',$dt['product.id'] ) }}" style="display: block">
                             <div class="mug-img">
                                 <img src="/aimeos/{{ $dt['media'][0] }}" class="girl img-responsive" alt=""/>
                                 <div class="mug-sticker" >
@@ -99,10 +102,10 @@
                                     <p style="display: flex; align-item: center; margin-right: 15px">
                                         <strike>{{ $dt['price'][0]['actual'] }}$</strike>
                                     </p>
-                                    <p>{{ $dt['price'][0]['sale'] }}$</p>
+                                    <p>{{ $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}$</p>
                                 </div>
                             </div>
-                        
+
                         </a>
                     </div>
                 </div>
@@ -330,6 +333,22 @@
         var $element = $('.element').isotope({
             itemSelector: '.element-item',
             layoutMode: 'fitRows'
+        });
+        $('#filters').on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            // use filterFn if matches value
+            // filterValue = filterFns[filterValue] || filterValue;
+            $element.isotope({
+                filter: filterValue
+            });
+        });
+        $('.button-group').each(function(i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+
+            $buttonGroup.on('click', 'button', function() {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
         });
     </script>
 </footer>
