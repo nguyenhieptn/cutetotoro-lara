@@ -12,7 +12,7 @@
                 <ul>
                     @foreach (getCategoriesMenu() as $key => $data)
                         <li>
-                            <a href="/all-product">{{ $data->label }}</a>
+                            <a href="/{{ $data->label }}">{{ $data->label }}</a>
                         </li>
                     @endforeach
                 </ul>

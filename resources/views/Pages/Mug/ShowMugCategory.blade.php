@@ -5,7 +5,7 @@
     <div>
         <h1 style="color: white; margin-top: 34px;">
             <center>
-                Search product
+                Mug
             </center>
         </h1>
     </div>
@@ -13,7 +13,7 @@
         <div class="mug-link">
             <p class="d-flex">
                 <a href="/">Home </a>
-                <span style="margin: 0 10px;">/</span>Search product
+                <span style="margin: 0 10px;">/</span>Mug
             </p>
         </div>
         <div class="row">
