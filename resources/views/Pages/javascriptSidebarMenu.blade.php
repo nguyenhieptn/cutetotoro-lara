@@ -1,5 +1,5 @@
 <script>
-    /* When the user clicks on the button, 
+    /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
@@ -82,7 +82,7 @@
             }
         }
     }
-    //poster
+    //poster.blade.php
     function myFunction4() {
         document.getElementById("myDropdown4").classList.toggle("show");
     }
