@@ -84,7 +84,7 @@
         <div class="element" style="margin-top: 81px;">
             @foreach ($bestSeller as $key => $dt)
 
-                <div class="element-item {{ $dt['catalog'][0]['label'].$dt['product.config']['Color'] }}">
+                <div class="element-item {{ $dt['catalog'][0]['label']}} {{$dt['product.config']['Color'] }}">
 
                 <div class="element-item {{-- $dt['catalog'][0]['label'] --}}">
 
