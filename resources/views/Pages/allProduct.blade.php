@@ -106,20 +106,20 @@
                     <li><label for="t-shirt" class="dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none">t-shirt</label> </li>
                     <li><label for="sticker" class="dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none">sticker</label> </li>
                     <li><label for="other" class="dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none">other</label> </li>
-                    <li><label for="all" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">all</label></li>
-                    <li><label for="mug" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">mug</label> </li>
-                    <li><label for="poster" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">poster</label> </li>
-                    <li><label for="t-shirt" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">t-shirt</label>
-                    </li>
-                    <li><label for="sticker" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">sticker</label>
-                    </li>
-                    <li><label for="other" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">other</label> </li>
+{{--                    <li><label for="all" class="dropdown-item button"--}}
+{{--                            style="height: fit-content; padding: 5px 10px; background-image: none">all</label></li>--}}
+{{--                    <li><label for="mug" class="dropdown-item button"--}}
+{{--                            style="height: fit-content; padding: 5px 10px; background-image: none">mug</label> </li>--}}
+{{--                    <li><label for="poster" class="dropdown-item button"--}}
+{{--                            style="height: fit-content; padding: 5px 10px; background-image: none">poster</label> </li>--}}
+{{--                    <li><label for="t-shirt" class="dropdown-item button"--}}
+{{--                            style="height: fit-content; padding: 5px 10px; background-image: none">t-shirt</label>--}}
+{{--                    </li>--}}
+{{--                    <li><label for="sticker" class="dropdown-item button"--}}
+{{--                            style="height: fit-content; padding: 5px 10px; background-image: none">sticker</label>--}}
+{{--                    </li>--}}
+{{--                    <li><label for="other" class="dropdown-item button"--}}
+{{--                            style="height: fit-content; padding: 5px 10px; background-image: none">other</label> </li>--}}
                 </ul>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
