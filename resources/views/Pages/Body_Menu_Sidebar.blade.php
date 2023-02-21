@@ -31,7 +31,7 @@
                     <div class="d-flex search-input">
                         <form action="/search" method="post">
                             @csrf
-                            <input class="Search_Input" type="text" name="keywords_submit" style="width:84%" placeholder="Search...">
+                            <input class="Search_Input" type="text" name="keywords_submit" placeholder="Search...">
                             <img type="submit" class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
                         </form>
                     </div>
