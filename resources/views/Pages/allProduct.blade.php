@@ -117,7 +117,9 @@
                     @endphp
                     @foreach($sale_product as  $dt)
                         <div class="carousel-cell" style="position: relative">
-                            <img style="width: 100%; height: 100%" src="/aimeos/{{ $dt['media'][0] }}" class="girl" alt="" />
+                            <a href="{{ route('product.detail',$dt['product.id'] ) }}">
+                                <img style="width: 100%; height: 100%" src="/aimeos/{{ $dt['media'][0] }}" class="girl" alt="" />
+                            </a>
                         </div>
                     @endforeach
                 </div>
