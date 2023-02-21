@@ -45,76 +45,55 @@
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
                 <ul id="sorts" class="dropdown-menu button-groupp">
-                    <li><button class=" dropdown-item button is-checked"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-sort-by="original-order">original order</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-sort-by="number">Low to high</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-sort-by="weight">High to low</button></li>
+                    <li><button class=" dropdown-item button is-checked all-product-filter"
+                            style="background-image: none" data-sort-by="original-order">original order</button></li>
+                    <li><button class=" dropdown-item button all-product-filter" data-sort-by="number"
+                            style="background-image: none">Low to
+                            high</button></li>
+                    <li><button class=" dropdown-item button all-product-filter" data-sort-by="weight"
+                            style="background-image: none">High to
+                            low</button></li>
                 </ul>
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">colors
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
                 <ul id="filters" class="dropdown-menu button-groupp">
-                    <li><button id="all" class=" dropdown-item button is-checked"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter="*">all</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter=".Blue">Blue</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter=".Red">Red</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter=".White">White</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter=".Brown">Brown</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter=".Yellow">Yellow</button></li>
-                    <li><button class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
-                            data-filter=".Gray">Gray</button></li>
-                    <li class="d-none"><button id="mug" class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
+                    <li><button id="all" class="all-product-filter dropdown-item button is-checked"
+                            style="background-image: none" data-filter="*">all</button></li>
+                    <li><button class="all-product-filter dropdown-item button" data-filter=".Blue"
+                            style="background-image: none">Blue</button></li>
+                    <li><button class="all-product-filter dropdown-item button" data-filter=".Red"
+                            style="background-image: none">Red</button></li>
+                    <li><button class="all-product-filter dropdown-item button" data-filter=".White"
+                            style="background-image: none">White</button></li>
+                    <li><button class="all-product-filter dropdown-item button" data-filter=".Brown"
+                            style="background-image: none">Brown</button></li>
+                    <li><button class="all-product-filter dropdown-item button" data-filter=".Yellow"
+                            style="background-image: none">Yellow</button></li>
+                    <li><button class="all-product-filter dropdown-item button" data-filter=".Gray">Gray</button></li>
+                    <li class="d-none"><button id="mug" class="all-product-filter dropdown-item button"
                             data-filter=".Mug">mug</button></li>
-                    <li class="d-none"><button id="poster" class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
+                    <li class="d-none"><button id="poster" class="all-product-filter dropdown-item button"
                             data-filter=".Poster">poster</button></li>
-                    <li class="d-none"><button id="t-shirt" class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
+                    <li class="d-none"><button id="t-shirt" class="all-product-filter dropdown-item button"
                             data-filter=".T-shirt">t-shirt</button></li>
-                    <li class="d-none"><button id="sticker" class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
+                    <li class="d-none"><button id="sticker" class="all-product-filter dropdown-item button"
                             data-filter=".Sticker">sticker</button></li>
-                    <li class="d-none"><button id="other" class=" dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none"
+                    <li class="d-none"><button id="other" class="all-product-filter dropdown-item button"
                             data-filter=".Other">other</button></li>
                 </ul>
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
-                <ul id="filters" class="dropdown-menu button-groupp" style="width: 150px; ">
-                    <li><label for="all" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">all</label></li>
-                    <li><label for="mug" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">mug</label> </li>
-                    <li><label for="poster" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">poster</label> </li>
-                    <li><label for="t-shirt" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">t-shirt</label>
+                <ul id="filter" class="dropdown-menu button-groupp2" style="width: 150px; ">
+                    <li><label for="all" class="dropdown-item button all-product-filter">all</label></li>
+                    <li><label for="mug" class="dropdown-item button all-product-filter">mug</label> </li>
+                    <li><label for="poster" class="dropdown-item button all-product-filter">poster</label> </li>
+                    <li><label for="t-shirt" class="dropdown-item button all-product-filter">t-shirt</label>
                     </li>
-                    <li><label for="sticker" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">sticker</label>
+                    <li><label for="sticker" class="dropdown-item button all-product-filter">sticker</label>
                     </li>
-                    <li><label for="other" class="dropdown-item button"
-                            style="height: fit-content; padding: 5px 10px; background-image: none">other</label> </li>
-
+                    <li><label for="other" class="dropdown-item button all-product-filter">other</label> </li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
@@ -149,7 +128,8 @@
                                     </p>
                                     <p class="number">
                                         {{ $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}</p>$
-                                    <p class="d-none weight">{{ 0 - $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}</p>
+                                    <p class="d-none weight">
+                                        {{ 0 - $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}</p>
                                 </div>
                             </div>
                         </a>
