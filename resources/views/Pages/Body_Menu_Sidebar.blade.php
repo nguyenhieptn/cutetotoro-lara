@@ -72,9 +72,7 @@
             <form action="/search" method="post">
                 @csrf
                 <input class="Search_Input" type="text" name="keywords_submit" style="width:84%" placeholder="Search...">
-                <button type="submit" name="search_product">
-                    <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
-                </button>
+                <img class="Search_Icon" src="{{ asset('FrontEnd/Image/search.png') }}">
             </form>
         </div>
         @include('Pages.menuSidebar')
