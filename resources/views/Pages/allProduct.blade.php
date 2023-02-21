@@ -132,9 +132,8 @@
                 @endforeach
 =======
                     <img src="/aimeos/{{ $dt['media'][0] }}" alt="down"> --}}
-           
 
->>>>>>> 9907575e3f80889136ba09db4434c37fd692a556
+
                 <span>View more</span>
             </div>
         </div>
@@ -143,25 +142,25 @@
     {{-- footer --}}
     <div class="footer_desktop" style="background-color: #f0eded">
         @include('components.footer')
-        
+
     </div>
     <style>
         @media screen and (min-width: 769px) {
             .footer_mobile {
                 display: none;
             }
-    
+
             .ft_mobile {
                 display: none;
             }
         }
-    
+
         @media screen and (max-width: 768px) {
             .footer_desktop {
                 display: none;
             }
         }
-    
+
         .footer_mobile p {
             font-family: 'Manjari';
             font-style: normal;
@@ -170,13 +169,13 @@
             line-height: 18px;
             color: #000000;
             text-align: center;
-    
+
         }
-    
+
         .titel_ft {
             text-align: center;
         }
-    
+
         .list {
             font-family: 'Manjari';
             font-style: normal;
@@ -219,7 +218,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container-fluid ft_mobile" style="color: #a4a4a4; background-color: #a4a4a4; padding-top: 30px">
         <style>
             .ft_list {
@@ -233,7 +232,7 @@
                 text-transform: lowercase;
                 color: #000000;
             }
-    
+
             .ft_list_cp {
                 font-family: 'Manjari';
                 font-style: normal;
@@ -245,7 +244,7 @@
                 color: #000000;
                 align-items: center;
             }
-    
+
             .text-center1 {
                 font-family: 'Manjari';
                 font-style: normal;
@@ -258,19 +257,19 @@
                 align-items: center;
                 justify-content: center;
             }
-    
+
             .ft_list_cp{
                 margin-bottom: 0px
             }
-    
+
             .ft-ul-mb >li{
                 padding: 0 7px
             }
-    
+
             .ft_list_cpu {
                 position: relative;
             }
-    
+
             .ft_list_cpu::before{
                 position: absolute;
                 content: "";
@@ -320,7 +319,7 @@
             <p class="ft_list_cp">Copyright 2023 © Cutetotoro</p>
         </div>
     </div>
-    
+
     {{-- end-footer --}}
 </body>
 <footer>
