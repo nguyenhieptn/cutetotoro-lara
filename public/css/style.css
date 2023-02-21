@@ -469,7 +469,7 @@ a {
    
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 389px) {
     .main-carousel-allproduct .flickity-viewport .flickity-slider .carousel-cell{
         width: 100%
     }
