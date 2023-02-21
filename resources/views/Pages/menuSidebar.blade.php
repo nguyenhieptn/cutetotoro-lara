@@ -25,17 +25,17 @@
         </a>
         <ul class="nav nav-treeview">
             <li class="nav-item Item_menu">
-                <a href="#{{$data->label}}" class="nav-link">
+                <a href="/all-product" class="nav-link">
                     <p>{{$data->label}} item</p>
                 </a>
             </li>
             <li class="nav-item Item_menu">
-                <a href="#{{$data->label}}" class="nav-link">
+                <a href="/all-product" class="nav-link">
                     <p>{{$data->label}} item</p>
                 </a>
             </li>
             <li class="nav-item Item_menu">
-                <a href="#{{$data->label}}" class="nav-link">
+                <a href="/all-product" class="nav-link">
                     <p>{{$data->label}} item</p>
                 </a>
             </li>

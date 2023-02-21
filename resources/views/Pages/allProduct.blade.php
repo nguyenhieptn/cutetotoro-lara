@@ -102,7 +102,7 @@
                                     <p style="display: flex; align-item: center; margin-right: 15px">
                                         <strike>{{ $dt['price'][0]['actual'] }}$</strike>
                                     </p>
-                                    <p>{{ $dt['price'][0]['sale'] }}$</p>
+                                    <p>{{ $dt['price'][0]['actual'] - $dt['price'][0]['rebate'] }}$</p>
                                 </div>
                             </div>
 

@@ -47,7 +47,7 @@
                 @endphp
                 @foreach ($sale_product as $dt)
                     <div class="grid-item grid-item-cus {{ $dt['product.label'] }}">
-                        <a href="/product-detail/{{ $dt['product.id'] }}" class="d-grid">
+                        <a href="{{ route('product.detail',$dt['product.id'] )}}" class="d-grid">
                             <img src="/aimeos/{{ $dt['media'][0] }}" alt="Ảnh sản phẩm" class="grid-item-cus-img">
                             <div class="sale-price">
                                 <span>{{ $dt['price'][0]['actual'] }}$</span>
