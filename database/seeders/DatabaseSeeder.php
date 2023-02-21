@@ -45,9 +45,9 @@ class DatabaseSeeder extends Seeder
 //            ],
 //            [
 //                'category_name' => 'Poster',
-//                'category_descript' => 'poster',
-//                'url' => 'poster',
-//                'meta_keywords' => 'poster',
+//                'category_descript' => 'poster.blade.php',
+//                'url' => 'poster.blade.php',
+//                'meta_keywords' => 'poster.blade.php',
 //                'created_at' => now(),
 //                'updated_at' => now(),
 //            ],

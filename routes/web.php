@@ -66,3 +66,8 @@ Route::post('/summary',[CartController::class,'Summary']);
 Route::post('/search',[\App\Http\Controllers\Frontend\HomeController::class,'Search_filter']);
 Route::get('/Mug',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_mug']);
 Route::get('/T-shirt',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_tshirt']);
+Route::get('/Sticker',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_sticker']);
+Route::get('/Poster',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_poster']);
+Route::get('/Bag',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_bag']);
+Route::get('/Other',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_orther']);
+

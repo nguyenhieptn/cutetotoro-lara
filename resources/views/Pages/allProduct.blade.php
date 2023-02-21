@@ -83,7 +83,7 @@
         </div>
         <div class="element" style="margin-top: 81px;">
             @foreach ($bestSeller as $key => $dt)
-                <div class="element-item {{ $dt['catalog'][0]['label'] }} {{ $dt['product.config']['Color'] }}">
+                <div class="element-item {{-- $dt['catalog'][0]['label'] --}}">
                     <div class="mug-product">
                         <a href="{{ route('product.detail',$dt['product.id'] ) }}" style="display: block">
                             <div class="mug-img">
@@ -123,7 +123,9 @@
                     @endphp
                     @foreach($sale_product as  $dt)
                         <div class="carousel-cell" style="position: relative">
-                            <img style="width: 100%; height: 100%" src="/aimeos/{{ $dt['media'][0] }}" class="girl" alt="" />
+                            <a href="{{ route('product.detail',$dt['product.id'] ) }}">
+                                <img style="width: 100%; height: 100%" src="/aimeos/{{ $dt['media'][0] }}" class="girl" alt="" />
+                            </a>
                         </div>
                     @endforeach
                 </div>
