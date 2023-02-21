@@ -65,31 +65,7 @@
                             <div class="checkout-standard-address-billing col-xs-12 col-xl">
                                 <h3>Billing address</h3>
                                 <div class="item-address item-new" data-option="null">
-                                    <div class="header">
-                                        <input id="ca_billingoption-new" type="radio" value="null"
-                                            name="ca_billingoption" checked="checked">
-                                        <label for="ca_billingoption-new" class="values value-new">
-                                            new address</label>
-                                    </div>
                                     <div class="form-list">
-                                        <div class="row form-item form-group salutation optional">
-                                            <div class="col-md-5">
-                                                <label for="address-billing-salutation-">
-                                                    Salutation</label>
-                                            </div>
-                                            <div class="col-md-7">
-                                                <select class="form-control" id="address-billing-salutation-"
-                                                    name="salutation">
-                                                    <option value="">Select salutation</option>
-                                                    <option value="" selected>
-                                                    </option>
-                                                    <option value="mr">
-                                                        Mr</option>
-                                                    <option value="ms">
-                                                        Ms</option>
-                                                </select>
-                                            </div>
-                                        </div>
                                         <div class="row form-item form-group firstname mandatory" data-regex="">
                                             <div class="col-md-5">
                                                 <label for="address-billing-firstname-">
@@ -700,17 +676,11 @@
                                         <div class="row form-item form-group languageid mandatory">
                                             <div class="col-md-5">
                                                 <label for="address-billing-languageid-">
-                                                    Language</label>
+                                                    Phone</label>
                                             </div>
                                             <div class="col-md-7">
-                                                <select class="form-control" id="address-billing-languageid-"
-                                                    name="select_language">
-                                                    <option value="">Select language</option>
-                                                    <option value="en" selected>
-                                                        English</option>
-                                                    <option value="de">
-                                                        German</option>
-                                                </select>
+                                                <input type="text" class="form-control" id="address-billing-languageid-"
+                                                    name="phone" placeholder="Phone">
                                             </div>
                                         </div>
                                         <div class="row form-item form-group vatid optional" data-regex="">
