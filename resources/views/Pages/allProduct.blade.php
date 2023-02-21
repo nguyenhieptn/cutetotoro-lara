@@ -62,13 +62,13 @@
                 <button type="button" class="mug-btn " data-bs-toggle="dropdown" aria-expanded="false">type
                     <img src="{{ asset('FrontEnd/Image/down.png') }}" alt="down">
                 </button>
-                <ul id="filters" class="dropdown-menu button-group">
-                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter="*">all</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Mug">mug</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Poster">poster</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".T-shirt">t-shirt</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Sticker">sticker</button></li>
-                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 0px; background-image: none" data-filter=".Other">other</button></li>
+                <ul id="filters" class="dropdown-menu button-groupp" style="width: 150px; ">
+                    <li><button class=" dropdown-item button is-checked" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter="*">all</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Mug">mug</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Poster">poster</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".T-shirt">t-shirt</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Sticker">sticker</button></li>
+                    <li><button class=" dropdown-item button" style="height: fit-content; padding: 5px 10px; background-image: none" data-filter=".Other">other</button></li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <img src="{{ asset('FrontEnd/Image/toright.png') }}" alt="toright">
@@ -152,7 +152,7 @@
                 filter: filterValue
             });
         });
-        $('.button-group').each(function(i, buttonGroup) {
+        $('.button-groupp').each(function(i, buttonGroup) {
             var $buttonGroup = $(buttonGroup);
 
             $buttonGroup.on('click', 'button', function() {
