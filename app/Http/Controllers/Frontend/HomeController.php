@@ -86,4 +86,42 @@ class HomeController extends Controller
         });
         return view('Pages.Mug.ShowMugCategory')->with(compact('filteredArray'));
     }
+    public function Show_category_tshirt(){
+        $total = 10;
+        $manager = MShop::create(app('aimeos.context')->get(true), 'product');
+        $items = $manager->search(clone $manager->filter(), ['text', 'media', 'price', 'catalog'], $total);
+        $products = [];
+        foreach ($items as $key => $item) {
+            $detail = $item;
+            $listItems = [];
+            foreach ($detail->getRefItems('media') as $media) {
+                $listItems['media'][] = $media->get('media.url');
+            }
+            foreach ($detail->getRefItems('text') as $text) {
+                $listItems['text'][] = $text->get('text.content');
+            }
+            foreach ($detail->getRefItems('catalog') as $catalog) {
+                $listItems['catalog'][] = [
+                    'label' => $catalog->label,
+                    'id'    => $catalog->id,
+                ];
+            }
+            foreach ($detail->getListItems('price') as $price) {
+                $price = $price->getRefItem();
+                $listItems['price'][] = [
+                    'actual'     => $price->get('price.value'),
+                    'rebate'     => $price->get('price.rebate'),
+                    'sale'       => getSalePrice($price->get('price.value'), $price->get('rebate')),
+                    'price_html' => getPriceHtml($price->get('price.value'), $price->get('rebate')),
+                ];
+            }
+            $product = array_merge($detail->toArray(), $listItems);
+            $products[] = $product;
+        }
+        view()->share('all_product',$products);
+        $filteredArray = Arr::where($products, function ($value, $key) {
+            return $value['catalog'][0]['label'] == 'T-shirt';
+        });
+        return view('Pages.tshirt.tshirt')->with(compact('filteredArray'));
+    }
 }

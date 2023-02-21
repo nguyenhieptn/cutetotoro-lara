@@ -65,3 +65,4 @@ Route::post('/payment',[CartController::class,'Payment']);
 Route::post('/summary',[CartController::class,'Summary']);
 Route::post('/search',[\App\Http\Controllers\Frontend\HomeController::class,'Search_filter']);
 Route::get('/Mug',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_mug']);
+Route::get('/T-shirt',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_tshirt']);

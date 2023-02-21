@@ -54,7 +54,7 @@
                     <a class="link" href="/mug">
                         <p class="Mug__CSS">Mug</p>
                     </a>
-                    <a class="link" href="/t-shirt">
+                    <a class="link" href="/tshirt">
                         <p class="T__Shirt">T-shirt</p>
                     </a>
                     <a class="link" href="/sticker">
