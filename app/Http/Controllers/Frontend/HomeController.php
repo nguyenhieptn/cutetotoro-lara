@@ -13,7 +13,7 @@ class HomeController extends Controller
         $data = $request->keywords_submit;
         $total = 10;
         $manager = MShop::create(app('aimeos.context')->get(true), 'product');
-        $items = $manager->search(clone $manager->filter(), ['text', 'media', 'price', 'catalog'], $total);
+        $items = $manager->search(clone $manager->filter($data), ['text', 'media', 'price', 'catalog'], $total);
         $products = [];
         foreach ($items as $key => $item) {
             $detail = $item;
@@ -43,10 +43,7 @@ class HomeController extends Controller
             $products[] = $product;
         }
         view()->share('all_product',$products);
-        $filteredArray = Arr::where($products, function ($value, $key) use($data) {
-            return $value['product.label'] == $data;
-        });
-        return view('Pages.search.search_product')->with(compact('filteredArray'));
+        return view('Pages.search.search_product');
     }
     public function Show_category_mug(){
         $total = 10;
