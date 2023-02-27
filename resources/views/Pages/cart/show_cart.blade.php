@@ -92,9 +92,9 @@ $cart = Session::get('cart');
                                                 <div class="details col-12 col-lg-8">
                                                     <p class="code">
                                                         <span class="name">{{$carts['product_Name']}}</span>
-                                                    </p> 
+                                                    </p>
                                                     <p>
-                                                        <span class="name" style="font-size: 15px"><span>Shipping price: </span> {{$carts['product_shipping']}}</span>
+                                                        <span class="name" style="font-size: 15px"><span>Shipping price: </span> {{$carts['product_shipping']}}$</span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -107,8 +107,8 @@ $cart = Session::get('cart');
                                                         name="cartQuantity[{{$carts['session_id']}}]" value="{{$carts['product_Quantity']}}" step="1"
                                                         min="1" max="2147483647">
                                                 </div>
-                                                <div class="unitprice col-4">{{$carts['product_Price']}}</div>
-                                                <div class="price col-3">{{$carts['product_Price'] * $carts['product_Quantity']}}</div>
+                                                <div class="unitprice col-4">{{$carts['product_Price']}}$</div>
+                                                <div class="price col-3">{{$carts['product_Price'] * $carts['product_Quantity']}}$</div>
                                                 <div class="action col-1">
                                                     <a class="minibutton delete"
                                                         href="{{('/delete-product/'.$carts['session_id'])}}"></a>
@@ -122,7 +122,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Sub-total</div>
-                                                <div class="price col-3">{{$total}}</div>
+                                                <div class="price col-3">{{$total}}$</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -131,7 +131,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Total shipping</div>
-                                                <div class="price col-3">{{$total_shipping}}</div>
+                                                <div class="price col-3">{{$total_shipping}}$</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@ $cart = Session::get('cart');
                                             <div class="row g-0 price-total">
                                                 <div class="quantity col-4">{{$number_product}} article</div>
                                                 <div class="col-4 total-text">Total</div>
-                                                <div class="price col-3">{{$total+$total_shipping}}</div>
+                                                <div class="price col-3">{{$total+$total_shipping}}$</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -150,7 +150,7 @@ $cart = Session::get('cart');
                                         <div class="col-8 col-md-6 offset-4 offset-md-6">
                                             <div class="row g-0">
                                                 <div class="col-8">Incl. 0% tax</div>
-                                                <div class="price col-3">0</div>
+                                                <div class="price col-3">0$</div>
                                                 <div class="action col-1"></div>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@ $cart = Session::get('cart');
                                             Please add product to cart
                                         </div>
                                     @endif
-                                    
+
                                 </div>
                             </div>
                         </div>

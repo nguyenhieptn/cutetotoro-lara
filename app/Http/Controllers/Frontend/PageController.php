@@ -54,4 +54,19 @@ class PageController extends Controller
         $this->getBestSellerProduct();
         return Response::view('Pages.allProduct');
     }
+    public function show_withlist(){
+        return view('Pages.footer.withlist.show_withlist');
+    }
+    public function show_about_us(){
+        return view('Pages.footer.about_us.show_about_us');
+    }
+    public function show_contact_us(){
+        return view('Pages.footer.contact_us.show_contact_us');
+    }
+    public function show_shipping_policy(){
+        return view('Pages.footer.shipping_policy.show_shipping_policy');
+    }
+    public function show_terms_of_service(){
+        return view('Pages.footer.terms_of_services.show_terms_of_services');
+    }
 }

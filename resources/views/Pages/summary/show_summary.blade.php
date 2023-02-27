@@ -43,12 +43,10 @@
             <section class="aimeos checkout-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
                 <nav class="container-xxl">
                     <ol class="steps">
-
                         <li class="step active basket">
                             <a href="/cart">
                                 Cart</a>
                         </li>
-
                         <li class="step active address">
                             <a href="/checkout">
                                 Address</a>
@@ -63,21 +61,15 @@
 
                     </ol>
                 </nav>
-
-                <form class="container-xxl" method="POST" action="/shop/checkout/process">
-                    <input class="csrf-token" type="hidden" name="_token"
-                        value="pW0kI04GSNVKT3Q2Cr0aIHYtMfIvtWtgmdaJBaoi">
+                <div class="container-xxl">
                     <section class="checkout-standard-summary common-summary">
                         <input type="hidden" name="cs_order" value="1">
-
                         <h1>Summary</h1>
                         <p class="note">Please check your order</p>
-
-
                         <div class="common-summary-address row">
                             <div class="item payment 1 col-sm-6">
                                 <div class="header">
-                                    <a class="modify" href="/shop/checkout/address">
+                                    <a class="modify" href="/checkout">
                                         Change</a>
                                     <h3>Billing address</h3>
                                 </div>
@@ -86,29 +78,23 @@
                                 @endphp
                                 <div class="content">
                                     {{$address['first_name']}} {{$address['last_name']}}<br>{{$address['company']}}<br>{{$address['street']}}<br>{{$address['city']}} {{$address['postal_code']}}<br>
-                                    {{$address['select_country']}}<br>{{$address['select_language']}}<br>{{$address['email']}}
+                                    {{$address['select_country']}}<br>{{$address['phone']}}<br>{{$address['email']}}
                                 </div>
                             </div>
-                            <!--
-
--->
                             <div class="item delivery 1 col-sm-6">
                                 <div class="header">
-                                    <a class="modify" href="/shop/checkout/address">
+                                    <a class="modify" href="/checkout">
                                         Change</a>
                                     <h3>Delivery address</h3>
                                 </div>
-
                                 <div class="content">
                                     like billing address</div>
                             </div>
                         </div>
-
-
                         <div class="common-summary-service row">
                             <div class="item delivery 1 col-sm-6">
                                 <div class="header">
-                                    <a class="modify" href="/shop/checkout/delivery">
+                                    <a class="modify" href="/checkout">
                                         Change</a>
                                     <h3>Delivery</h3>
                                 </div>
@@ -119,96 +105,66 @@
                                     </div>
 
                                     <ul class="attr-list">
-
                                         <li class="delivery-time.hourminute">
-
                                             <span class="name">
                                                 Pick-up time</span>
-
                                             <span class="value">10:58</span>
-
                                         </li>
-
                                         <li class="delivery-supplier.address">
-
                                             <span class="name">
                                                 Pick-up address</span>
-
                                             <span class="value">Test supplier 1, Test company, Test street 1, 10000 Test
                                                 city</span>
-
                                         </li>
-
-
                                     </ul>
                                 </div>
                             </div>
-                            <!--
-
--->
                             <div class="item payment 1 col-sm-6">
                                 <div class="header">
-                                    <a class="modify" href="/shop/checkout/payment">
+                                    <a class="modify" href="#">
                                         Change</a>
                                         @php
                                             $payment = Session::get('info_payment');
                                         @endphp
                                     <h3>Payment</h3>
                                 </div>
-
                                 <div class="content">
                                     <div class="item">
                                         <h4>{{$payment['payment']}}</h4>
                                     </div>
-
                                 </div>
                             </div>
-
                         </div>
-
-
                         <div class="common-summary-additional row">
                             <div class="item coupon 1 col-sm-4">
                                 <div class="header">
-                                    <a class="modify" href="/shop/basket">
+                                    <a class="modify" href="/cart">
                                         Change</a>
                                     <h3>Coupon codes</h3>
                                 </div>
-
                                 <div class="content">
                                 </div>
                             </div>
-                            <!--
-
--->
                             <div class="item customerref col-sm-4">
                                 <div class="header">
                                     <h3>Your reference</h3>
                                 </div>
-
                                 <div class="content">
                                     <input class="customerref-value" name="cs_customerref" value="">
                                 </div>
                             </div>
-                            <!--
-
--->
                             <div class="item comment col-sm-4">
                                 <div class="header">
                                     <h3>Your comment</h3>
                                 </div>
-
                                 <div class="content">
                                     <textarea class="comment-value" name="cs_comment"></textarea>
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="checkout-standard-summary-option row">
                             <div class="checkout-standard-summary-option-account col-sm-12">
                                 <h3>Customer account</h3>
-
                                 <div class="single 1">
                                     <input id="option-account" type="checkbox" value="1" name="cs_option_account"
                                         checked="checked">
@@ -218,15 +174,12 @@
                                     </p>
                                 </div>
                             </div>
-
                             <div class="checkout-standard-summary-option-terms col-sm-12">
                                 <h3>Terms and conditions</h3>
-
                                 <div class="single 1">
                                     <input type="hidden" name="cs_option_terms" value="1">
                                     <input id="option-terms-accept" type="checkbox" value="1"
                                         name="cs_option_terms_value">
-
                                     <p>
                                         <label for="option-terms-accept">
                                             I accept the <a href="/p/terms" target="_blank" title="terms and conditions"
@@ -236,15 +189,12 @@
                                                 target="_blank" title="cancellation policy"
                                                 alt="cancellation policy">cancellation policy</a></label>
                                     </p>
-
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="common-summary-detail row">
                             <div class="header">
-                                <a class="modify" href="/shop/basket">
+                                <a class="modify" href="/cart">
                                     Change</a>
                                 <h2>Details</h2>
                             </div>
@@ -252,13 +202,13 @@
                                 $cart = Session::get('cart');
                             @endphp
                             <div class="basket table-responsive">
-                            <div class="container-fluid">
-            <section class="aimeos basket-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
+                                <div class="container-fluid">
+                                    <section class="aimeos basket-standard" data-jsonurl="https://laravel.demo.aimeos.org/jsonapi">
                 <div class="container-xxl">
                     <form action="/update-cart" method="Post">
                         @csrf
                         <div class="row header">
-                            <h1 class="col-12 col-sm-6">Cart Product</h1>
+                            <h1 class="col-12 col-sm-6">Cart Review</h1>
                         </div>
                         <div class="common-summary-detail">
                             <div class="header">
@@ -286,157 +236,130 @@
                                         </div>
                                     </div>
                                     @if(Session::get('cart')==true)
-                                    @php
-                                        $total = 0;
-                                        $number_product = 0;
-                                        $total_shipping = 0;
-                                    @endphp
-                                    @foreach($cart as $key => $carts)
-                                    @php
-                                        $subtotal = $carts['product_Price'] * $carts['product_Quantity'];
-                                        $total+=$subtotal;
-                                        $total_number_product = $carts['product_Quantity'];
-                                        $number_product+=$total_number_product;
-                                        $shipping_price = $carts['product_shipping'];
-                                        $total_shipping+=$shipping_price;
-                                    @endphp
-                                    <div class="supplier">
-                                        <h3 class="supplier-name">{{$carts['product_Name']}}</h3>
-                                    </div>
-                                    <div class="row g-0 product-item ">
-                                        <div class="col-4 col-md-6">
-                                            <div class="row g-0">
-                                                <div class="status col-1">
+                                        @php
+                                            $total = 0;
+                                            $number_product = 0;
+                                            $total_shipping = 0;
+                                        @endphp
+                                        @foreach($cart as $key => $carts)
+                                            @php
+                                                $subtotal = $carts['product_Price'] * $carts['product_Quantity'];
+                                                $total+=$subtotal;
+                                                $total_number_product = $carts['product_Quantity'];
+                                                $number_product+=$total_number_product;
+                                                $shipping_price = $carts['product_shipping'];
+                                                $total_shipping+=$shipping_price;
+                                            @endphp
+                                            <div class="supplier">
+                                                <h3 class="supplier-name">{{$carts['product_Name']}}</h3>
+                                            </div>
+                                            <div class="row g-0 product-item ">
+                                                <div class="col-4 col-md-6">
+                                                    <div class="row g-0">
+                                                        <div class="status col-1">
+                                                        </div>
+                                                        <div class="image col-11 col-lg-3">
+                                                            <img class="detail"
+                                                                 src="/aimeos/{{$carts['product_Image']}}">
+                                                        </div>
+                                                        <div class="details col-12 col-lg-8">
+                                                            <p class="code">
+                                                                <span class="name">{{$carts['product_Name']}}</span>
+                                                            </p>
+                                                            <p>
+                                                                <span class="name" style="font-size: 15px"><span>Shipping price: </span> {{$carts['product_shipping']}}$</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="image col-11 col-lg-3">
-                                                    <img class="detail"
-                                                        src="/aimeos/{{$carts['product_Image']}}">
+                                                <div class="col-8 col-md-6">
+                                                    <div class="row g-0">
+                                                        <div class="quantity col-4 quantity col-4">
+                                                            &nbsp;
+                                                            <input class="value" type="number" required="required"
+                                                                   name="cartQuantity[{{$carts['session_id']}}]" value="{{$carts['product_Quantity']}}" step="1"
+                                                                   min="1" max="2147483647">
+                                                        </div>
+                                                        <div class="unitprice col-4">{{$carts['product_Price']}}$</div>
+                                                        <div class="price col-3">{{$carts['product_Price'] * $carts['product_Quantity']}}$</div>
+                                                        <div class="action col-1">
+                                                            <a class="minibutton delete"
+                                                               href="{{('/delete-product/'.$carts['session_id'])}}"></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="details col-12 col-lg-8">
-                                                    <p class="code">
-                                                        <span class="name">{{$carts['product_Name']}}</span>
-                                                    </p>
-                                                    <p>
-                                                        <span class="name" style="font-size: 15px"><span>Shipping price: </span> {{$carts['product_shipping']}}</span>
-                                                    </p>
+                                            </div>
+                                        @endforeach
+                                        <div class="subtotal row g-0">
+                                            <div class="col-8 col-md-6 offset-4 offset-md-6">
+                                                <div class="row g-0">
+                                                    <div class="col-8">Sub-total</div>
+                                                    <div class="price col-3">{{$total}}$</div>
+                                                    <div class="action col-1"></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-8 col-md-6">
-                                            <div class="row g-0">
-                                                <div class="quantity col-4 quantity col-4">
-                                                    &nbsp;
-                                                    <input class="value" type="number" required="required"
-                                                        name="cartQuantity[{{$carts['session_id']}}]" value="{{$carts['product_Quantity']}}" step="1"
-                                                        min="1" max="2147483647">
+                                        <div class="delivery row g-0">
+                                            <div class="col-8 col-md-6 offset-4 offset-md-6">
+                                                <div class="row g-0">
+                                                    <div class="col-8">Total shipping</div>
+                                                    <div class="price col-3">{{$total_shipping}}$</div>
+                                                    <div class="action col-1"></div>
                                                 </div>
-                                                <div class="unitprice col-4">{{$carts['product_Price']}}</div>
-                                                <div class="price col-3">{{$carts['product_Price'] * $carts['product_Quantity']}}</div>
-                                                <div class="action col-1">
-                                                    <a class="minibutton delete"
-                                                        href="{{('/delete-product/'.$carts['session_id'])}}"></a>
+                                            </div>
+                                        </div>
+                                        <div class="total row g-0">
+                                            <div class="col-8 col-md-6 offset-4 offset-md-6">
+                                                <div class="row g-0 price-total">
+                                                    <div class="quantity col-4">{{$number_product}} article</div>
+                                                    <div class="col-4 total-text">Total</div>
+                                                    <div class="price col-3">{{$total+$total_shipping}}$</div>
+                                                    <div class="action col-1"></div>
                                                 </div>
-
                                             </div>
                                         </div>
-                                    </div>
-                                    @endforeach
-                                    <div class="subtotal row g-0">
-                                        <div class="col-8 col-md-6 offset-4 offset-md-6">
-                                            <div class="row g-0">
-                                                <div class="col-8">Sub-total</div>
-                                                <div class="price col-3">{{$total}}</div>
-                                                <div class="action col-1"></div>
+                                        <div class="tax row g-0">
+                                            <div class="col-8 col-md-6 offset-4 offset-md-6">
+                                                <div class="row g-0">
+                                                    <div class="col-8">Incl. 0% tax</div>
+                                                    <div class="price col-3">0$</div>
+                                                    <div class="action col-1"></div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="delivery row g-0">
-                                        <div class="col-8 col-md-6 offset-4 offset-md-6">
-                                            <div class="row g-0">
-                                                <div class="col-8">Total shipping</div>
-                                                <div class="price col-3">{{$total_shipping}}</div>
-                                                <div class="action col-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="total row g-0">
-                                        <div class="col-8 col-md-6 offset-4 offset-md-6">
-                                            <div class="row g-0 price-total">
-                                                <div class="quantity col-4">{{$number_product}} article</div>
-                                                <div class="col-4 total-text">Total</div>
-                                                <div class="price col-3">{{$total+$total_shipping}}</div>
-                                                <div class="action col-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tax row g-0">
-                                        <div class="col-8 col-md-6 offset-4 offset-md-6">
-                                            <div class="row g-0">
-                                                <div class="col-8">Incl. 0% tax</div>
-                                                <div class="price col-3">0</div>
-                                                <div class="action col-1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
                                     @else
                                         <div>
                                             Please add product to cart
                                         </div>
                                     @endif
-
                                 </div>
-                            </div>
-                        </div>
-                        <div class="basket-standard-coupon">
-                            <div class="header">
-                                <h2>Coupon codes</h2>
-                            </div>
-                            <div class="content">
-                                <div class="input-group coupon-new">
-                                    <input class="form-control coupon-code" type="text" maxlength="255"
-                                        placeholder="Coupon codes" name="b_coupon">
-                                    <button class="btn btn-primary" type="button">Apply</button>
-                                </div>
-
                             </div>
                         </div>
                         <div class="button-group">
-
-                            <button class="btn btn-default btn-lg" type="submit">
-                                Update</button>
 
                         </div>
                     </form>
                 </div>
             </section>
-        </div>
+                                </div>
                             </div>
                         </div>
-
-
                         <div class="button-group">
                             <button class="btn btn-primary btn-lg btn-action">
                                 Buy now
                             </button>
                         </div>
-
                     </section>
-                </form>
+                </div>
             </section>
         </div>
     </div>
-
-
     <a id="toTop" class="back-to-top" href="#" title="Back to top">
         <div class="top-icon"></div>
     </a>
-
     <!-- Scripts -->
     <script src="{{asset('default/app.js?v=1')}}"></script>
     <script src="{{asset('default/aimeos.js?v=1')}}"></script>
-
-
 </body>
-
 </html>
 @stop

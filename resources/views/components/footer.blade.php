@@ -30,13 +30,20 @@
             </div>
             <div class='a'>
                 <p>INFORMATION</p>
-                <ul class="ft-inf-u">
-                    <li class='b'>Wishlist</li>
-                    <li class='b'>About us</li>
-                    <li class='b'>Contact us</li>
-                    <li class='b'>Shipping Policy</li>
-                    <li class='b'>Terms of Service</li>
-                </ul>
+                <div class="list-group" style="list-style: none; padding-left: 0; margin-bottom: 0px">
+                    <style>
+                        .list-group-item{
+                            background: none;
+                            border: none;
+                            font-size: 16px;
+                        }
+                    </style>
+                    <a class="b list-group-item list-group-item-action" href="/withlist">wishlist</a>
+                    <a class="b list-group-item list-group-item-action" href="/about-us">about us</a>
+                    <a class="b list-group-item list-group-item-action" href="/contact-us">contact us</a>
+                    <a class="b list-group-item list-group-item-action" href="/shipping-policy"> shipping policy</a>
+                    <a class="b list-group-item list-group-item-action" href="/terms-of-service">terms of service</a>
+                </div>
             </div>
         </div>
     </div>
@@ -49,11 +56,19 @@
                 <div class="ft-bt-left">
                    <div class="">
                         <ul style="list-style: none; padding-left: 0; margin-bottom: 0px">
-                            <li><a href="#">wishlist</a></li>
-                            <li><a href="#">about us</a></li>
-                            <li><a href="#">contact us</a></li>
-                            <li><a href="#"> shipping policy</a></li>
-                            <li><a href="#">terms of service</a></li>
+                            <style>
+                                .ft-bt-left ul::before{
+                                    display: none;
+                                }
+                                .text-uppercase{
+                                    font-size: 16px;
+                                }
+                            </style>
+                            <li><a class="text-uppercase" href="/withlist">wishlist</a></li>
+                            <li><a class="text-uppercase" href="/about-us">about us</a></li>
+                            <li><a class="text-uppercase" href="/contact-us">contact us</a></li>
+                            <li><a class="text-uppercase" href="/shipping-policy"> shipping policy</a></li>
+                            <li><a class="text-uppercase" href="/terms-of-service">terms of service</a></li>
                         </ul>
                    </div>
                     <p class="d-flex justify-content-center" style="margin-top: 15px; margin-bottom: 0px">copyright 2023
@@ -63,29 +78,30 @@
 
             <div class="col col-12 col-xs-12 col-xl-6">
                 <div class="ft-bt-right d-flex justify-content-center">
-                    <ul style="list-style: none; margin-bottom: 0px">
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
                     <ul style="list-style: none; padding-left: 0px; margin-bottom: 0px">
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-cc-visa"></i>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-cc-paypal"></i>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-cc-stripe"></i>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa-brands fa-telegram"></i>
+                                <i class="fa-brands fa-cc-mastercard"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="{{asset('icon_payment/cod.png')}}" alt="cash_on_delivery" height="33.75px" width="30px">
                             </a>
                         </li>
                     </ul>

@@ -13,18 +13,12 @@
 
 <body>
     @include('cutetotoro::layouts.head')
-    {{-- best-seller --}}
-    <div>
-        {{-- @yield('aimeos_stage') --}}
+    <div style="background: white;">
         @yield('content')
     </div>
     @include('cutetotoro::layouts.footer')
-
 </body>
 <footer style="display: none;">
-    <!-- footer page -->
-
-    <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
@@ -51,15 +45,12 @@
     });
     $('#filters').on('click', 'button', function() {
         var filterValue = $(this).attr('data-filter');
-        // use filterFn if matches value
-        // filterValue = filterFns[filterValue] || filterValue;
         $grid.isotope({
             filter: filterValue
         });
     });
     $('.button-group').each(function(i, buttonGroup) {
         var $buttonGroup = $(buttonGroup);
-
         $buttonGroup.on('click', 'button', function() {
             $buttonGroup.find('.is-checked').removeClass('is-checked');
             $(this).addClass('is-checked');

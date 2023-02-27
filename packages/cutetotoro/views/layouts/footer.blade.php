@@ -1,6 +1,6 @@
 <div class="footer_desktop" style="background-color: #f0eded">
     @include('components.footer')
-    
+
 </div>
 <style>
     @media screen and (min-width: 769px) {
@@ -23,7 +23,7 @@
         font-family: 'Manjari';
         font-style: normal;
         font-weight: 700;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 18px;
         color: #000000;
         text-align: center;
@@ -38,8 +38,8 @@
         font-family: 'Manjari';
         font-style: normal;
         font-weight: 700;
-        font-size: 15px;
-        line-height: 18px;
+        font-size: 16px;
+
         justify-content: center;
         color: #000000;
         text-decoration: underline;
@@ -67,11 +67,11 @@
         <div>
             <p class="titel_ft">INFORMATION</p>
             <div>
-                <p class="list">Wishplist</p>
-                <p class="list">About us</p>
-                <p class="list">Contact us</p>
-                <p class="list">Shipping Poplicy</p>
-                <p style="margin-bottom: 0" class="list">Terms of Service</p>
+                <p class="list"><a href="/withlist">Wishlist</a></p>
+                <p class="list"><a href="/about-us">About us</a></p>
+                <p class="list"><a href="/contact-us">Contact us</a></p>
+                <p class="list"><a href="/shipping-policy">Shipping Poplicy</a></p>
+                <p style="margin-bottom: 0" class="list"><a href="/terms-of-service">Terms of Service</a></p>
             </div>
         </div>
     </div>
@@ -83,10 +83,9 @@
             font-family: 'Manjari';
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 21px;
             text-align: center;
-            text-decoration-line: underline;
             text-transform: lowercase;
             color: #000000;
         }
@@ -95,7 +94,7 @@
             font-family: 'Manjari';
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 21px;
             text-align: center;
             text-transform: lowercase;
@@ -107,7 +106,7 @@
             font-family: 'Manjari';
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 21px;
             text-align: center;
             text-transform: lowercase;
@@ -139,36 +138,37 @@
         }
     </style>
     <div class="text-center" style="margin-bottom: 10px">
-        <a href="" class="ft_list">WISHLIST</a>
-        <a href="" class="ft_list">ABOUT US</a>
-        <a href="" class="ft_list">CONTACT US</a>
-        <a href="" class="ft_list">SHIPPING</a>
-        <a href="" class="ft_list">POLICY</a>
-        <a href="" class="ft_list">TERMS OF SERVICE</a>
+        <a href="/withlist" class="text-uppercase ft_list">WISHLIST</a>
+        <a href="/about-us" class="text-uppercase ft_list">ABOUT US</a>
+        <a href="/contact-us" class="text-uppercase ft_list">CONTACT US</a>
+        <a href="/shipping-polic" class="text-uppercase ft_list">SHIPPING POLICY</a>
+        <a href="/terms-of-service" class="text-uppercase ft_list">TERMS OF SERVICE</a>
     </div>
     <div class="text-center1 d-flex" style="margin-bottom: 3px">
-        <p class="ft_list_cp ft_list_cpu" style="padding-right: 1rem">Contact</p>
-        {{-- <img src="{{ asset('/FrontEnd/Image/Line4.png') }}" alt="" style="height: 34px;padding-bottom: 1rem;"> --}}
-        <p class="ft_list_cp ft_list_cpu" style="padding-left: 1rem; padding-right: 1rem">About</p>
         <ul class=ft-ul-mb style="list-style: none; padding-left: 0px; margin-bottom: 0px; margin-left: 10px; display: flex">
             <li>
                 <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-cc-visa"></i>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-cc-stripe"></i>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="{{asset('icon_payment/cod.png')}}" alt="cash_on_delivery" height="33.75px" width="30px">
                 </a>
             </li>
         </ul>

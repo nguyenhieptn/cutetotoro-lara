@@ -60,6 +60,7 @@ Route::post('/add-cart',[showDetailController::class,'add_cart'])->name('product
 Route::get('/cart',[showDetailController::class,'cart'])->name('cart');
 Route::get('/checkout',[showDetailController::class,'show_checkout']);
 Route::post('/update-cart',[showDetailController::class,'updateCart']);
+Route::post('/update-cart-summary',[CartController::class,'update_cart_summary']);
 Route::get('/delete-product/{session_id}',[showDetailController::class,'deleteProduct']);
 Route::post('/payment',[CartController::class,'Payment']);
 Route::post('/summary',[CartController::class,'Summary']);
@@ -70,4 +71,9 @@ Route::get('/Sticker',[\App\Http\Controllers\Frontend\HomeController::class,'Sho
 Route::get('/Poster',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_poster']);
 Route::get('/Bag',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_bag']);
 Route::get('/Other',[\App\Http\Controllers\Frontend\HomeController::class,'Show_category_orther']);
+Route::get('/withlist',[PageController::class,'show_withlist']);
+Route::get('/about-us',[PageController::class,'show_about_us']);
+Route::get('/contact-us',[PageController::class,'show_contact_us']);
+Route::get('/shipping-policy',[PageController::class,'show_shipping_policy']);
+Route::get('/terms-of-service',[PageController::class,'show_terms_of_service']);
 

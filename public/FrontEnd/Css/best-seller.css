@@ -121,7 +121,7 @@ p {
         margin-bottom: 0px;
     }
 
-  
+
     .a-view-all{
         padding-right: 10px;
     }
@@ -184,7 +184,7 @@ p {
     }
 
     .ft-top h1, span, a {
-        font-size: 18px;
+        font-size: 16px;
         /* margin-bottom: 18px; */
         font-weight: 700;
         font-family: 'Manjari';
@@ -245,7 +245,7 @@ p {
     .view-all {
         right: 0;
     }
-    
+
     .wrap-about{
         padding: 15px;
     }
@@ -302,7 +302,7 @@ p {
         left: 61%;
         line-height: 20px;
         letter-spacing: 15px;
-     
+
     }
 
     .about-l h1 {
@@ -318,7 +318,7 @@ p {
         padding-left: 0;
         padding-right: 2rem;
      }
- 
+
      .line{
          padding-right: 0;
          display:  none;
@@ -345,7 +345,7 @@ p {
         left: 61%;
         line-height: 20px;
         letter-spacing: 15px;
-     
+
     }
 
     .best_seller_top-image {
@@ -374,7 +374,7 @@ p {
         top: 85%;
         left: 13%;
      }
-   
+
 
 }
 
@@ -414,7 +414,7 @@ p {
         left: 61%;
         line-height: 20px;
         letter-spacing: 15px;
-     
+
     }
 
     .about-img-bottom p {
@@ -493,7 +493,7 @@ p {
         left: 61%;
         line-height: 20px;
         letter-spacing: 15px;
-     
+
     }
 
     .ft-bt-left ul li {
@@ -521,14 +521,14 @@ p {
      .a p{
         font-size: 16px;
      }
- 
+
      .line{
          padding-right: 1.5rem;
          display:  unset;
      }
 
      .text_about {
-        padding-right: 4rem; 
+        padding-right: 4rem;
      }
 
      .ft-bt-left ul::before{
@@ -573,7 +573,7 @@ p {
         left: 62%;
         line-height: 20px;
         letter-spacing: 15px;
-     
+
     }
 
     .ft-contact li {
@@ -589,7 +589,7 @@ p {
         padding-left: 0;
         padding-right: 8rem;
      }
- 
+
      .line{
          padding-right: 1rem;
 
@@ -747,7 +747,7 @@ p {
 
 .ft-bt-right ul:first-child li a{
     display: block;
-   
+
 }
 
 .ft-bt-right ul li {
